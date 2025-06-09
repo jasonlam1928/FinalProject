@@ -24,6 +24,11 @@ bool Unit::UpdateActionValue(float deltaTime) {
     return false;
 }
 
+void Unit::Update(float deltaTime){
+    
+}
+
+
 void Unit::drawRadius(int cameraX, int cameraY) {
     if (!calc) {
         int dx[4] = {0, 0, 1, -1};
@@ -81,7 +86,7 @@ void Unit::drawRadius(int cameraX, int cameraY) {
 
         radius = visited;
         radiusStep = level;
-        Valid = valid;
+        MoveValid = valid;
         drawStep = 0;
         drawTimer = 0;
         calc = true;
@@ -93,7 +98,7 @@ void Unit::drawRadius(int cameraX, int cameraY) {
 
         float x = r.x * 96 - cameraX;
         float y = r.y * 96 - cameraY;
-        ALLEGRO_COLOR fillColor = Valid[r] ?
+        ALLEGRO_COLOR fillColor = MoveValid[r] ?
             al_map_rgba(144, 238, 144, 120) :
             al_map_rgba(238, 144, 144, 200);
         al_draw_filled_rectangle(x, y, x + 96, y + 96, fillColor);
@@ -111,7 +116,7 @@ void Unit::UpdateRadiusAnimation(float deltaTime) {
 
 bool Unit::CheckPlacement(int x, int y) {
     IntPoint p(x, y);
-    if (!Valid[p]) return false;
+    if (!MoveValid[p]) return false;
 
     for (auto& r : radius) {
         if (r == p) {

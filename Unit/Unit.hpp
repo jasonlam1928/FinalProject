@@ -38,8 +38,9 @@ public:
 
     std::set<Engine::IntPoint> radius;
     std::map<Engine::IntPoint, int> radiusStep;
-    std::map<Engine::IntPoint, bool> Valid;
+    std::map<Engine::IntPoint, bool> MoveValid;
 
+    void Update(float deltaTime) override;
     bool UpdateActionValue(float deltaTime);
     void drawRadius(int cameraX, int cameraY);
     void UpdateRadiusAnimation(float deltaTime);

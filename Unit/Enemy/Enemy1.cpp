@@ -13,7 +13,7 @@ void Knight::Act(){
     int bestStep=10000;
     Engine::IntPoint bestMove;
     for(auto& r:radius){
-        if(!Valid[r]) continue;
+        if(!MoveValid[r]) continue;
         //cout<<radiusStep[r]<<" "<<distance<<endl;
         for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
             Unit* unit = dynamic_cast<Unit*>(obj);
