@@ -1,5 +1,6 @@
 CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/Engine/Unit.cpp \
+  C:/Users/jason/Downloads/Final_project/Engine/Unit.hpp \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/set \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__algorithm/equal.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__algorithm/comp.h \
@@ -796,36 +797,9 @@ CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj: \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__functional/unary_negate.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/queue \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/deque \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/iostream \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/istream \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/ostream \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/bitset \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/format \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/container_adaptor.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/range_default_formatter.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__chrono/statically_widen.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/range_formatter.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/format_context.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/format_arg_store.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/format_args.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__ranges/ref_view.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/stack \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/format_functions.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_char.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/write_escaped.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/escaped_output_table.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_floating_point.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__charconv/chars_format.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__charconv/to_chars_floating_point.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_integer.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_pointer.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_string.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__format/formatter_tuple.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/print \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/map \
-  C:/allegro/include/allegro5/allegro_primitives.h \
-  C:/allegro/include/allegro5/allegro.h \
-  C:/allegro/include/allegro5/base.h \
+  C:/Users/jason/Downloads/Final_project/Engine/Sprite.hpp \
+  C:/allegro/include/allegro5/color.h C:/allegro/include/allegro5/base.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/sys/types.h \
   C:/allegro/include/allegro5/internal/alconfig.h \
   C:/allegro/include/allegro5/platform/alplatf.h \
@@ -838,9 +812,10 @@ CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj: \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/include/inttypes.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/inttypes.h \
   C:/allegro/include/allegro5/platform/astdbool.h \
+  C:/allegro/include/allegro5/allegro_font.h \
+  C:/allegro/include/allegro5/allegro.h \
   C:/allegro/include/allegro5/altime.h \
   C:/allegro/include/allegro5/bitmap.h \
-  C:/allegro/include/allegro5/color.h \
   C:/allegro/include/allegro5/bitmap_draw.h \
   C:/allegro/include/allegro5/bitmap_io.h \
   C:/allegro/include/allegro5/file.h C:/allegro/include/allegro5/path.h \
@@ -877,20 +852,20 @@ CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj: \
   C:/allegro/include/allegro5/timer.h C:/allegro/include/allegro5/tls.h \
   C:/allegro/include/allegro5/alcompat.h \
   C:/allegro/include/allegro5/platform/alwin.h \
+  C:/allegro/include/allegro5/allegro_ttf.h \
+  C:/Users/jason/Downloads/Final_project/./Engine/Point.hpp \
+  C:/Users/jason/Downloads/Final_project/./UI/Component/Image.hpp \
+  C:/Users/jason/Downloads/Final_project/./Engine/IObject.hpp \
+  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/list \
+  C:/Users/jason/Downloads/Final_project/Engine/IntPoint.hpp \
+  C:/Users/jason/Downloads/Final_project/Engine/Point.hpp \
   C:/Users/jason/Downloads/Final_project/./Scene/PlayScene.hpp \
   C:/allegro/include/allegro5/allegro_audio.h \
-  C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/list \
   C:/Users/jason/Downloads/Final_project/./Engine/IScene.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/Group.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/IControl.hpp \
-  C:/Users/jason/Downloads/Final_project/./Engine/IObject.hpp \
-  C:/Users/jason/Downloads/Final_project/./Engine/Point.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/Unit.hpp \
-  C:/Users/jason/Downloads/Final_project/./Engine/Sprite.hpp \
-  C:/allegro/include/allegro5/allegro_font.h \
-  C:/allegro/include/allegro5/allegro_ttf.h \
-  C:/Users/jason/Downloads/Final_project/./UI/Component/Image.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Label.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/GameEngine.hpp \
-  C:/Users/jason/Downloads/Final_project/Engine/Unit.hpp
+  C:/allegro/include/allegro5/allegro_primitives.h

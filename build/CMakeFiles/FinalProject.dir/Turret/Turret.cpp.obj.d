@@ -939,6 +939,7 @@ CMakeFiles/FinalProject.dir/Turret/Turret.cpp.obj: \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/set \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__tree \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/map \
+  C:/Users/jason/Downloads/Final_project/./Engine/IntPoint.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/GameEngine.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/AudioHelper.hpp \
   C:/allegro/include/allegro5/allegro_audio.h \

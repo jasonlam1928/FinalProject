@@ -61,6 +61,12 @@
 },
 {
   "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Engine\\IntPoint.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Engine\\IntPoint.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Engine/IntPoint.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
   "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Engine\\LOG.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Engine\\LOG.cpp",
   "file": "C:/Users/jason/Downloads/Final_project/Engine/LOG.cpp",
   "output": "CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj"

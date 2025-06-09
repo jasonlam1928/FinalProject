@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/jason/Downloads/Final_project/Engine/IControl.cpp" "CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/IObject.cpp" "CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/IScene.cpp" "CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Engine/IntPoint.cpp" "CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/LOG.cpp" "CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp" "CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp" "CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj.d"

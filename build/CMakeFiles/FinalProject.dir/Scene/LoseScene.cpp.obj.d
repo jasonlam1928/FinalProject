@@ -866,5 +866,6 @@ CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: \
   C:/allegro/include/allegro5/allegro_font.h \
   C:/allegro/include/allegro5/allegro_ttf.h \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Image.hpp \
+  C:/Users/jason/Downloads/Final_project/./Engine/IntPoint.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Label.hpp

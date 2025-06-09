@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj.d"
   "CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj"
   "CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj.d"
+  "CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj"
+  "CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj.d"
   "CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj"
   "CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj.d"
   "CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj"

@@ -2,6 +2,7 @@
 #include<iostream>
 #include "Enemy1.hpp"
 #include"Scene/PlayScene.hpp"
+#include"Engine/IntPoint.hpp"
 
 Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 100, 5) {
     std::cout<<"Yes"<<std::endl;
@@ -10,14 +11,14 @@ Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 100, 5) {
 void Knight::Act(){
     int closetDist=10000;
     int bestStep=10000;
-    pair<int, int> bestMove;
+    Engine::IntPoint bestMove;
     for(auto& r:radius){
-        if(radiusStep[r]>distance) continue;
+        if(!Valid[r]) continue;
         //cout<<radiusStep[r]<<" "<<distance<<endl;
         for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
             Unit* unit = dynamic_cast<Unit*>(obj);
             if(unit->IsPlayer()){
-                int dist = abs(r.first-unit->x0)+abs(r.second-unit->y0);
+                int dist = abs(r.x - unit->gridPos.x)+abs(r.y - unit->gridPos.y);
                 if(dist<closetDist){
                     closetDist=dist;
                     bestMove=r;
@@ -31,8 +32,8 @@ void Knight::Act(){
             
         }
     }
-    x0=bestMove.first, y0=bestMove.second;
-    Sprite::Move(bestMove.first*96+96/2, bestMove.second*96+96/2);
+    gridPos.x=bestMove.x, gridPos.y=bestMove.y;
+    Sprite::Move(bestMove.x*96+96/2, bestMove.y*96+96/2);
     calc=false;
 }
 

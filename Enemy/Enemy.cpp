@@ -23,10 +23,7 @@ PlayScene *Enemy::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Enemy::Enemy(std::string img, float x, float y, float hp, float speed, int distance) : Unit(x, y,img, speed, hp, distance), distance(distance){
-}
-
-void Enemy::setAttackValue(float r, float cd, int Damage){
+Enemy::Enemy(std::string img, float x, float y, float hp, float speed, int distance) : Unit(x, y,img, speed, hp, distance), distance(distance), speed(speed), hp(hp){
 
 }
 

@@ -122,6 +122,8 @@ void PlayScene::ConfirmClick(){
     Processing->MovetoPreview();
     Processing->CancelPreview();
     Processing=nullptr;
+    auto it=Action.find(Processing);
+    if(it!=Action.end()) Action.erase(it);
 }
 void PlayScene::CancelClick(){
     waitingForConfirm=false;
@@ -168,7 +170,6 @@ void PlayScene::Update(float deltaTime) {
     cameraX = std::max(0.0f, std::min(cameraX, maxCameraX));
     cameraY = std::max(0.0f, std::min(cameraY, maxCameraY));
     
-    multiset<Unit*> deleted;
     for(auto obj:UnitGroup->GetObjects()){
         Unit* unit = dynamic_cast<Unit*>(obj);
 
@@ -185,15 +186,9 @@ void PlayScene::Update(float deltaTime) {
     for(auto unit:Action){
         if(unit->UpdateActionValue(deltaTime)){
             Managing.push(unit);
-            deleted.insert(unit);
         }
     }
-    for(auto unit:deleted){
-        auto it = Action.find(unit);   // 找到其中一個 iterator
-        if (it != Action.end())
-            Action.erase(it);
-    }
-    deleted.clear();
+    
     
     if(!Managing.empty()&&Processing==nullptr){
         Processing=Managing.front();
@@ -201,8 +196,8 @@ void PlayScene::Update(float deltaTime) {
         drawRadius=true;
         Preview=Processing;
         Preview->drawStep=0;
-        cameraTargetX=Processing->x0*BlockSize-WindowSize.first/2;
-        cameraTargetY=Processing->y0*BlockSize-WindowSize.second/2;
+        cameraTargetX=Processing->gridPos.x*BlockSize-WindowSize.first/2;
+        cameraTargetY=Processing->gridPos.y*BlockSize-WindowSize.second/2;
         cameraToTarget=false;
     }
 
@@ -317,7 +312,7 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
             drawRadius=false;
             for(auto& obj:UnitGroup->GetObjects()){
                 Unit* unit=dynamic_cast<Unit*>(obj);
-                if(x==unit->x0&&y==unit->y0){
+                if(x==unit->gridPos.x&&y==unit->gridPos.y){
                     Preview=unit;
                     drawRadius=true;
                     Preview->drawStep=0;

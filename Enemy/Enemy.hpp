@@ -15,21 +15,19 @@ class Turret;
 
 class Enemy : public Unit {
 protected:
-    float speed;
-    float hp;
-    
-
     PlayScene *getPlayScene();
-
     std::list<Enemy *>::iterator lockedEnemyIterator;
 
 public:
     int actionValue;
     int distance;
+    float speed;
+    int Maxhp;
+    int hp;
+    int attackRange;
     Enemy(std::string img, float x, float y, float hp, float speed, int distance);
     bool IsPlayer() const override { return false; }
     void Hit(float damage, std::string Label);
-    void setAttackValue(float r, float cd, int damage);
     void Update(float deltaTime) override;
     void Draw() const override;
     

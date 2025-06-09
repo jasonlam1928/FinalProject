@@ -369,6 +369,30 @@ Engine/IScene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/IScene.cpp.s
 .PHONY : Engine/IScene.cpp.s
 
+Engine/IntPoint.obj: Engine/IntPoint.cpp.obj
+.PHONY : Engine/IntPoint.obj
+
+# target to build an object file
+Engine/IntPoint.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj
+.PHONY : Engine/IntPoint.cpp.obj
+
+Engine/IntPoint.i: Engine/IntPoint.cpp.i
+.PHONY : Engine/IntPoint.i
+
+# target to preprocess a source file
+Engine/IntPoint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.i
+.PHONY : Engine/IntPoint.cpp.i
+
+Engine/IntPoint.s: Engine/IntPoint.cpp.s
+.PHONY : Engine/IntPoint.s
+
+# target to generate assembly for a file
+Engine/IntPoint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.s
+.PHONY : Engine/IntPoint.cpp.s
+
 Engine/LOG.obj: Engine/LOG.cpp.obj
 .PHONY : Engine/LOG.obj
 
@@ -960,6 +984,9 @@ help:
 	@echo ... Engine/IScene.obj
 	@echo ... Engine/IScene.i
 	@echo ... Engine/IScene.s
+	@echo ... Engine/IntPoint.obj
+	@echo ... Engine/IntPoint.i
+	@echo ... Engine/IntPoint.s
 	@echo ... Engine/LOG.obj
 	@echo ... Engine/LOG.i
 	@echo ... Engine/LOG.s
