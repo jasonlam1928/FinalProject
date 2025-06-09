@@ -18,8 +18,8 @@ protected:
     int actionValue;
     int distance;
     float speed;
-    int Maxhp;
-    int hp;
+    float Maxhp;
+    float hp;
     int attackRange;
     PlayScene *getPlayScene();
     // Reference: Design Patterns - Factory Method.

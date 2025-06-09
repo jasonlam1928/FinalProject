@@ -33,7 +33,7 @@ void Knight::Act(){
         }
     }
     gridPos.x=bestMove.x, gridPos.y=bestMove.y;
-    Sprite::Move(bestMove.x*96+96/2, bestMove.y*96+96/2);
+    Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
     calc=false;
 }
 

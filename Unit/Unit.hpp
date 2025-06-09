@@ -23,7 +23,7 @@ public:
     float Speed;
     float HP;
     float MAXHP;
-    float distance;
+    int distance;
     int attackRange;
 
     float ActionValue;  // 當前行動值
@@ -43,6 +43,7 @@ public:
 
     void Update(float deltaTime) override;
     bool UpdateActionValue(float deltaTime);
+    void drawUI();
     void drawRadius(int cameraX, int cameraY);
     void UpdateRadiusAnimation(float deltaTime);
     bool CheckPlacement(int x, int y);

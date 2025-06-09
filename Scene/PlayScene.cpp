@@ -34,8 +34,8 @@ using namespace std;
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
 const int PlayScene::MapWidth = 64, PlayScene::MapHeight = 64;
-const int PlayScene::BlockSize = 96;
-const pair<int,int> PlayScene::WindowSize={2200,1400};
+const int PlayScene::BlockSize = 64;
+const pair<int,int> PlayScene::WindowSize={1600,832};
 const float PlayScene::DangerTime = 7.61;
 const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
@@ -259,6 +259,7 @@ void PlayScene::Draw() const {
     if(Preview!=nullptr){
         if(drawRadius){
             Preview->drawRadius(cameraX, cameraY);
+            Preview->drawUI();
         }
     }
     //btnCancel->Draw();

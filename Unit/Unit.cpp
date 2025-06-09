@@ -11,7 +11,7 @@ PlayScene* Unit::getPlayScene() {
 
 Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance)
     : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false) {
-    gridPos = IntPoint(x / 96, y / 96);
+    gridPos = IntPoint(x / PlayScene::BlockSize, y / PlayScene::BlockSize);
     attackRange=2;
 }
 
@@ -26,6 +26,23 @@ bool Unit::UpdateActionValue(float deltaTime) {
 
 void Unit::Update(float deltaTime){
     
+}
+
+void Unit::drawUI(){
+    const float barWidth = 400.0f;
+    const float barHeight = 50.0f;
+    const float offsetY = 0;  // 血條往上移一點，不擋住角色
+
+    float healthPercent = static_cast<float>(HP) / MAXHP;
+    float filledWidth = barWidth * healthPercent;
+    int x=0;
+    int y=0;
+    // 血條背景（灰色）
+    al_draw_filled_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(100, 100, 100));
+    // 血量（紅色）
+    al_draw_filled_rectangle(x, y + offsetY, x + filledWidth, y + offsetY + barHeight, al_map_rgb(255, 0, 0));
+    // 外框（白色）
+    al_draw_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(255, 255, 255), 1);
 }
 
 
@@ -96,13 +113,13 @@ void Unit::drawRadius(int cameraX, int cameraY) {
         int dist = radiusStep[r];
         if (dist > drawStep) continue;
 
-        float x = r.x * 96 - cameraX;
-        float y = r.y * 96 - cameraY;
+        float x = r.x * PlayScene::BlockSize - cameraX;
+        float y = r.y * PlayScene::BlockSize - cameraY;
         ALLEGRO_COLOR fillColor = MoveValid[r] ?
             al_map_rgba(144, 238, 144, 120) :
             al_map_rgba(238, 144, 144, 200);
-        al_draw_filled_rectangle(x, y, x + 96, y + 96, fillColor);
-        al_draw_rectangle(x, y, x + 96, y + 96, al_map_rgb(0, 128, 0), 1);
+        al_draw_filled_rectangle(x, y, x + PlayScene::BlockSize, y + PlayScene::BlockSize, fillColor);
+        al_draw_rectangle(x, y, x + PlayScene::BlockSize, y + PlayScene::BlockSize, al_map_rgb(0, 128, 0), 1);
     }
 }
 
@@ -121,7 +138,7 @@ bool Unit::CheckPlacement(int x, int y) {
     for (auto& r : radius) {
         if (r == p) {
             previewPos = p;
-            Sprite::Move(p.x * 96 + 48, p.y * 96 + 48);
+            Sprite::Move(p.x * PlayScene::BlockSize + PlayScene::BlockSize/2, p.y * PlayScene::BlockSize + PlayScene::BlockSize/2);
             return true;
         }
     }
@@ -133,5 +150,5 @@ void Unit::MovetoPreview() {
 }
 
 void Unit::CancelPreview() {
-    Sprite::Move(gridPos.x * 96 + 48, gridPos.y * 96 + 48);
+    Sprite::Move(gridPos.x * PlayScene::BlockSize + PlayScene::BlockSize/2, gridPos.y * PlayScene::BlockSize + PlayScene::BlockSize/2);
 }
