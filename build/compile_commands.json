@@ -1,18 +1,6 @@
 [
 {
   "directory": "C:/Users/jason/Downloads/Final_project/build",
-  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Enemy\\Enemy.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Enemy\\Enemy.cpp",
-  "file": "C:/Users/jason/Downloads/Final_project/Enemy/Enemy.cpp",
-  "output": "CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.obj"
-},
-{
-  "directory": "C:/Users/jason/Downloads/Final_project/build",
-  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Enemy\\Enemy1.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Enemy\\Enemy1.cpp",
-  "file": "C:/Users/jason/Downloads/Final_project/Enemy/Enemy1.cpp",
-  "output": "CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.obj"
-},
-{
-  "directory": "C:/Users/jason/Downloads/Final_project/build",
   "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Engine\\Allegro5Exception.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Engine\\Allegro5Exception.cpp",
   "file": "C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp",
   "output": "CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj"
@@ -91,12 +79,6 @@
 },
 {
   "directory": "C:/Users/jason/Downloads/Final_project/build",
-  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Engine\\Unit.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Engine\\Unit.cpp",
-  "file": "C:/Users/jason/Downloads/Final_project/Engine/Unit.cpp",
-  "output": "CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj"
-},
-{
-  "directory": "C:/Users/jason/Downloads/Final_project/build",
   "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Scene\\LoseScene.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Scene\\LoseScene.cpp",
   "file": "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp",
   "output": "CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj"
@@ -145,18 +127,6 @@
 },
 {
   "directory": "C:/Users/jason/Downloads/Final_project/build",
-  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Turret\\Turret.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Turret\\Turret.cpp",
-  "file": "C:/Users/jason/Downloads/Final_project/Turret/Turret.cpp",
-  "output": "CMakeFiles/FinalProject.dir/Turret/Turret.cpp.obj"
-},
-{
-  "directory": "C:/Users/jason/Downloads/Final_project/build",
-  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Turret\\Turret1.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Turret\\Turret1.cpp",
-  "file": "C:/Users/jason/Downloads/Final_project/Turret/Turret1.cpp",
-  "output": "CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.obj"
-},
-{
-  "directory": "C:/Users/jason/Downloads/Final_project/build",
   "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\UI\\Animation\\DirtyEffect.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\UI\\Animation\\DirtyEffect.cpp",
   "file": "C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp",
   "output": "CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj"
@@ -196,6 +166,36 @@
   "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\UI\\Component\\Slider.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\UI\\Component\\Slider.cpp",
   "file": "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp",
   "output": "CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Unit\\Enemy\\Enemy.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Unit\\Enemy\\Enemy.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Unit\\Enemy\\Enemy1.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Unit\\Enemy\\Enemy1.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Unit\\Turret\\Turret.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Unit\\Turret\\Turret.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Unit\\Turret\\Turret1.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Unit\\Turret\\Turret1.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.obj"
+},
+{
+  "directory": "C:/Users/jason/Downloads/Final_project/build",
+  "command": "C:\\Users\\jason\\Downloads\\llvm-mingw-20240417-msvcrt-x86_64\\llvm-mingw-20240417-msvcrt-x86_64\\bin\\clang++.exe  @CMakeFiles/FinalProject.dir/includes_CXX.rsp -g -o CMakeFiles\\FinalProject.dir\\Unit\\Unit.cpp.obj -c C:\\Users\\jason\\Downloads\\Final_project\\Unit\\Unit.cpp",
+  "file": "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp",
+  "output": "CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj"
 },
 {
   "directory": "C:/Users/jason/Downloads/Final_project/build",

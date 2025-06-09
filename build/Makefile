@@ -129,54 +129,6 @@ FinalProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/build
 .PHONY : FinalProject/fast
 
-Enemy/Enemy.obj: Enemy/Enemy.cpp.obj
-.PHONY : Enemy/Enemy.obj
-
-# target to build an object file
-Enemy/Enemy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.obj
-.PHONY : Enemy/Enemy.cpp.obj
-
-Enemy/Enemy.i: Enemy/Enemy.cpp.i
-.PHONY : Enemy/Enemy.i
-
-# target to preprocess a source file
-Enemy/Enemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.i
-.PHONY : Enemy/Enemy.cpp.i
-
-Enemy/Enemy.s: Enemy/Enemy.cpp.s
-.PHONY : Enemy/Enemy.s
-
-# target to generate assembly for a file
-Enemy/Enemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.s
-.PHONY : Enemy/Enemy.cpp.s
-
-Enemy/Enemy1.obj: Enemy/Enemy1.cpp.obj
-.PHONY : Enemy/Enemy1.obj
-
-# target to build an object file
-Enemy/Enemy1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.obj
-.PHONY : Enemy/Enemy1.cpp.obj
-
-Enemy/Enemy1.i: Enemy/Enemy1.cpp.i
-.PHONY : Enemy/Enemy1.i
-
-# target to preprocess a source file
-Enemy/Enemy1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.i
-.PHONY : Enemy/Enemy1.cpp.i
-
-Enemy/Enemy1.s: Enemy/Enemy1.cpp.s
-.PHONY : Enemy/Enemy1.s
-
-# target to generate assembly for a file
-Enemy/Enemy1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.s
-.PHONY : Enemy/Enemy1.cpp.s
-
 Engine/Allegro5Exception.obj: Engine/Allegro5Exception.cpp.obj
 .PHONY : Engine/Allegro5Exception.obj
 
@@ -489,30 +441,6 @@ Engine/Sprite.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.s
 .PHONY : Engine/Sprite.cpp.s
 
-Engine/Unit.obj: Engine/Unit.cpp.obj
-.PHONY : Engine/Unit.obj
-
-# target to build an object file
-Engine/Unit.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj
-.PHONY : Engine/Unit.cpp.obj
-
-Engine/Unit.i: Engine/Unit.cpp.i
-.PHONY : Engine/Unit.i
-
-# target to preprocess a source file
-Engine/Unit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/Unit.cpp.i
-.PHONY : Engine/Unit.cpp.i
-
-Engine/Unit.s: Engine/Unit.cpp.s
-.PHONY : Engine/Unit.s
-
-# target to generate assembly for a file
-Engine/Unit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Engine/Unit.cpp.s
-.PHONY : Engine/Unit.cpp.s
-
 Scene/LoseScene.obj: Scene/LoseScene.cpp.obj
 .PHONY : Scene/LoseScene.obj
 
@@ -705,54 +633,6 @@ Scene/WinScene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.s
 .PHONY : Scene/WinScene.cpp.s
 
-Turret/Turret.obj: Turret/Turret.cpp.obj
-.PHONY : Turret/Turret.obj
-
-# target to build an object file
-Turret/Turret.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret.cpp.obj
-.PHONY : Turret/Turret.cpp.obj
-
-Turret/Turret.i: Turret/Turret.cpp.i
-.PHONY : Turret/Turret.i
-
-# target to preprocess a source file
-Turret/Turret.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret.cpp.i
-.PHONY : Turret/Turret.cpp.i
-
-Turret/Turret.s: Turret/Turret.cpp.s
-.PHONY : Turret/Turret.s
-
-# target to generate assembly for a file
-Turret/Turret.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret.cpp.s
-.PHONY : Turret/Turret.cpp.s
-
-Turret/Turret1.obj: Turret/Turret1.cpp.obj
-.PHONY : Turret/Turret1.obj
-
-# target to build an object file
-Turret/Turret1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.obj
-.PHONY : Turret/Turret1.cpp.obj
-
-Turret/Turret1.i: Turret/Turret1.cpp.i
-.PHONY : Turret/Turret1.i
-
-# target to preprocess a source file
-Turret/Turret1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.i
-.PHONY : Turret/Turret1.cpp.i
-
-Turret/Turret1.s: Turret/Turret1.cpp.s
-.PHONY : Turret/Turret1.s
-
-# target to generate assembly for a file
-Turret/Turret1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.s
-.PHONY : Turret/Turret1.cpp.s
-
 UI/Animation/DirtyEffect.obj: UI/Animation/DirtyEffect.cpp.obj
 .PHONY : UI/Animation/DirtyEffect.obj
 
@@ -921,6 +801,126 @@ UI/Component/Slider.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.s
 .PHONY : UI/Component/Slider.cpp.s
 
+Unit/Enemy/Enemy.obj: Unit/Enemy/Enemy.cpp.obj
+.PHONY : Unit/Enemy/Enemy.obj
+
+# target to build an object file
+Unit/Enemy/Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj
+.PHONY : Unit/Enemy/Enemy.cpp.obj
+
+Unit/Enemy/Enemy.i: Unit/Enemy/Enemy.cpp.i
+.PHONY : Unit/Enemy/Enemy.i
+
+# target to preprocess a source file
+Unit/Enemy/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.i
+.PHONY : Unit/Enemy/Enemy.cpp.i
+
+Unit/Enemy/Enemy.s: Unit/Enemy/Enemy.cpp.s
+.PHONY : Unit/Enemy/Enemy.s
+
+# target to generate assembly for a file
+Unit/Enemy/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.s
+.PHONY : Unit/Enemy/Enemy.cpp.s
+
+Unit/Enemy/Enemy1.obj: Unit/Enemy/Enemy1.cpp.obj
+.PHONY : Unit/Enemy/Enemy1.obj
+
+# target to build an object file
+Unit/Enemy/Enemy1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.obj
+.PHONY : Unit/Enemy/Enemy1.cpp.obj
+
+Unit/Enemy/Enemy1.i: Unit/Enemy/Enemy1.cpp.i
+.PHONY : Unit/Enemy/Enemy1.i
+
+# target to preprocess a source file
+Unit/Enemy/Enemy1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.i
+.PHONY : Unit/Enemy/Enemy1.cpp.i
+
+Unit/Enemy/Enemy1.s: Unit/Enemy/Enemy1.cpp.s
+.PHONY : Unit/Enemy/Enemy1.s
+
+# target to generate assembly for a file
+Unit/Enemy/Enemy1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.s
+.PHONY : Unit/Enemy/Enemy1.cpp.s
+
+Unit/Turret/Turret.obj: Unit/Turret/Turret.cpp.obj
+.PHONY : Unit/Turret/Turret.obj
+
+# target to build an object file
+Unit/Turret/Turret.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.obj
+.PHONY : Unit/Turret/Turret.cpp.obj
+
+Unit/Turret/Turret.i: Unit/Turret/Turret.cpp.i
+.PHONY : Unit/Turret/Turret.i
+
+# target to preprocess a source file
+Unit/Turret/Turret.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.i
+.PHONY : Unit/Turret/Turret.cpp.i
+
+Unit/Turret/Turret.s: Unit/Turret/Turret.cpp.s
+.PHONY : Unit/Turret/Turret.s
+
+# target to generate assembly for a file
+Unit/Turret/Turret.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.s
+.PHONY : Unit/Turret/Turret.cpp.s
+
+Unit/Turret/Turret1.obj: Unit/Turret/Turret1.cpp.obj
+.PHONY : Unit/Turret/Turret1.obj
+
+# target to build an object file
+Unit/Turret/Turret1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.obj
+.PHONY : Unit/Turret/Turret1.cpp.obj
+
+Unit/Turret/Turret1.i: Unit/Turret/Turret1.cpp.i
+.PHONY : Unit/Turret/Turret1.i
+
+# target to preprocess a source file
+Unit/Turret/Turret1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.i
+.PHONY : Unit/Turret/Turret1.cpp.i
+
+Unit/Turret/Turret1.s: Unit/Turret/Turret1.cpp.s
+.PHONY : Unit/Turret/Turret1.s
+
+# target to generate assembly for a file
+Unit/Turret/Turret1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.s
+.PHONY : Unit/Turret/Turret1.cpp.s
+
+Unit/Unit.obj: Unit/Unit.cpp.obj
+.PHONY : Unit/Unit.obj
+
+# target to build an object file
+Unit/Unit.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj
+.PHONY : Unit/Unit.cpp.obj
+
+Unit/Unit.i: Unit/Unit.cpp.i
+.PHONY : Unit/Unit.i
+
+# target to preprocess a source file
+Unit/Unit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Unit.cpp.i
+.PHONY : Unit/Unit.cpp.i
+
+Unit/Unit.s: Unit/Unit.cpp.s
+.PHONY : Unit/Unit.s
+
+# target to generate assembly for a file
+Unit/Unit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Unit.cpp.s
+.PHONY : Unit/Unit.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -954,12 +954,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... FinalProject
-	@echo ... Enemy/Enemy.obj
-	@echo ... Enemy/Enemy.i
-	@echo ... Enemy/Enemy.s
-	@echo ... Enemy/Enemy1.obj
-	@echo ... Enemy/Enemy1.i
-	@echo ... Enemy/Enemy1.s
 	@echo ... Engine/Allegro5Exception.obj
 	@echo ... Engine/Allegro5Exception.i
 	@echo ... Engine/Allegro5Exception.s
@@ -999,9 +993,6 @@ help:
 	@echo ... Engine/Sprite.obj
 	@echo ... Engine/Sprite.i
 	@echo ... Engine/Sprite.s
-	@echo ... Engine/Unit.obj
-	@echo ... Engine/Unit.i
-	@echo ... Engine/Unit.s
 	@echo ... Scene/LoseScene.obj
 	@echo ... Scene/LoseScene.i
 	@echo ... Scene/LoseScene.s
@@ -1026,12 +1017,6 @@ help:
 	@echo ... Scene/WinScene.obj
 	@echo ... Scene/WinScene.i
 	@echo ... Scene/WinScene.s
-	@echo ... Turret/Turret.obj
-	@echo ... Turret/Turret.i
-	@echo ... Turret/Turret.s
-	@echo ... Turret/Turret1.obj
-	@echo ... Turret/Turret1.i
-	@echo ... Turret/Turret1.s
 	@echo ... UI/Animation/DirtyEffect.obj
 	@echo ... UI/Animation/DirtyEffect.i
 	@echo ... UI/Animation/DirtyEffect.s
@@ -1053,6 +1038,21 @@ help:
 	@echo ... UI/Component/Slider.obj
 	@echo ... UI/Component/Slider.i
 	@echo ... UI/Component/Slider.s
+	@echo ... Unit/Enemy/Enemy.obj
+	@echo ... Unit/Enemy/Enemy.i
+	@echo ... Unit/Enemy/Enemy.s
+	@echo ... Unit/Enemy/Enemy1.obj
+	@echo ... Unit/Enemy/Enemy1.i
+	@echo ... Unit/Enemy/Enemy1.s
+	@echo ... Unit/Turret/Turret.obj
+	@echo ... Unit/Turret/Turret.i
+	@echo ... Unit/Turret/Turret.s
+	@echo ... Unit/Turret/Turret1.obj
+	@echo ... Unit/Turret/Turret1.i
+	@echo ... Unit/Turret/Turret1.s
+	@echo ... Unit/Unit.obj
+	@echo ... Unit/Unit.i
+	@echo ... Unit/Unit.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

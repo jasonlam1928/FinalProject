@@ -5,8 +5,6 @@ cmake_policy(SET CMP0009 NEW)
 # ALL_SOURCES at CMakeLists.txt:13 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy1.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/AudioHelper.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Collider.cpp"
@@ -20,7 +18,6 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Unit.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp"
@@ -29,8 +26,6 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret1.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Animation/ExplosionEffect.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/HitLabel.cpp"
@@ -38,6 +33,11 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
   "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/3.29.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/jason/Downloads/Final_project/main.cpp"
   )
@@ -49,8 +49,6 @@ endif()
 # ALL_SOURCES at CMakeLists.txt:13 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Enemy/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy1.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -73,7 +71,6 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Unit.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -109,8 +106,6 @@ endif()
 # ALL_SOURCES at CMakeLists.txt:13 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Turret/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret1.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -127,6 +122,20 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+endif()
+
+# ALL_SOURCES at CMakeLists.txt:13 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Unit/*.cpp")
+set(OLD_GLOB
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

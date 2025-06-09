@@ -18,6 +18,7 @@ file(GLOB_RECURSE ALL_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/Enemy/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/Resource/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/Turret/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Unit/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"   # 把根目錄（main.cpp）也包含
 )
 list(FILTER ALL_SOURCES EXCLUDE REGEX ".*/build/.*")

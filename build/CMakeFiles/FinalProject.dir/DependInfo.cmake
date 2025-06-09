@@ -8,8 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy.cpp" "CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Enemy/Enemy.cpp.obj.d"
-  "C:/Users/jason/Downloads/Final_project/Enemy/Enemy1.cpp" "CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Enemy/Enemy1.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp" "CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/AudioHelper.cpp" "CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Collider.cpp" "CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj.d"
@@ -23,7 +21,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp" "CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp" "CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp" "CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj.d"
-  "C:/Users/jason/Downloads/Final_project/Engine/Unit.cpp" "CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Engine/Unit.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp" "CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp" "CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp" "CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj.d"
@@ -32,8 +29,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp" "CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp" "CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp" "CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj.d"
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret.cpp" "CMakeFiles/FinalProject.dir/Turret/Turret.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Turret/Turret.cpp.obj.d"
-  "C:/Users/jason/Downloads/Final_project/Turret/Turret1.cpp" "CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Turret/Turret1.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp" "CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/UI/Animation/ExplosionEffect.cpp" "CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/UI/Component/HitLabel.cpp" "CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj.d"
@@ -41,6 +36,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp" "CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp" "CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp" "CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp" "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp" "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp" "CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp" "CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.obj.d"
+  "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp" "CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj.d"
   "C:/Users/jason/Downloads/Final_project/main.cpp" "CMakeFiles/FinalProject.dir/main.cpp.obj" "gcc" "CMakeFiles/FinalProject.dir/main.cpp.obj.d"
   )
 
