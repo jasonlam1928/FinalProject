@@ -1,12 +1,11 @@
-#ifndef ENEMY_HPP
-#define ENEMY_HPP
+#pragma once
 #include <list>
 #include <string>
 #include <vector>
 
 #include "Engine/Point.hpp"
 #include "Engine/Sprite.hpp"
-#include"Engine/Unit.hpp"
+#include"Unit/Unit.hpp"
 
 class Bullet;
 class PlayScene;
@@ -33,4 +32,3 @@ public:
     
 };
 
-#endif   // ENEMY_HPP

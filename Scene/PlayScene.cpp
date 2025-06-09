@@ -13,8 +13,8 @@
 #include <queue>
 #include <set>
 
-#include "Enemy/Enemy.hpp"
-#include "Enemy/Enemy1.hpp"
+#include "Unit/Enemy/Enemy.hpp"
+#include "Unit/Enemy/Enemy1.hpp"
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/Group.hpp"
@@ -23,8 +23,8 @@
 #include "UI/Component/Label.hpp"
 #include "UI/Component/ImageButton.hpp"
 #include "PlayScene.hpp"
-#include "Turret/Turret.hpp"
-#include"Turret/Turret1.hpp"
+#include "Unit/Turret/Turret.hpp"
+#include"Unit/Turret/Turret1.hpp"
 #include "UI/Animation/DirtyEffect.hpp"
 
 #include<queue>

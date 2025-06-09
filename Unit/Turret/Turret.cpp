@@ -10,7 +10,7 @@
 #include<iostream>
 #include "UI/Component/Label.hpp"
 #include "UI/Component/HitLabel.hpp"
-#include "Enemy/Enemy.hpp"
+#include "Unit/Enemy/Enemy.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/AudioHelper.hpp"
 #include "Engine/Group.hpp"

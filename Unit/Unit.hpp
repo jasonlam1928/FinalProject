@@ -4,8 +4,8 @@
 #include <queue>
 #include <map>
 #include <string>
-#include "Sprite.hpp"
-#include "IntPoint.hpp"
+#include "Engine/Sprite.hpp"
+#include "Engine/IntPoint.hpp"
 
 class PlayScene;
 
@@ -23,6 +23,7 @@ public:
     float Speed;
     float HP;
     float distance;
+    int attackRange;
 
     float ActionValue;  // 當前行動值
     static constexpr float MaxActionValue = 10000;

@@ -12,6 +12,7 @@ PlayScene* Unit::getPlayScene() {
 Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance)
     : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false) {
     gridPos = IntPoint(x / 96, y / 96);
+    attackRange=2;
 }
 
 bool Unit::UpdateActionValue(float deltaTime) {
@@ -39,7 +40,7 @@ void Unit::drawRadius(int cameraX, int cameraY) {
         valid[gridPos] = true;
 
         int step = 0;
-        while (!q.empty() && step <= distance) {
+        while (!q.empty() && step < distance+attackRange) {
             int sz = q.size();
             for (int i = 0; i < sz; ++i) {
                 IntPoint cur = q.front(); q.pop();
@@ -52,9 +53,10 @@ void Unit::drawRadius(int cameraX, int cameraY) {
                         outOfRange = true;
                         valid[nxt] = false;
                     }
-                    if (step == distance) {
+                    else if (step >= distance) {
                         outOfRange = true;
                         valid[nxt] = false;
+                        q.push(nxt);
                     }
 
                     for (auto& obj : getPlayScene()->UnitGroup->GetObjects()) {
