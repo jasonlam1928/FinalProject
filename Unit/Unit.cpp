@@ -13,6 +13,7 @@ Unit::Unit(float x, float y, std::string img, float speed, float hp, int distanc
     : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false) {
     gridPos = IntPoint(x / PlayScene::BlockSize, y / PlayScene::BlockSize);
     attackRange=2;
+    MAXHP=hp;
 }
 
 bool Unit::UpdateActionValue(float deltaTime) {
