@@ -15,10 +15,12 @@ class HitLabel;
 
 class Turret : public Unit {
 protected:
-    int hp;
-    int maxhp;
+    int actionValue;
     int distance;
     float speed;
+    int Maxhp;
+    int hp;
+    int attackRange;
     PlayScene *getPlayScene();
     // Reference: Design Patterns - Factory Method.
 public:

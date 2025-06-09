@@ -24,7 +24,7 @@ PlayScene *Enemy::getPlayScene() {
 }
 
 Enemy::Enemy(std::string img, float x, float y, float hp, float speed, int distance) : Unit(x, y,img, speed, hp, distance), distance(distance), speed(speed), hp(hp){
-
+    Maxhp=hp;
 }
 
 void Enemy::Hit(float damage, std::string Label) {

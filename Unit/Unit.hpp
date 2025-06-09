@@ -22,6 +22,7 @@ public:
 
     float Speed;
     float HP;
+    float MAXHP;
     float distance;
     int attackRange;
 

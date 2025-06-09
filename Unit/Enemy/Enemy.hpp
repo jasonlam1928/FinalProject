@@ -18,7 +18,6 @@ protected:
     std::list<Enemy *>::iterator lockedEnemyIterator;
 
 public:
-    int actionValue;
     int distance;
     float speed;
     int Maxhp;
