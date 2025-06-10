@@ -17,6 +17,7 @@
 #include "Engine/IObject.hpp"
 #include "Engine/IScene.hpp"
 #include "Engine/Point.hpp"
+#include "Engine/IntPoint.hpp"
 #include "Scene/PlayScene.hpp"
 #include "UI/Animation/ExplosionEffect.hpp"
 #include "UI/Animation/DirtyEffect.hpp"
@@ -25,22 +26,44 @@
 #include "Turret.hpp"
 #include "Scene/PlayScene.hpp"
 
+
+
 PlayScene *Turret::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
-Turret::Turret(std::string img, float x, float y, float hp, float speed, int distance) : Unit(x, y, img, speed, hp, distance), distance(distance), speed(speed), hp(hp) {
+Turret::Turret(std::string img, float x, float y, float hp, float speed, int distance, float damage) : Unit(x, y, img, speed, hp, distance, damage), distance(distance), speed(speed), hp(hp), damage(damage) {
     Maxhp=hp;
 }
 
 void Turret::Update(float deltaTime) {
     
 }
-void Turret::OnExplode() {
-    
+
+bool Turret::CheckPlacement(int x, int y) {
+    Engine::IntPoint p(x, y);
+
+    if (!MoveValid[p]){
+        for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
+            Unit* unit=dynamic_cast<Unit*>(obj);
+            if(unit->gridPos==p&&!unit->IsPlayer()){
+                unit->UnitHit(damage);
+                return false;
+            }
+        }
+    }
+
+    for (auto& r : radius) {
+        
+        if (r == p) {
+            previewPos = p;
+            Sprite::Move(p.x * PlayScene::BlockSize + PlayScene::BlockSize/2, p.y * PlayScene::BlockSize + PlayScene::BlockSize/2);
+            return true;
+        }
+    }
+    return false;
 }
 
-void Turret::Hit(float damage, std::string Label) {
-    hp -= damage;
+void Turret::Hit() {
     
 }
 void Turret::Draw() const {

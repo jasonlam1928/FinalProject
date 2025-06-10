@@ -21,17 +21,18 @@ protected:
     int Maxhp;
     int hp;
     int attackRange;
+    float damage;
     PlayScene *getPlayScene();
     // Reference: Design Patterns - Factory Method.
 public:
     bool Enabled = true;
-
-    Turret(std::string img, float x, float y, float hp, float speed, int distance);
+    Unit* target;
+    Turret(std::string img, float x, float y, float hp, float speed, int distance, float damage);
     bool IsPlayer() const override { return true; }
     void Update(float deltaTime) override;
     void Draw() const override;
-    virtual void OnExplode();
-    void Hit(float damage, std::string Label);
+    bool CheckPlacement(int x, int y);
+    void Hit();
 
 };
 #endif   // TURRET_HPP

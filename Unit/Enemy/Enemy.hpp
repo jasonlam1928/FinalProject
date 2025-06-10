@@ -20,10 +20,12 @@ protected:
 public:
     int distance;
     float speed;
-    int Maxhp;
-    int hp;
+    float Maxhp;
+    float hp;
     int attackRange;
-    Enemy(std::string img, float x, float y, float hp, float speed, int distance);
+    float damage;
+    Unit* target;
+    Enemy(std::string img, float x, float y, float hp, float speed, int distance, float damage);
     bool IsPlayer() const override { return false; }
     void Hit(float damage, std::string Label);
     void Update(float deltaTime) override;

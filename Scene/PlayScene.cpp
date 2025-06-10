@@ -34,8 +34,8 @@ using namespace std;
 bool PlayScene::DebugMode = false;
 const std::vector<Engine::Point> PlayScene::directions = { Engine::Point(-1, 0), Engine::Point(0, -1), Engine::Point(1, 0), Engine::Point(0, 1) };
 const int PlayScene::MapWidth = 64, PlayScene::MapHeight = 64;
-const int PlayScene::BlockSize = 96;
-const pair<int,int> PlayScene::WindowSize={2200,1400};
+const int PlayScene::BlockSize = 64;
+const pair<int,int> PlayScene::WindowSize={1600,832};
 const float PlayScene::DangerTime = 7.61;
 const Engine::Point PlayScene::SpawnGridPoint = Engine::Point(-1, 0);
 const Engine::Point PlayScene::EndGridPoint = Engine::Point(MapWidth, MapHeight - 1);
@@ -47,6 +47,7 @@ const std::vector<int> PlayScene::code = {
 Engine::Point PlayScene::GetClientSize() {
     return Engine::Point(MapWidth * BlockSize, MapHeight * BlockSize);
 }
+
 void PlayScene::Initialize() {
     mapState.clear();
     keyStrokes.clear();
@@ -59,8 +60,6 @@ void PlayScene::Initialize() {
     AddNewObject(GroundEffectGroup = new Group());
     AddNewObject(DebugIndicatorGroup = new Group());
     AddNewObject(UnitGroup = new Group());
-
-    AddNewObject(BulletGroup = new Group());
     AddNewObject(EffectGroup = new Group());
     // Should support buttons.
     AddNewControlObject(UIGroup = new Group());
@@ -158,13 +157,11 @@ void PlayScene::Update(float deltaTime) {
     float dist = std::sqrt(dx * dx + dy * dy);
     float moveSpeed = 8000.0f; // 每秒移動幾多像素，可自行調節
     if(!cameraToTarget){
-        if (dist > 100.0f) {
+        if (dist > 10.0f) {
             float moveStep = moveSpeed * deltaTime;
             if (moveStep > dist) moveStep = dist;
             cameraX += dx / dist * moveStep;
             cameraY += dy / dist * moveStep;
-        } else {
-            cameraToTarget = true;
         }
     }
     cameraX = std::max(0.0f, std::min(cameraX, maxCameraX));
@@ -193,12 +190,19 @@ void PlayScene::Update(float deltaTime) {
     if(!Managing.empty()&&Processing==nullptr){
         Processing=Managing.front();
         Managing.pop();
-        drawRadius=true;
-        Preview=Processing;
-        Preview->drawStep=0;
-        cameraTargetX=Processing->gridPos.x*BlockSize-WindowSize.first/2;
-        cameraTargetY=Processing->gridPos.y*BlockSize-WindowSize.second/2;
-        cameraToTarget=false;
+        if(!Action.count(Processing)){
+            Processing=nullptr;
+        }
+        else{
+            drawRadius=true;
+            Preview=Processing;
+            Preview->drawStep=0;
+            cameraTargetX=Processing->gridPos.x*BlockSize-WindowSize.first/2;
+            cameraTargetY=Processing->gridPos.y*BlockSize-WindowSize.second/2;
+            cameraToTarget=false;
+        }
+        
+        
     }
 
     if(Processing!=nullptr){
@@ -207,6 +211,8 @@ void PlayScene::Update(float deltaTime) {
             if (MoveTime >= 2.0f) {
                 Unit* p = Processing;
                 p->Act(); // 如果你有定義玩家的 Act
+                cameraTargetX=Processing->gridPos.x*BlockSize-WindowSize.first/2;
+                cameraTargetY=Processing->gridPos.y*BlockSize-WindowSize.second/2;
                 UnitMoving=true;
                 MoveTime = 0;
             }
@@ -234,11 +240,11 @@ void PlayScene::Update(float deltaTime) {
         float screenX = WindowSize.first-2000 - cameraX;
         float screenY = WindowSize.second-1000 - cameraY;
         //cout<<"X:"<<screenX<<" Y:"<<screenY<<endl;
-        bx1=WindowSize.first-screenX;
-        by1 = WindowSize.second-screenY;
-        bx2 = bx1-200;
+        bx1=WindowSize.first-screenX-1000;
+        by1 = WindowSize.second-screenY-500;
+        bx2 = bx1-140;
         btnConfirm->SetPosition(bx1, by1, cameraX, cameraY);
-        btnCancel->SetPosition( bx2-200, by1, cameraX, cameraY);
+        btnCancel->SetPosition( bx2, by1, cameraX, cameraY);
 
         btnConfirm->Visible = btnCancel->Visible = true;
     }
@@ -253,16 +259,25 @@ void PlayScene::Draw() const {
     al_identity_transform(&Camera);
     al_translate_transform(&Camera, -cameraX, -cameraY);
     al_use_transform(&Camera);
-    IScene::Draw();
+    TileMapGroup->Draw();
+    GroundEffectGroup->Draw();
+    DebugIndicatorGroup->Draw();
+    UnitGroup->Draw();
+    EffectGroup->Draw();
     al_identity_transform(&Camera);
     al_use_transform(&Camera);
     if(Preview!=nullptr){
         if(drawRadius){
             Preview->drawRadius(cameraX, cameraY);
+            Preview->DrawUI();
         }
     }
-    //btnCancel->Draw();
-    //btnConfirm->Draw();
+    al_identity_transform(&Camera);
+    al_translate_transform(&Camera, -cameraX, -cameraY);
+    al_use_transform(&Camera);
+    UIGroup->Draw();
+    al_identity_transform(&Camera);
+    al_use_transform(&Camera);
 }
 
 void PlayScene::OnMouseDown(int button, int mx, int my) {
@@ -290,7 +305,8 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
                 cout<<worldX<<" "<<bx2-240<<" "<<bx1+240<<" "<<worldY<<" "<<by1-80<<" "<<by1+80<<endl;
                 if(!(worldX>=bx2-240&&worldX<=bx1+240&&worldY>=by1-80&&worldY<=by1+80)){
                     cout<<"out"<<endl;
-                    if(Processing->CheckPlacement(x, y)){
+                    Turret* turret = dynamic_cast<Turret*>(Processing);
+                    if(turret->CheckPlacement(x, y)){
                         waitingForConfirm=true;
                         confirmUnit   = Processing;
                         confirmTarget = Engine::Point(x, y);

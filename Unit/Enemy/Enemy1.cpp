@@ -4,7 +4,7 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 100, 5) {
+Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 100, 5, 2) {
     std::cout<<"Yes"<<std::endl;
 }
 
@@ -20,11 +20,13 @@ void Knight::Act(){
             if(unit->IsPlayer()){
                 int dist = abs(r.x - unit->gridPos.x)+abs(r.y - unit->gridPos.y);
                 if(dist<closetDist){
+                    target = unit;
                     closetDist=dist;
                     bestMove=r;
                     bestStep=radiusStep[r];
                 }
                 else if(dist==closetDist&&radiusStep[r]<bestStep){
+                    target = unit;
                     bestMove=r;
                     bestStep=radiusStep[r];
                 }
@@ -32,8 +34,10 @@ void Knight::Act(){
             
         }
     }
+    if(closetDist<=attackRange) target->UnitHit(Unit::damage);
+    cout<<Unit::damage;
     gridPos.x=bestMove.x, gridPos.y=bestMove.y;
-    Sprite::Move(bestMove.x*96+96/2, bestMove.y*96+96/2);
+    Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
     calc=false;
 }
 

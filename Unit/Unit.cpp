@@ -1,4 +1,5 @@
 #include "Unit.hpp"
+#include<iostream>
 #include "Scene/PlayScene.hpp"
 #include "Engine/GameEngine.hpp"
 #include <allegro5/allegro_primitives.h>
@@ -9,10 +10,11 @@ PlayScene* Unit::getPlayScene() {
     return dynamic_cast<PlayScene*>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance)
-    : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false) {
-    gridPos = IntPoint(x / 96, y / 96);
+Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage)
+    : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false), damage(damage) {
+    gridPos = IntPoint(x / PlayScene::BlockSize, y / PlayScene::BlockSize);
     attackRange=2;
+    MAXHP=HP;
 }
 
 bool Unit::UpdateActionValue(float deltaTime) {
@@ -22,6 +24,22 @@ bool Unit::UpdateActionValue(float deltaTime) {
         return true;
     }
     return false;
+}
+
+void Unit::DrawUI(){
+    const float barWidth = 200.0f;
+    const float barHeight = 10.0f;
+    const float offsetY = 20.0f;  // 血條往上移一點，不擋住角色
+    float healthPercent = static_cast<float>(HP) / MAXHP;
+    float filledWidth = barWidth * healthPercent;
+    int x=0;
+    int y=0;
+    // 血條背景（灰色）
+    al_draw_filled_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(100, 100, 100));
+    // 血量（紅色）
+    al_draw_filled_rectangle(x, y + offsetY, x + filledWidth, y + offsetY + barHeight, al_map_rgb(255, 0, 0));
+    // 外框（白色）
+    al_draw_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(255, 255, 255), 1);
 }
 
 void Unit::Update(float deltaTime){
@@ -96,13 +114,13 @@ void Unit::drawRadius(int cameraX, int cameraY) {
         int dist = radiusStep[r];
         if (dist > drawStep) continue;
 
-        float x = r.x * 96 - cameraX;
-        float y = r.y * 96 - cameraY;
+        float x = r.x * PlayScene::BlockSize - cameraX;
+        float y = r.y * PlayScene::BlockSize - cameraY;
         ALLEGRO_COLOR fillColor = MoveValid[r] ?
             al_map_rgba(144, 238, 144, 120) :
             al_map_rgba(238, 144, 144, 200);
-        al_draw_filled_rectangle(x, y, x + 96, y + 96, fillColor);
-        al_draw_rectangle(x, y, x + 96, y + 96, al_map_rgb(0, 128, 0), 1);
+        al_draw_filled_rectangle(x, y, x + PlayScene::BlockSize, y + PlayScene::BlockSize, fillColor);
+        al_draw_rectangle(x, y, x + PlayScene::BlockSize, y + PlayScene::BlockSize, al_map_rgb(0, 128, 0), 1);
     }
 }
 
@@ -114,18 +132,13 @@ void Unit::UpdateRadiusAnimation(float deltaTime) {
     }
 }
 
-bool Unit::CheckPlacement(int x, int y) {
-    IntPoint p(x, y);
-    if (!MoveValid[p]) return false;
-
-    for (auto& r : radius) {
-        if (r == p) {
-            previewPos = p;
-            Sprite::Move(p.x * 96 + 48, p.y * 96 + 48);
-            return true;
-        }
+void Unit::UnitHit(float UnitDamage){
+    HP-=UnitDamage;
+    std::cout<<HP;
+    if(HP<=0){
+        getPlayScene()->Action.erase(this);
+        getPlayScene()->UnitGroup->RemoveObject(this->objectIterator);
     }
-    return false;
 }
 
 void Unit::MovetoPreview() {
@@ -133,5 +146,5 @@ void Unit::MovetoPreview() {
 }
 
 void Unit::CancelPreview() {
-    Sprite::Move(gridPos.x * 96 + 48, gridPos.y * 96 + 48);
+    Sprite::Move(gridPos.x * PlayScene::BlockSize + PlayScene::BlockSize/2, gridPos.y * PlayScene::BlockSize + PlayScene::BlockSize/2);
 }

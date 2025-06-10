@@ -14,7 +14,7 @@ protected:
     PlayScene* getPlayScene();
 
 public:
-    Unit(float x, float y, std::string img, float speed, float hp, int distance);
+    Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage);
     virtual ~Unit() = default;
 
     virtual bool IsPlayer() const = 0;
@@ -23,8 +23,9 @@ public:
     float Speed;
     float HP;
     float MAXHP;
-    float distance;
+    int distance;
     int attackRange;
+    float damage;
 
     float ActionValue;  // 當前行動值
     static constexpr float MaxActionValue = 10000;
@@ -34,18 +35,17 @@ public:
     float drawTimer = 0;
     float drawInterval = 0.02f; // 每層間隔動畫時間
 
-    Engine::IntPoint gridPos;      // 原本 x0, y0
-    Engine::IntPoint previewPos;   // 原本 Prex0, Prey0
-
+    Engine::IntPoint gridPos;  
+    Engine::IntPoint previewPos;   
     std::set<Engine::IntPoint> radius;
     std::map<Engine::IntPoint, int> radiusStep;
     std::map<Engine::IntPoint, bool> MoveValid;
-
     void Update(float deltaTime) override;
     bool UpdateActionValue(float deltaTime);
+    void DrawUI();
     void drawRadius(int cameraX, int cameraY);
     void UpdateRadiusAnimation(float deltaTime);
-    bool CheckPlacement(int x, int y);
+    void UnitHit(float UnitDamage);
     void MovetoPreview();
     void CancelPreview();
 };
