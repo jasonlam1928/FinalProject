@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "FinalProject::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-FinalProject-Debug-32a55a772a1a91fa0934.json",
+					"jsonFile" : "target-FinalProject-Debug-6939c03c05c2cb3a677d.json",
 					"name" : "FinalProject",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/jason/Downloads/Final_project/build",
-		"source" : "C:/Users/jason/Downloads/Final_project"
+		"build" : "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build",
+		"source" : "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject"
 	},
 	"version" : 
 	{

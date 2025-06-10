@@ -3,141 +3,145 @@
 cmake_policy(SET CMP0009 NEW)
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/AudioHelper.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Collider.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/GameEngine.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Group.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IControl.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IObject.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IntPoint.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/LOG.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/SettingsScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Animation/ExplosionEffect.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/HitLabel.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Image.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
-  "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/3.29.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
-  "C:/Users/jason/Downloads/Final_project/main.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Allegro5Exception.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/AudioHelper.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Collider.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/GameEngine.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Group.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IControl.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IObject.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IntPoint.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/LOG.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Point.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Resources.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Sprite.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/LoseScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/MapEditorScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/MapEditorSelectScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/PlayScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/Save.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/Scoreboard.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/SettingsScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/StageSelectScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/StartScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/WinScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Animation/DirtyEffect.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Animation/ExplosionEffect.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/HitLabel.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Image.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/ImageButton.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Label.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Slider.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Enemy/Enemy.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Enemy/Enemy1.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Turret/Turret.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Turret/Turret1.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Unit.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/3.29.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Enemy/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Enemy/*.cpp")
 set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Engine/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/AudioHelper.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Collider.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/GameEngine.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Group.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IControl.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IObject.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/IntPoint.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/LOG.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Point.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp"
-  "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Allegro5Exception.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/AudioHelper.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Collider.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/GameEngine.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Group.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IControl.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IObject.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/IntPoint.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/LOG.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Point.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Resources.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Engine/Sprite.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Resource/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Resource/*.cpp")
 set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Scene/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/SettingsScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp"
-  "C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/LoseScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/MapEditorScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/MapEditorSelectScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/PlayScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/Save.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/Scoreboard.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/SettingsScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/StageSelectScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/StartScene.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Scene/WinScene.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Turret/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Turret/*.cpp")
 set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/UI/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Animation/ExplosionEffect.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/HitLabel.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Image.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp"
-  "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Animation/DirtyEffect.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Animation/ExplosionEffect.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/HitLabel.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Image.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/ImageButton.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Label.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/UI/Component/Slider.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Unit/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/*.cpp")
 set(OLD_GLOB
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Enemy/Enemy.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Enemy/Enemy1.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Turret/Turret.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Turret/Turret1.cpp"
+  "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/Unit/Unit.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/cmake.verify_globs")
 endif()

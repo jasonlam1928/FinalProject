@@ -4,6 +4,11 @@
 
 #include "StartScene.h"
 #include <allegro5/allegro_audio.h>
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_ttf.h>
 #include <functional>
 #include <memory>
 #include <string>
@@ -46,4 +51,43 @@ void StartScene::PlayOnClick(int stage) {
 }
 void StartScene::SettingsOnClick(int stage) {
     Engine::GameEngine::GetInstance().ChangeScene("Settings");
+}
+void StartScene::DebugOnClick(int stage) {
+    debugMode = !debugMode;
+    if (debugMode) {
+        Engine::GameEngine::GetInstance().ChangeScene("MapEditor");
+    } else {
+        Engine::GameEngine::GetInstance().ChangeScene("stage-select");
+    }
+}
+void StartScene::OnKeyDown(int keyCode) {
+    IScene::OnKeyDown(keyCode);
+    /*如果 Shift+F7 就 Debug Mode*/
+    if (keyCode == ALLEGRO_KEY_F7) {
+        debugMode = !debugMode;
+        debugModeMessageTimer = 2.0f; // Show message for 2 seconds
+    }
+}
+
+void StartScene::Draw() const {
+    IScene::Draw();
+    if (debugModeMessageTimer > 0.0f) {
+        float alpha = std::min(1.0f, debugModeMessageTimer / 2.0f);
+        int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
+        ALLEGRO_COLOR color = al_map_rgba_f(1, 1, 1, alpha); /*白色嘅*/
+        al_draw_text(
+            Engine::Resources::GetInstance().GetFont("pirulen.ttf", 48).get(),
+            color, w / 2, 40, ALLEGRO_ALIGN_CENTRE, (debugMode) ? "Debug Mode Enabled" : "Debug Mode Disabled"
+            );
+    }
+}
+
+void StartScene::Update(float deltaTime) {
+    IScene::Update(deltaTime);
+    if (debugModeMessageTimer > 0.0f) {
+        debugModeMessageTimer -= deltaTime;
+        if (debugModeMessageTimer <= 0.0f) {
+            debugModeMessageTimer = 0.0f;
+        }
+    }
 }

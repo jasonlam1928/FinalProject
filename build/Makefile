@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jason\Downloads\Final_project
+CMAKE_SOURCE_DIR = "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jason\Downloads\Final_project\build
+CMAKE_BINARY_DIR = "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jason\Downloads\Final_project\build\CMakeFiles C:\Users\jason\Downloads\Final_project\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jason\Downloads\Final_project\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -112,7 +112,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P C:\Users\jason\Downloads\Final_project\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles\VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
@@ -464,6 +464,54 @@ Scene/LoseScene.s: Scene/LoseScene.cpp.s
 Scene/LoseScene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.s
 .PHONY : Scene/LoseScene.cpp.s
+
+Scene/MapEditorScene.obj: Scene/MapEditorScene.cpp.obj
+.PHONY : Scene/MapEditorScene.obj
+
+# target to build an object file
+Scene/MapEditorScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj
+.PHONY : Scene/MapEditorScene.cpp.obj
+
+Scene/MapEditorScene.i: Scene/MapEditorScene.cpp.i
+.PHONY : Scene/MapEditorScene.i
+
+# target to preprocess a source file
+Scene/MapEditorScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.i
+.PHONY : Scene/MapEditorScene.cpp.i
+
+Scene/MapEditorScene.s: Scene/MapEditorScene.cpp.s
+.PHONY : Scene/MapEditorScene.s
+
+# target to generate assembly for a file
+Scene/MapEditorScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.s
+.PHONY : Scene/MapEditorScene.cpp.s
+
+Scene/MapEditorSelectScene.obj: Scene/MapEditorSelectScene.cpp.obj
+.PHONY : Scene/MapEditorSelectScene.obj
+
+# target to build an object file
+Scene/MapEditorSelectScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj
+.PHONY : Scene/MapEditorSelectScene.cpp.obj
+
+Scene/MapEditorSelectScene.i: Scene/MapEditorSelectScene.cpp.i
+.PHONY : Scene/MapEditorSelectScene.i
+
+# target to preprocess a source file
+Scene/MapEditorSelectScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.i
+.PHONY : Scene/MapEditorSelectScene.cpp.i
+
+Scene/MapEditorSelectScene.s: Scene/MapEditorSelectScene.cpp.s
+.PHONY : Scene/MapEditorSelectScene.s
+
+# target to generate assembly for a file
+Scene/MapEditorSelectScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.s
+.PHONY : Scene/MapEditorSelectScene.cpp.s
 
 Scene/PlayScene.obj: Scene/PlayScene.cpp.obj
 .PHONY : Scene/PlayScene.obj
@@ -996,6 +1044,12 @@ help:
 	@echo ... Scene/LoseScene.obj
 	@echo ... Scene/LoseScene.i
 	@echo ... Scene/LoseScene.s
+	@echo ... Scene/MapEditorScene.obj
+	@echo ... Scene/MapEditorScene.i
+	@echo ... Scene/MapEditorScene.s
+	@echo ... Scene/MapEditorSelectScene.obj
+	@echo ... Scene/MapEditorSelectScene.i
+	@echo ... Scene/MapEditorSelectScene.s
 	@echo ... Scene/PlayScene.obj
 	@echo ... Scene/PlayScene.i
 	@echo ... Scene/PlayScene.s
@@ -1067,7 +1121,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P C:\Users\jason\Downloads\Final_project\build\CMakeFiles\VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles\VerifyGlobs.cmake"
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
