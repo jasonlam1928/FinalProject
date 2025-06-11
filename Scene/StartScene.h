@@ -18,8 +18,7 @@ public:
     void Initialize() override;
     void Terminate() override;
     void PlayOnClick(int stage);
-    void SettingsOnClick(int stage);
-    void DebugOnClick(int stage);    
+    void SettingsOnClick(int stage);  
     void Draw() const override;
     void OnKeyDown(int keyCode) override;
     void Update(float deltaTime) override;

@@ -47,19 +47,12 @@ void StartScene::Terminate() {
     IScene::Terminate();
 }
 void StartScene::PlayOnClick(int stage) {
-    Engine::GameEngine::GetInstance().ChangeScene("stage-select");
+    Engine::GameEngine::GetInstance().ChangeScene((!debugMode) ? "stage-select" : "map-editor-select");
 }
 void StartScene::SettingsOnClick(int stage) {
     Engine::GameEngine::GetInstance().ChangeScene("Settings");
 }
-void StartScene::DebugOnClick(int stage) {
-    debugMode = !debugMode;
-    if (debugMode) {
-        Engine::GameEngine::GetInstance().ChangeScene("MapEditor");
-    } else {
-        Engine::GameEngine::GetInstance().ChangeScene("stage-select");
-    }
-}
+
 void StartScene::OnKeyDown(int keyCode) {
     IScene::OnKeyDown(keyCode);
     /*如果 Shift+F7 就 Debug Mode*/

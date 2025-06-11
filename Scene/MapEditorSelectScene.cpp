@@ -2,11 +2,13 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <iostream>
 
 #include "Engine/AudioHelper.hpp"
 #include "Engine/GameEngine.hpp"
 #include "Engine/Point.hpp"
 #include "Engine/Resources.hpp"
+#include "MapEditorScene.hpp"
 #include "PlayScene.hpp"
 #include "MapEditorSelectScene.hpp"
 #include "UI/Component/ImageButton.hpp"
@@ -14,11 +16,14 @@
 #include "UI/Component/Slider.hpp"
 
 void MapEditorSelectScene::Initialize() {
+    std::cout << "[DEBUG] MapEditorSelectScene::Initialize called" << std::endl;
     int w = Engine::GameEngine::GetInstance().GetScreenSize().x;
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     int halfW = w / 2;
     int halfH = h / 2;
     Engine::ImageButton *btn;
+
+    AddNewObject(new Engine::Label("Map Editor", "pirulen.ttf", 48, halfW, halfH * 0.15, 255, 255, 255, 255, 0.5, 0.5));
 
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH / 2 - 50, 400, 100);
     btn->SetOnClickCallback(std::bind(&MapEditorSelectScene::PlayOnClick, this, 1));
@@ -29,33 +34,28 @@ void MapEditorSelectScene::Initialize() {
     AddNewControlObject(btn);
     AddNewObject(new Engine::Label("Stage 2", "pirulen.ttf", 48, halfW, halfH / 2 + 150, 0, 0, 0, 255, 0.5, 0.5));
 
-    // Not safe if release resource while playing, however we only free while change scene, so it's fine.
-    bgmInstance = AudioHelper::PlaySample("select.ogg", true, AudioHelper::BGMVolume);
-
     btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", halfW - 200, halfH * 3 / 2 - 50, 400, 100);
     btn->SetOnClickCallback(std::bind(&MapEditorSelectScene::BackOnClick, this, 1));
     AddNewControlObject(btn);
     AddNewObject(new Engine::Label("Back", "pirulen.ttf", 48, halfW, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
-
-    btn = new Engine::ImageButton("stage-select/dirt.png", "stage-select/floor.png", w-halfW/2, halfH/10-50 , 400, 100);
-    btn->SetOnClickCallback(std::bind(&MapEditorSelectScene::ScoreboardOnClick, this, 1));
-    AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Scoreboard", "pirulen.ttf", 24, w-halfW/2+200, halfH /10, 0, 0, 0, 255, 0.5, 0.5));
 }
 void MapEditorSelectScene::Terminate() {
-    AudioHelper::StopSample(bgmInstance);
-    bgmInstance = std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE>();
     IScene::Terminate();
 }
 void MapEditorSelectScene::BackOnClick(int stage) {
     Engine::GameEngine::GetInstance().ChangeScene("start");
 }
 void MapEditorSelectScene::PlayOnClick(int stage) {
-    PlayScene *scene = dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetScene("play"));
+    std::cout << "[DEBUG] PlayOnClick called with stage: " << stage << std::endl;
+    MapEditorScene *scene = dynamic_cast<MapEditorScene *>(Engine::GameEngine::GetInstance().GetScene("map-editor"));
     scene->MapId = stage;
-    Engine::GameEngine::GetInstance().ChangeScene("play");
+    std::cout << "[DEBUG ]Changing to map-editor with MapId: " << stage << "..." << std::endl;
+    Engine::GameEngine::GetInstance().ChangeScene("map-editor");
 }
 void MapEditorSelectScene::ScoreboardOnClick(int stage) {
     Engine::GameEngine::GetInstance().ChangeScene("Scoreboard");
 }
-
+void MapEditorSelectScene::Draw() const {
+    IScene::Draw();
+    // You can add custom drawing code here if needed
+}

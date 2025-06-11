@@ -7,13 +7,13 @@
 
 class MapEditorSelectScene final : public Engine::IScene {
 private:
-    std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE> bgmInstance;
 
 public:
     explicit MapEditorSelectScene() = default;
     void Initialize() override;
     void Terminate() override;
     void PlayOnClick(int stage);
+    void Draw() const override;
     void ScoreboardOnClick(int stage);
     void BackOnClick(int stage);
 
