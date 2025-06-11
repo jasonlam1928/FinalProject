@@ -690,6 +690,7 @@ CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/byteswap.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/endian.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/has_single_bit.h \
+  C:/allegro/include/allegro5/allegro_primitives.h \
   C:/allegro/include/allegro5/allegro.h \
   C:/allegro/include/allegro5/base.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/include/stdarg.h \

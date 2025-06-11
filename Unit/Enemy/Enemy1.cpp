@@ -4,14 +4,14 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 100, 5, 2) {
-    std::cout<<"Yes"<<std::endl;
+Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 10, 5, 2, "Knight_01") {
+
 }
 
 void Knight::Act(){
     int closetDist=10000;
     int bestStep=10000;
-    Engine::IntPoint bestMove;
+    Engine::IntPoint bestMove=gridPos;
     for(auto& r:radius){
         if(!MoveValid[r]) continue;
         //cout<<radiusStep[r]<<" "<<distance<<endl;
@@ -35,7 +35,7 @@ void Knight::Act(){
         }
     }
     if(closetDist<=attackRange) target->UnitHit(Unit::damage);
-    cout<<Unit::damage;
+    //cout<<Unit::damage;
     gridPos.x=bestMove.x, gridPos.y=bestMove.y;
     Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
     calc=false;

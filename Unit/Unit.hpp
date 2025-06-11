@@ -14,7 +14,7 @@ protected:
     PlayScene* getPlayScene();
 
 public:
-    Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage);
+    Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage, std::string Label);
     virtual ~Unit() = default;
 
     virtual bool IsPlayer() const = 0;
@@ -26,9 +26,10 @@ public:
     int distance;
     int attackRange;
     float damage;
+    std::string Label;
 
     float ActionValue;  // 當前行動值
-    static constexpr float MaxActionValue = 10000;
+    inline static float MaxActionValue = 20.0f;
 
     bool calc;
     int drawStep = 0;
@@ -40,6 +41,7 @@ public:
     std::set<Engine::IntPoint> radius;
     std::map<Engine::IntPoint, int> radiusStep;
     std::map<Engine::IntPoint, bool> MoveValid;
+
     void Update(float deltaTime) override;
     bool UpdateActionValue(float deltaTime);
     void DrawUI();
@@ -48,4 +50,5 @@ public:
     void UnitHit(float UnitDamage);
     void MovetoPreview();
     void CancelPreview();
+    bool TryMoveNearTarget(Unit* target);
 };

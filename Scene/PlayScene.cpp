@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro.h>
 #include <ostream>
 #include<iostream>
@@ -68,17 +69,19 @@ void PlayScene::Initialize() {
     ConstructUI();
     float screenW = Engine::GameEngine::GetInstance().GetScreenSize().x;
     float screenH = Engine::GameEngine::GetInstance().GetScreenSize().y;
-    btnConfirm = new Engine::ImageButton("play/Idle.png", "play/Hover.png",
-                                         200, 236, 120, 40);
+    btnConfirm = new Engine::ImageButton("play/Idle.png", "play/Hover.png",200, 236, 120, 40);
     btnConfirm->SetOnClickCallback(std::bind(&PlayScene::ConfirmClick, this)) ;   
     AddNewControlObject(btnConfirm);                                 
-    btnCancel  = new Engine::ImageButton("play/Idle.png",  "play/Hover.png",
-                                         0, 0, 120, 40);
+    btnCancel  = new Engine::ImageButton("play/Idle.png",  "play/Hover.png",0, 0, 120, 40);
     btnCancel->SetOnClickCallback(std::bind(&PlayScene::CancelClick, this)) ;  
     AddNewControlObject(btnCancel);  
-    btnConfirm->Visible = btnCancel->Visible = false;
+    btnAttack = new Engine::ImageButton("play/Idle.png",  "play/Hover.png",0, 0, 120, 40);
+    btnAttack->SetOnClickCallback(std::bind(&PlayScene::AttackClick, this)) ;  
+    AddNewControlObject(btnAttack);
+    btnConfirm->Visible = btnCancel->Visible = btnAttack->Visible=false;
     UIGroup->AddNewObject(btnConfirm);
     UIGroup->AddNewObject(btnCancel);
+    UIGroup->AddNewObject(btnAttack);
     // 设定回调
 
     // Add groups from bottom to top.
@@ -111,25 +114,38 @@ void PlayScene::Initialize() {
         }
     }
     
+    for(auto obj:UnitGroup->GetObjects()){
+        Unit* unit = dynamic_cast<Unit*>(obj);
+        Action.push_back(unit);
+    }
 
 }
 
 void PlayScene::ConfirmClick(){
     waitingForConfirm=false;
     previewSelected = false;
-    btnConfirm->Visible = btnCancel->Visible = false;
+    btnConfirm->Visible = btnCancel->Visible = btnAttack->Visible=false;
     Processing->MovetoPreview();
     Processing->CancelPreview();
     Processing=nullptr;
-    auto it=Action.find(Processing);
-    if(it!=Action.end()) Action.erase(it);
 }
 void PlayScene::CancelClick(){
     waitingForConfirm=false;
     previewSelected = false;
-    btnConfirm->Visible = btnCancel->Visible = false;
+    btnConfirm->Visible = btnCancel->Visible = btnAttack->Visible=false;
     Processing->CancelPreview();
 }
+void PlayScene::AttackClick(){
+    waitingForConfirm=false;
+    Processing->MovetoPreview();
+    Processing->CancelPreview();
+    btnConfirm->Visible = btnCancel->Visible = btnAttack->Visible=false;
+    Defense->UnitHit(Processing->damage);
+    drawRadius=false;
+    attackUIActive = true;
+    AttackUIVisibleTime = 0.5f;
+}
+
 void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
     AudioHelper::StopSample(deathBGMInstance);
@@ -166,31 +182,20 @@ void PlayScene::Update(float deltaTime) {
     }
     cameraX = std::max(0.0f, std::min(cameraX, maxCameraX));
     cameraY = std::max(0.0f, std::min(cameraY, maxCameraY));
+    if(Managing.empty()){
+        for(auto unit:Action){
+            if(unit->UpdateActionValue(deltaTime)){
+                Managing.push(unit);
+            }
+        }
+    }
     
-    for(auto obj:UnitGroup->GetObjects()){
-        Unit* unit = dynamic_cast<Unit*>(obj);
-
-        if(Action.count(unit)==0){
-            Action.insert(unit);
-        }
-        else if(Action.count(unit)==1){
-            Unit* prev = *Action.find(unit);
-            unit->ActionValue+=prev->ActionValue;
-            Action.insert(unit);
-        }
-
-    }
-    for(auto unit:Action){
-        if(unit->UpdateActionValue(deltaTime)){
-            Managing.push(unit);
-        }
-    }
     
     
     if(!Managing.empty()&&Processing==nullptr){
         Processing=Managing.front();
         Managing.pop();
-        if(!Action.count(Processing)){
+        if(std::find(Action.begin(), Action.end(), Processing) == Action.end()){
             Processing=nullptr;
         }
         else{
@@ -204,7 +209,7 @@ void PlayScene::Update(float deltaTime) {
         
         
     }
-
+    //PC行動
     if(Processing!=nullptr){
         if (!Processing->IsPlayer()) {
             MoveTime += deltaTime;
@@ -218,9 +223,11 @@ void PlayScene::Update(float deltaTime) {
             }
         }
     }
+    //畫radius
     if(Preview!=nullptr&&drawRadius){
         Preview->UpdateRadiusAnimation(deltaTime);
     }
+    //unit移動時間
     if(UnitMoving){
         MoveTime+=deltaTime;
         if(MoveTime>=1.0f){
@@ -233,6 +240,7 @@ void PlayScene::Update(float deltaTime) {
             UnitMoving=false;
         }
     }
+    //button嘅UI
     if (waitingForConfirm && confirmUnit && btnCancel->Visible && btnConfirm->Visible) {
         // 1) 取单位世界坐标（格子中心）
 
@@ -240,17 +248,31 @@ void PlayScene::Update(float deltaTime) {
         float screenX = WindowSize.first-2000 - cameraX;
         float screenY = WindowSize.second-1000 - cameraY;
         //cout<<"X:"<<screenX<<" Y:"<<screenY<<endl;
-        bx1=WindowSize.first-screenX-1000;
-        by1 = WindowSize.second-screenY-500;
-        bx2 = bx1-140;
+        bx1=WindowSize.first-screenX-520;
+        by1 = WindowSize.second-screenY-210;
+        bx2 = bx1-1470;
+        bx3 = bx1-700;
         btnConfirm->SetPosition(bx1, by1, cameraX, cameraY);
         btnCancel->SetPosition( bx2, by1, cameraX, cameraY);
+        btnAttack->SetPosition(bx3, by1, cameraX, cameraY);
 
         btnConfirm->Visible = btnCancel->Visible = true;
     }
     else {
         btnConfirm->Visible = btnCancel->Visible = false;
     }
+    //攻擊UI介面
+    if(!attackUIDraw) btnAttack->Visible = false;
+    if (attackUIActive) {
+        AttackUIVisibleTime -= deltaTime;
+        if (AttackUIVisibleTime <= 0.0f) {
+            attackUIDraw = false;
+            attackUIActive = false;
+            btnAttack->Visible = false;
+            Processing=nullptr;
+            drawRadius=true;
+        }
+}
 }
 
 
@@ -267,10 +289,11 @@ void PlayScene::Draw() const {
     al_identity_transform(&Camera);
     al_use_transform(&Camera);
     if(Preview!=nullptr){
+        Preview->DrawUI();
         if(drawRadius){
             Preview->drawRadius(cameraX, cameraY);
-            Preview->DrawUI();
         }
+        if(attackUIDraw) AttackUI();
     }
     al_identity_transform(&Camera);
     al_translate_transform(&Camera, -cameraX, -cameraY);
@@ -280,7 +303,32 @@ void PlayScene::Draw() const {
     al_use_transform(&Camera);
 }
 
+void PlayScene::AttackUI() const{
+    const float barWidth = 400.0f;
+    const float barHeight = 20.0f;
+    const float offsetY = 10.0f;  // 血條往上移一點，不擋住角色
+    float healthPercent = static_cast<float>(Defense->MAXHP-Defense->HP) / Defense->MAXHP;
+    float filledWidth = barWidth * healthPercent;
+    int x=1200;
+    int y=0;
+    // 血條背景（灰色）
+    al_draw_filled_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(100, 100, 100));
+    // 血量（紅色）
+    al_draw_filled_rectangle(x+filledWidth, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(255, 0, 0));
+    // 外框（白色）
+    al_draw_rectangle(x, y + offsetY, x + barWidth, y + offsetY + barHeight, al_map_rgb(255, 255, 255), 1);
+    btnAttack->Visible=true;
+}
+
+
 void PlayScene::OnMouseDown(int button, int mx, int my) {
+
+    for(auto a:Action){
+        //cout<<a->Label<<" ";
+        cout<<"value:"<<a->ActionValue<<endl;
+        
+    }
+    cout<<endl;
 
     if (previewSelected) {
         // 让底层 UIGroup 先处理（包含 Confirm/Cancel 按钮）
@@ -302,9 +350,8 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
         cameraStartY = cameraY;
         if(Preview==Processing&&drawRadius){
             if(Processing->IsPlayer()){
-                cout<<worldX<<" "<<bx2-240<<" "<<bx1+240<<" "<<worldY<<" "<<by1-80<<" "<<by1+80<<endl;
                 if(!(worldX>=bx2-240&&worldX<=bx1+240&&worldY>=by1-80&&worldY<=by1+80)){
-                    cout<<"out"<<endl;
+                    //cout<<"out"<<endl;
                     Turret* turret = dynamic_cast<Turret*>(Processing);
                     if(turret->CheckPlacement(x, y)){
                         waitingForConfirm=true;
@@ -315,17 +362,21 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
                     else{
                         Processing->CancelPreview();
                         drawRadius=false;
-                        btnConfirm->Visible = btnCancel->Visible = false;
+                        attackUIDraw=false;
+                        
+                        btnConfirm->Visible = btnCancel->Visible = btnAttack->Visible= false;
                     } 
                 }
                 
             }
             else{
                 drawRadius=false;
+                attackUIDraw=false;
             } 
         }
         else{
             drawRadius=false;
+            attackUIDraw=false;
             for(auto& obj:UnitGroup->GetObjects()){
                 Unit* unit=dynamic_cast<Unit*>(obj);
                 if(x==unit->gridPos.x&&y==unit->gridPos.y){

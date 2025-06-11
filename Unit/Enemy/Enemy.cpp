@@ -23,9 +23,10 @@ PlayScene *Enemy::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Enemy::Enemy(std::string img, float x, float y, float hp, float speed, int distance, float damage) : Unit(x, y,img, speed, hp, distance, damage), distance(distance), speed(speed), hp(hp), damage(damage){
+Enemy::Enemy(std::string img, float x, float y, float hp, float speed, int distance, float damage, std::string Label) : Unit(x, y,img, speed, hp, distance, damage, Label), distance(distance), speed(speed), hp(hp), damage(damage), Label(Label){
     Maxhp=hp;
     attackRange=2;
+    img=img;
 }
 
 void Enemy::Hit(float damage, std::string Label) {

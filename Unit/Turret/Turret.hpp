@@ -27,11 +27,12 @@ protected:
 public:
     bool Enabled = true;
     Unit* target;
-    Turret(std::string img, float x, float y, float hp, float speed, int distance, float damage);
+    Turret(std::string img, float x, float y, float hp, float speed, int distance, float damage, std::string Label);
     bool IsPlayer() const override { return true; }
     void Update(float deltaTime) override;
     void Draw() const override;
     bool CheckPlacement(int x, int y);
+    bool TryMoveNearTarget(Unit* target);
     void Hit();
 
 };

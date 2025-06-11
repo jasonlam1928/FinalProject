@@ -6,30 +6,33 @@
 
 using Engine::IntPoint;
 
+
+
 PlayScene* Unit::getPlayScene() {
     return dynamic_cast<PlayScene*>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
-Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage)
-    : Sprite(img, x, y), Speed(speed), HP(hp), ActionValue(MaxActionValue), distance(distance), calc(false), damage(damage) {
+Unit::Unit(float x, float y, std::string img, float speed, float hp, int distance, float damage,std::string Label)
+    : Sprite(img, x, y), Speed(speed), HP(hp), distance(distance), calc(false), damage(damage), Label(Label), ActionValue(MaxActionValue) {
     gridPos = IntPoint(x / PlayScene::BlockSize, y / PlayScene::BlockSize);
     attackRange=2;
     MAXHP=HP;
 }
 
 bool Unit::UpdateActionValue(float deltaTime) {
-    ActionValue -= Speed;
+    ActionValue -= Speed*deltaTime;
+    //cout<<Speed<<""<<deltaTime<<endl;
     if (ActionValue <= 0) {
-        ActionValue += MaxActionValue;
+        ActionValue+=MaxActionValue;
         return true;
     }
     return false;
 }
 
 void Unit::DrawUI(){
-    const float barWidth = 200.0f;
-    const float barHeight = 10.0f;
-    const float offsetY = 20.0f;  // 血條往上移一點，不擋住角色
+    const float barWidth = 400.0f;
+    const float barHeight = 20.0f;
+    const float offsetY = 10.0f;  // 血條往上移一點，不擋住角色
     float healthPercent = static_cast<float>(HP) / MAXHP;
     float filledWidth = barWidth * healthPercent;
     int x=0;
@@ -134,15 +137,20 @@ void Unit::UpdateRadiusAnimation(float deltaTime) {
 
 void Unit::UnitHit(float UnitDamage){
     HP-=UnitDamage;
-    std::cout<<HP;
+    //std::cout<<HP;
     if(HP<=0){
-        getPlayScene()->Action.erase(this);
-        getPlayScene()->UnitGroup->RemoveObject(this->objectIterator);
+        auto PlayScene = getPlayScene();
+        auto it = std::find(PlayScene->Action.begin(),PlayScene->Action.end(), this);
+        if (it != PlayScene->Action.end()) {
+            PlayScene->Action.erase(it);
+        }
+        PlayScene->UnitGroup->RemoveObject(this->objectIterator);
     }
 }
 
 void Unit::MovetoPreview() {
     gridPos = previewPos;
+    calc=false;
 }
 
 void Unit::CancelPreview() {

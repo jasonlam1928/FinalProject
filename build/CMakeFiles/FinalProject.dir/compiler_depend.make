@@ -11611,6 +11611,7 @@ CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: C:/Users/jason/Downloads/Fi
   C:/allegro/include/allegro5/allegro.h \
   C:/allegro/include/allegro5/allegro_audio.h \
   C:/allegro/include/allegro5/allegro_font.h \
+  C:/allegro/include/allegro5/allegro_primitives.h \
   C:/allegro/include/allegro5/allegro_ttf.h \
   C:/allegro/include/allegro5/altime.h \
   C:/allegro/include/allegro5/base.h \
