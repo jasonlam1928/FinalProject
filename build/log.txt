@@ -21,7 +21,6 @@
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 120x40
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png
 [INFO] Loaded Resource<image>: Resource/images/play/Hover.png
-[INFO] Loaded Resource<image>: Resource/images/play/target.png
 [INFO] Loaded Resource<audio>: Resource/audios/astronomia.ogg
 [INFO] Created<sample_instance>: Resource/audios/astronomia.ogg
 [INFO] Loaded Resource<image>: Resource/images/lose/benjamin-happy.png

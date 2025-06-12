@@ -15,9 +15,9 @@ void LoseScene::Initialize() {
     int h = Engine::GameEngine::GetInstance().GetScreenSize().y;
     int halfW = w / 2;
     int halfH = h / 2;
-    int Score = getScore();
-    std::string Scoretext = std::to_string(Score);
-    AddNewObject(new Engine::Label("Your Score:" + Scoretext ,  "pirulen.ttf", 48, halfW, halfH / 4 - 60, 255, 255, 255, 255, 0.5, 0.5));
+    // int Score = score;
+    // std::string Scoretext = std::to_string(Score);
+    //AddNewObject(new Engine::Label("Your Score:" + Scoretext ,  "pirulen.ttf", 48, halfW, halfH / 4 - 60, 255, 255, 255, 255, 0.5, 0.5));
     AddNewObject(new Engine::Image("lose/benjamin-happy.png", halfW, halfH, 0, 0, 0.5, 0.5));
     AddNewObject(new Engine::Label("You Lose :(", "pirulen.ttf", 48, halfW, halfH / 4 + 10, 255, 255, 255, 255, 0.5, 0.5));
     Engine::ImageButton *btn;

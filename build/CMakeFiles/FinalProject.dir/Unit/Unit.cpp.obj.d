@@ -893,4 +893,5 @@ CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Label.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/GameEngine.hpp \
+  C:/Users/jason/Downloads/Final_project/./Engine/Resources.hpp \
   C:/allegro/include/allegro5/allegro_primitives.h

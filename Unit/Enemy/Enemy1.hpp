@@ -3,5 +3,6 @@
 class Knight : public Enemy {
 public:
     Knight(int x, int y);
-    void Act() override;
+    bool Act() override;
+    void chooseSkill() override;
 };

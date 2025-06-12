@@ -26800,6 +26800,7 @@ CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: C:/Users/jason/Downloads/Final_pr
   C:/Users/jason/Downloads/Final_project/Engine/IScene.hpp \
   C:/Users/jason/Downloads/Final_project/Engine/IntPoint.hpp \
   C:/Users/jason/Downloads/Final_project/Engine/Point.hpp \
+  C:/Users/jason/Downloads/Final_project/Engine/Resources.hpp \
   C:/Users/jason/Downloads/Final_project/Engine/Sprite.hpp \
   C:/Users/jason/Downloads/Final_project/Scene/PlayScene.hpp \
   C:/Users/jason/Downloads/Final_project/UI/Component/Image.hpp \

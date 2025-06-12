@@ -97,24 +97,18 @@ public:
     void Update(float deltaTime) override;
     void Draw() const override;
     void AttackUI()const;
+    void ChooseAbilityUI()const;
     void OnMouseDown(int button, int mx, int my) override;
     void OnMouseMove(int mx, int my) override;
     void OnMouseUp(int button, int mx, int my) override;
     void OnKeyDown(int keyCode) override;
     void OnKeyUp(int keyCode) override;
-    void Hit();
-    int GetMoney() const;
-    void EarnMoney(int money);
     void ReadMap();
     void ReadEnemyWave();
     void ConstructUI();
-    void UIBtnClicked(int id);
-    bool CheckSpaceValid(int x, int y);
-    void Scores();
-    void ClearPlace(int x, int y);
-    std::vector<std::vector<int>> CalculateBFSDistance();
-    pair<int,int> GetCamera();
-    // void ModifyReadMapTiles();
+    void DrawActionValue(const std::vector<Unit*>& sortedAction, int y, float iconSize, float cellW, float cellH, int showCount) const;
+    void AttackSystem();
+    void CalcAttackValue();
 
     mutable ALLEGRO_TRANSFORM Camera;
     vector<Unit*> Action;
@@ -129,17 +123,25 @@ public:
     bool waitingForConfirm = false;
     bool previewSelected = false;
     Engine::Point confirmTarget;  
-    Engine::ImageButton *btnConfirm, *btnCancel, *btnAttack;
+    Engine::ImageButton *btnConfirm, *btnAbilityCancel, *btnAttack;
     Unit *confirmUnit = nullptr;
 
     Unit* Defense;
     bool attackUIDraw=false;
+    bool ChooseAbilityDraw=false;
     float AttackUIVisibleTime = 0;
     bool attackUIActive = false;
 
     int actionValue = 100;
     bool active;
     float MoveTime;
+
+    mutable std::vector<std::pair<int, Engine::Point>> actionCellRects;
+    mutable int PlayerselectedSkillIndex = -1; // -1 代表未選
+    mutable int EnemyselectedSkillIndex = -1; // -1 代表未選
+    void SetDrawRadius(bool value);
+    bool isUnitInGroup(Unit* unit) const;
+    void RemoveUnit(Unit* unit);
 };
 
 int getScore();

@@ -4,11 +4,13 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 10, 5, 2, "Knight_01") {
-
+Knight::Knight(int x, int y) : Enemy("play/Knight_01.png", x, y, 10, 10, 5, 2, 100, "Knight_01") {
+    AddSkill({"Blade", 1, 5, 5, 0.2});
+    AddSkill({"LaserBlade", 1, 20, 10, 0.4});
 }
 
-void Knight::Act(){
+//SKILL:Name, Energy, Power, CritChance
+bool Knight::Act(){
     int closetDist=10000;
     int bestStep=10000;
     Engine::IntPoint bestMove=gridPos;
@@ -34,10 +36,37 @@ void Knight::Act(){
             
         }
     }
-    if(closetDist<=attackRange) target->UnitHit(Unit::damage);
+    if(closetDist<=attackRange){
+        PlayScene* scene = getPlayScene();
+        scene->Defense=target;
+        scene->btnAttack->Visible=false;
+        scene->SetDrawRadius(false);
+        scene->ChooseAbilityDraw=true;
+        scene->btnConfirm->Visible=true;
+        scene->waitingForConfirm=true;
+        gridPos.x=bestMove.x, gridPos.y=bestMove.y;
+        Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
+        calc=false;
+        return true;
+    }
     //cout<<Unit::damage;
     gridPos.x=bestMove.x, gridPos.y=bestMove.y;
     Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
     calc=false;
+    return false;
+}
+
+void Knight::chooseSkill(){
+    PlayScene* Scene = getPlayScene();
+    int maxEnergy = -1;
+    int bestSkillIndex = -1;
+    const auto& skills = GetSkills();
+    for (int i = 0; i < (int)skills.size(); ++i) {
+        if (Energy >= skills[i].energy && skills[i].energy > maxEnergy) {
+            maxEnergy = skills[i].energy;
+            bestSkillIndex = i;
+        }
+    }
+    Scene->EnemyselectedSkillIndex = bestSkillIndex;
 }
 

@@ -31,7 +31,8 @@
 PlayScene *Turret::getPlayScene() {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
-Turret::Turret(std::string img, float x, float y, float hp, float speed, int distance, float damage, std::string Label) : Unit(x, y, img, speed, hp, distance, damage, Label), distance(distance), speed(speed), hp(hp), damage(damage) {
+Turret::Turret(std::string img, float x, float y, int hp, float speed, int distance, int damage, int energy, std::string Label)
+    : Unit(x, y, img, speed, hp, distance, damage, energy, Label), distance(distance), speed(speed), hp(hp), damage(damage) {
     Maxhp=hp;
     attackRange=2;
 }
