@@ -101,6 +101,8 @@ void PlayScene::Initialize() {
 void PlayScene::AttackSystem(){
     if (!Processing || !isUnitInGroup(Processing)) return;
     if (!Defense || !isUnitInGroup(Defense)) return;
+    lastAttackDamage = 0;
+    lastCounterDamage = 0;
     if(Processing->IsPlayer()){
         Processing->MovetoPreview();
         Processing->CancelPreview();
@@ -108,12 +110,14 @@ void PlayScene::AttackSystem(){
         int damage = Processing->GetSkills()[PlayerselectedSkillIndex].power;
         Processing->Energy-=Processing->GetSkills()[PlayerselectedSkillIndex].energy;
         Defense->UnitHit(damage);
+        lastAttackDamage = damage;
         // 防呆：UnitHit 可能導致 Defense 被移除
         if (!Defense || !isUnitInGroup(Defense) || Defense->HP<=0) return;
         Defense->chooseSkill();
         int EnemyDamage = Defense->GetSkills()[EnemyselectedSkillIndex].power;
         Defense->Energy-=Defense->GetSkills()[EnemyselectedSkillIndex].energy;
         Processing->UnitHit(EnemyDamage);
+        lastCounterDamage = EnemyDamage;
         // 防呆：UnitHit 可能導致 Processing 被移除
         if (!Processing || !isUnitInGroup(Processing)) return;
     }
@@ -122,11 +126,13 @@ void PlayScene::AttackSystem(){
         int EnemyDamage = Processing->GetSkills()[EnemyselectedSkillIndex].power;
         Processing->Energy-=Processing->GetSkills()[EnemyselectedSkillIndex].energy;
         Defense->UnitHit(EnemyDamage);
+        lastAttackDamage = EnemyDamage;
         // 防呆：UnitHit 可能導致 Defense 被移除
         if (!Defense || !isUnitInGroup(Defense) || Defense->HP<=0) return;
         int damage = Defense->GetSkills()[PlayerselectedSkillIndex].power;
         Defense->Energy-=Defense->GetSkills()[PlayerselectedSkillIndex].energy;
         Processing->UnitHit(damage);
+        lastCounterDamage = damage;
         // 防呆：UnitHit 可能導致 Processing 被移除
         if (!Processing || !isUnitInGroup(Processing)) return;
     }
@@ -151,9 +157,6 @@ void PlayScene::ConfirmClick(){
     
     if(ChooseAbilityDraw){
         AttackSystem();
-        ChooseAbilityDraw=false;
-        waitingForConfirm=false;
-        previewSelected = false;
         btnConfirm->Visible = btnAbilityCancel->Visible = btnAttack->Visible=false;
         Processing->Reset();
         attackUIActive=true;
@@ -186,6 +189,15 @@ void PlayScene::Terminate() {
     AudioHelper::StopBGM(bgmId);
     AudioHelper::StopSample(deathBGMInstance);
     deathBGMInstance = std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE>();
+    if (attackUIFont) {
+        al_destroy_font(attackUIFont);
+        attackUIFont = nullptr;
+    }
+    if (font20) { al_destroy_font(font20); font20 = nullptr; }
+    if (font22) { al_destroy_font(font22); font22 = nullptr; }
+    if (font28) { al_destroy_font(font28); font28 = nullptr; }
+    if (font32) { al_destroy_font(font32); font32 = nullptr; }
+    if (font48) { al_destroy_font(font48); font48 = nullptr; }
     IScene::Terminate();
 }
 void PlayScene::Update(float deltaTime) {
@@ -320,6 +332,9 @@ void PlayScene::Update(float deltaTime) {
             attackUIDraw = false;
             attackUIActive = false;
             btnAttack->Visible = false;
+            ChooseAbilityDraw=false;
+            waitingForConfirm=false;
+            previewSelected = false;
             // 防呆：Processing 失效檢查
             if(Processing && !isUnitInGroup(Processing)) Processing = nullptr;
             if(Processing && Processing->HP<=0){
@@ -334,7 +349,6 @@ void PlayScene::Update(float deltaTime) {
             if(Defense && !isUnitInGroup(Defense)) Defense = nullptr;
             Processing=nullptr;
             drawRadius=true;
-            cout<<"click";
         }
 }
 }
@@ -374,9 +388,9 @@ void PlayScene::Draw() const {
         return a->ActionValue < b->ActionValue;
     });
     int y = 100;
-    const float iconSize = 32.0f;
-    const float cellW = 120.0f;
-    const float cellH = iconSize + 4;
+    const float iconSize = 120.0f;
+    const float cellW = 100.0f;
+    const float cellH = 32 + 4;
     int showCount = std::min(10, static_cast<int>(sortedAction.size()));
     DrawActionValue(sortedAction, y, iconSize, cellW, cellH, showCount);
     // 儲存 actionCellRects 供 OnMouseDown 使用
@@ -408,18 +422,16 @@ void PlayScene::DrawActionValue(const std::vector<Unit*>& sortedAction, int y, f
             float drawH = srcH * scale;
             float drawX = 10;
             float drawY = y;
-            al_draw_scaled_bitmap(avatar, 0, 0, srcW, srcH, drawX, drawY, drawW, drawH, 0);
+            al_draw_scaled_bitmap(avatar, 100, 50, srcW, srcH, drawX, drawY, drawW, drawH, 0);
         }
         // 畫行動值（*10並取整數）
         int value = static_cast<int>(unit->ActionValue * 10);
         std::string text = std::to_string(value);
-        ALLEGRO_FONT* font = al_load_ttf_font("Resource/fonts/pirulen.ttf", 20, 0);
-        if (!font) font = al_create_builtin_font();
-        al_draw_text(font, al_map_rgb(0,0,0), 10 + iconSize + 18, y + 4, 0, text.c_str());
-        al_destroy_font(font);
+        ALLEGRO_FONT* font = font20;
+        al_draw_text(font, al_map_rgb(0,0,0), 10 + 32 + 18, y + 4, 0, text.c_str());
         // 儲存格子區域
         this->actionCellRects.push_back({i, Engine::Point(6, y-2)});
-        y += iconSize + 12;
+        y += 32 + 12;
     }
 }
 
@@ -456,8 +468,7 @@ void PlayScene::AttackUI() const{
     if(!ChooseAbilityDraw)btnAttack->Visible=true;
     char hpText[32];
     snprintf(hpText, sizeof(hpText), "%d / %d", Defense->HP, Defense->MAXHP);
-    ALLEGRO_FONT* font = al_load_ttf_font("Resource/fonts/pirulen.ttf", 32, 0);
-    if (!font) font = al_create_builtin_font();
+    ALLEGRO_FONT* font = font32;
     int textWidth = al_get_text_width(font, hpText);
     int textHeight = al_get_font_line_height(font);
     al_draw_text(font, al_map_rgb(255,255,255), barX + barWidth/2 - textWidth/2, y + offsetY*4 - textHeight-2, 0, hpText);
@@ -472,13 +483,22 @@ void PlayScene::AttackUI() const{
     // 能量數值
     char energyText[32];
     snprintf(energyText, sizeof(energyText), "%d / %d", Defense->Energy, Defense->MaxEnergy);
-    ALLEGRO_FONT* energyFont = al_load_ttf_font("Resource/fonts/pirulen.ttf", 18, 0);
-    if (!energyFont) energyFont = al_create_builtin_font();
+    ALLEGRO_FONT* energyFont = font20;
     int energyTextWidth = al_get_text_width(energyFont, energyText);
     int energyTextHeight = al_get_font_line_height(energyFont);
     al_draw_text(energyFont, al_map_rgb(255,255,255), barX + barWidth/2 - energyTextWidth/2, y + energyOffsetY + (energyBarHeight-energyTextHeight)/2, 0, energyText);
-    al_destroy_font(font);
-    al_destroy_font(energyFont);
+    // 顯示本次攻擊與反擊造成的傷害
+    if (attackUIActive && (lastAttackDamage > 0 || lastCounterDamage > 0)) {
+        ALLEGRO_FONT* bigFont = font48;
+        int textY = y + offsetY + barHeight + 40;
+        if (lastAttackDamage > 0) {
+            al_draw_textf(bigFont, al_map_rgb(255, 0, 0), barX + barWidth/2, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastAttackDamage);
+            textY += 56;
+        }
+        if (lastCounterDamage > 0) {
+            al_draw_textf(bigFont, al_map_rgb(255, 80, 80), barX + barWidth/2, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastCounterDamage);
+        }
+    }
 }
 
 void PlayScene::ChooseAbilityUI() const{
@@ -543,15 +563,13 @@ void PlayScene::ChooseAbilityUI() const{
     for (int c = 1; c < 5; ++c) colXs[c] = colXs[c-1] + colWs[c-1];
     // 標題列
     const char* headers[colCount] = {"Name", "Power", "Range", "Energy", "Crit Rate"};
-    ALLEGRO_FONT* headerFont = al_load_ttf_font("Resource/fonts/pirulen.ttf", 22, 0);
-    if (!headerFont) headerFont = al_create_builtin_font();
+    ALLEGRO_FONT* headerFont = font22;
     float headerY = startY - skillCellH;
     for (int c = 0; c < colCount; ++c) {
         al_draw_filled_rectangle(colXs[c], headerY, colXs[c] + colWs[c], headerY + skillCellH, al_map_rgb(30, 30, 30));
         al_draw_rectangle(colXs[c], headerY, colXs[c] + colWs[c], headerY + skillCellH, al_map_rgb(180, 180, 180), 2);
         al_draw_text(headerFont, al_map_rgb(255,255,0), colXs[c] + colWs[c]/2, headerY + 14, ALLEGRO_ALIGN_CENTRE, headers[c]);
     }
-    al_destroy_font(headerFont);
     // 技能內容
     for (int i = 0; i < maxSkills; ++i) {
         float cellY = startY + i * (skillCellH + skillCellGap);
@@ -565,8 +583,7 @@ void PlayScene::ChooseAbilityUI() const{
         }
         if (i < (int)skills.size()) {
             const auto& skill = skills[i];
-            ALLEGRO_FONT* cellFont = al_load_ttf_font("Resource/fonts/pirulen.ttf", 20, 0);
-            if (!cellFont) cellFont = al_create_builtin_font();
+            ALLEGRO_FONT* cellFont = font20;
             // 名稱
             al_draw_text(cellFont, al_map_rgb(255,255,255), colXs[0] + colWs[0]/2, cellY + 14, ALLEGRO_ALIGN_CENTRE, skill.name.c_str());
             // Power
@@ -577,7 +594,6 @@ void PlayScene::ChooseAbilityUI() const{
             al_draw_textf(cellFont, al_map_rgb(255,255,200), colXs[3] + colWs[3]/2, cellY + 14, ALLEGRO_ALIGN_CENTRE, "%d", skill.energy);
             // 暴擊率
             al_draw_textf(cellFont, al_map_rgb(255,200,200), colXs[4] + colWs[4]/2, cellY + 14, ALLEGRO_ALIGN_CENTRE, "%d%%", (int)(skill.critRate*100));
-            al_destroy_font(cellFont);
         }
     }
 }
@@ -808,6 +824,24 @@ void PlayScene::ConstructUI() {
     UIGroup->AddNewObject(btnConfirm);
     UIGroup->AddNewObject(btnAbilityCancel);
     UIGroup->AddNewObject(btnAttack);
+
+    // 載入攻擊傷害顯示字型
+    if (!attackUIFont) {
+        attackUIFont = al_load_ttf_font("Resource/fonts/pirulen.ttf", 28, 0);
+        if (!attackUIFont) attackUIFont = al_create_builtin_font();
+    }
+    // 統一載入所有 UI 會用到的字型
+    if (!font20) font20 = al_load_ttf_font("Resource/fonts/pirulen.ttf", 20, 0);
+    if (!font22) font22 = al_load_ttf_font("Resource/fonts/pirulen.ttf", 22, 0);
+    if (!font28) font28 = al_load_ttf_font("Resource/fonts/pirulen.ttf", 28, 0);
+    if (!font32) font32 = al_load_ttf_font("Resource/fonts/pirulen.ttf", 32, 0);
+    if (!font48) font48 = al_load_ttf_font("Resource/fonts/pirulen.ttf", 48, 0);
+    // fallback
+    if (!font20) font20 = al_create_builtin_font();
+    if (!font22) font22 = al_create_builtin_font();
+    if (!font28) font28 = al_create_builtin_font();
+    if (!font32) font32 = al_create_builtin_font();
+    if (!font48) font48 = al_create_builtin_font();
 }
 
 void PlayScene::SetDrawRadius(bool value) {

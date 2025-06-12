@@ -93,6 +93,12 @@ void Unit::Reset(){
     if (Energy > MaxEnergy) {
         Energy = MaxEnergy;
     }
+    for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
+        Unit* unit = dynamic_cast<Unit*>(obj);
+
+        unit->calc=false;
+    }
+    
 }
 
 

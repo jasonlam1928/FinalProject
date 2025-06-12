@@ -142,6 +142,16 @@ public:
     void SetDrawRadius(bool value);
     bool isUnitInGroup(Unit* unit) const;
     void RemoveUnit(Unit* unit);
+    int lastAttackDamage = 0;
+    int lastCounterDamage = 0;
+
+    ALLEGRO_FONT* attackUIFont = nullptr;
+    ALLEGRO_FONT* bigFont = nullptr;
+    ALLEGRO_FONT* font20 = nullptr;
+    ALLEGRO_FONT* font22 = nullptr;
+    ALLEGRO_FONT* font28 = nullptr;
+    ALLEGRO_FONT* font32 = nullptr;
+    ALLEGRO_FONT* font48 = nullptr;
 };
 
 int getScore();
