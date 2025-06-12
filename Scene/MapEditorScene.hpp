@@ -18,12 +18,16 @@ private:
     std::vector<std::vector<int>> mapState;
     float cameraX = 0, cameraY = 0;
     bool dragging = false;
+    bool placing = false;
+    int lastPlacedGridX = -1, lastPlacedGridY = -1;
     int dragStartX = 0, dragStartY = 0;
     float cameraStartX = 0, cameraStartY = 0;
     int selectedTileIndex = 0;
     int selectedEnemyIndex = 0;
     std::vector<std::string> tileTypes = {"play/floor.png", "play/dirt.png"}; /*Add your tile image paths*/
     std::vector<int> enemyTypes = {1, 2};
+    std::vector<std::tuple<int, float, float>> unitData;
+    static bool removeButtonSelected;
 
 public:    
     int MapId = 1;
@@ -35,6 +39,10 @@ public:
     void OnMouseMove(int mx, int my) override;
     void OnMouseUp(int button, int mx, int my) override;
     void OnMouseDown(int button, int mx, int my) override;
+    void OnKeyDown(int keyCode) override;
+    void RedrawTileMap();
+    void SaveMapAndUnits();
+    void RemoveAtGrid(int gridX, int gridY);
 };
 
 #endif   // MAPEDITORSCENE_HPP
