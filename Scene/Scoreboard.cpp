@@ -40,7 +40,7 @@ void Scoreboard::UpdateScorePage() {
 
     for (int i = cur; i < cur + 5 && i < counts; ++i) {
         string rank = to_string(i + 1);
-        auto* label = new Engine::Label(rank + " " + playersRecord[i].name + " " + to_string(playersRecord[i].score) + "   "+ playersRecord[i].time,
+        auto* label = new Engine::Label(rank + " " + playersRecord[i].name + " " + "stage:"+ to_string(playersRecord[i].stage) + " " + to_string(playersRecord[i].score) + "   "+ playersRecord[i].time,
                                         "pirulen.ttf", 24, halfW, 150 + 80 * (i - cur),
                                         255, 255, 255, 255, 0.5, 0.5);
         AddNewObject(label);
@@ -67,13 +67,15 @@ void Scoreboard::Initialize() {
     string name;
     string time;
     int score;
+    int stage;
     
     if(file.is_open()){
         cout<<"Load";
-        while(file>>name>>score>>time){
+        while(file>>name>>stage>>score>>time){
             counts++;
             PlayerRecord p;
             p.name = name;
+            p.stage = stage;
             p.score = score;
             p.time = time;
             playersRecord.push_back(p);

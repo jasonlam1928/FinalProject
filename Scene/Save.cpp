@@ -29,7 +29,10 @@
 using namespace std;
 
 bool comparePlayers(const PlayerRecord& a, const PlayerRecord& b) {
-    if (a.score != b.score) {
+    if(a.stage!=b.stage){
+        return a.stage>b.stage;
+    }
+    else if (a.score != b.score) {
         return a.score < b.score;
     }
     return a.name > b.name;
@@ -71,11 +74,13 @@ void Save::SaveRecord(int stage) {
         string name;
         string times;
         int score;
+        int stage;
     
     if(file.is_open()){
-        while(file>>name>>score>>times){
+        while(file>>name>>stage>>score>>times){
             PlayerRecord p;
             p.name = name;
+            p.stage = stage;
             p.score = score;
             p.time = times;
             playersRecord.push_back(p);
@@ -86,6 +91,8 @@ void Save::SaveRecord(int stage) {
         PlayerRecord p;
         p.name = PlayerName;
         p.score = getScore();
+        PlayScene playScene;
+        p.stage = playScene.MapId;
         stringstream time;
         std::time_t now = std::time(nullptr);
         std::tm* localTime = std::localtime(&now);

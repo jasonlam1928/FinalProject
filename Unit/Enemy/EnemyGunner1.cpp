@@ -4,7 +4,7 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-EnemyGunner1::EnemyGunner1(int x, int y) : Enemy("play/EnemyBase.png","play/GunnerIcon.png","play/KnightIdle.png", x, y, 10, 10, 5, 2, 200, 2, "Knight_01") {
+EnemyGunner1::EnemyGunner1(int x, int y) : Enemy("play/EnemyBase.png","play/GunnerIcon.png","play/GunnerIdle.png", x, y, 10, 10, 5, 2, 200, 2, "Knight_01") {
     AddSkill({"Shoot", 2, 50, 5, 0.2});
     AddSkill({"Defense", 1, 0, 0, 0});
     attackRange=2;

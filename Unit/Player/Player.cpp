@@ -28,17 +28,18 @@
 
 
 
-PlayScene *Player::getPlayScene() {
+PlayScene *Player::getPlayScene() const{
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 Player::Player(std::string base, std::string img,std::string fight_img,  float x, float y, int hp, float speed, int distance, int damage, int energy, int attackRange,std::string Label)
-    : Unit(x, y, base, img, fight_img,  speed, hp, distance, damage, energy, attackRange, Label), distance(distance), speed(speed), hp(hp), damage(damage), attackRange(attackRange){
+    : Unit(x, y, base, img, fight_img,  speed, hp, distance, damage, energy, attackRange, Label), distance(distance), speed(speed), hp(hp), damage(damage), attackRange(attackRange) {
     Maxhp=hp;
 }
 
 void Player::Update(float deltaTime) {
     PlayScene* scene = getPlayScene();
     imgBase.Move(Sprite::Position.x, Sprite::Position.y);
+    Select.Move(Sprite::Position.x, Sprite::Position.y);
 }
 // Turret.cpp
 bool Player::TryMoveNearTarget(Unit* target) {
@@ -60,48 +61,51 @@ bool Player::TryMoveNearTarget(Unit* target) {
             for(int i=0;i<4;i++){
                 Engine::IntPoint nxt=cur;
                 bool valid=true;
-                 nxt.x+=dx[i];
-                 nxt.y+=dy[i];
-                 
-                 if(!MoveValid.count(nxt)) continue;
-                 
-                 if(nxt.x<0||nxt.x>=PlayScene::MapWidth-1||nxt.y<0||nxt.y>=PlayScene::MapHeight) continue;
-                 
-                 if(visited.count(nxt)) continue;
-                 for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
+                nxt.x+=dx[i];
+                nxt.y+=dy[i];
+
+                if(!MoveValid.count(nxt)) continue;
+
+                if(nxt.x<=0||nxt.x>=PlayScene::MapWidth||nxt.y<=0||nxt.y>=PlayScene::MapHeight) continue;
+
+                if(visited.count(nxt)) continue;
+                for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
                     Unit* unit = dynamic_cast<Unit*>(obj);
                     if(nxt==unit->gridPos&&!unit->IsPlayer()){
                         valid=false;
                         break;
                     }
-                 }
-                 
+                }
 
-                 // 優先順序: step+1==attackRange > (radiusStep[nxt]<bestUnitStep) > (step+1<=attackRange)
-                 if (step+1 == attackRange && MoveValid[nxt]) {
+                int stepToUse = step + 1;
+                // 如果遇到minirock，步數再加1
+                if (getPlayScene()->mapState[nxt.y][nxt.x] == 2) { // 假設2代表minirock
+                    stepToUse += 1;
+                }
+
+                // 優先順序: step+1==attackRange > (radiusStep[nxt]<bestUnitStep) > (step+1<=attackRange)
+                if (stepToUse == attackRange && MoveValid[nxt]) {
                     if (radiusStep[nxt] < bestUnitStep) {
-                        bestDistance = step+1;
+                        bestDistance = stepToUse;
                         bestnxt = nxt;
                         bestUnitStep = radiusStep[nxt];
                     }
-                 } else if (radiusStep[nxt] < bestUnitStep && MoveValid[nxt] && step+1 <= attackRange) {
+                } else if (radiusStep[nxt] < bestUnitStep && MoveValid[nxt] && stepToUse <= attackRange) {
                     bestnxt = nxt;
                     bestUnitStep = radiusStep[nxt];
-                 } else if (MoveValid[nxt] && step+1 <= attackRange) {
+                } else if (MoveValid[nxt] && stepToUse <= attackRange) {
                     bestnxt = nxt;
-                 }
-                 if(step>attackRange-1&&bestUnitStep!=INT_MAX)continue;
-                 if(nxt==this->previewPos){
-                    getPlayScene()->distance = step+1;
+                }
+                if(stepToUse>attackRange-1&&bestUnitStep!=INT_MAX)continue;
+                if(nxt==this->previewPos){
+                    getPlayScene()->distance = stepToUse;
                     return true;
-                 } 
-                 if(!valid) continue;
-                 q.push({nxt, step+1});
-                 visited.insert(nxt);
-                 
+                } 
+                if(!valid) continue;
+                q.push({nxt, stepToUse});
+                visited.insert(nxt);
+
             }
-           
-            
         }
     }
     if (bestnxt == Engine::IntPoint(0, 0)) return false;
@@ -154,6 +158,9 @@ void Player::Hit() {
 void Player::Draw() const {
     imgBase.Draw();
     Sprite::Draw();
+    if(getPlayScene()->Processing==this){
+        Select.Draw();
+    }
 }
 
 

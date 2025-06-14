@@ -42,9 +42,10 @@ void MapEditorScene::Initialize() {
 
     // Initialize tileTypes before using it
     tileTypes = {
-        "play/dirt.png",   // 0
-        "play/floor.png", // 1
-        "play/sand.png"  // 2 (or another image if you have more types)
+        "play/GrassTile.png",   // 0
+        "play/PlacableTile.png", // 1
+        "play/Rock.png",
+        "play/MiniRock.png"  // 2 (or another image if you have more types)
     };
 
     // Load map (reuse PlayScene logic)
@@ -82,8 +83,6 @@ void MapEditorScene::Initialize() {
             int num = mapState[i][j];
             if (num >= 0 && num < static_cast<int>(tileTypes.size()))
                 TileMapGroup->AddNewObject(new Engine::Image(tileTypes[num], j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-            else
-                TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
         }
     }
 
@@ -496,7 +495,7 @@ void MapEditorScene::OnMouseDown(int button, int mx, int my) {
                 if (removeButtonSelected) {
                     RemoveAtGrid(gridX, gridY);
                 } else if (selectedEnemyIndex >= 0 && selectedEnemyIndex < static_cast<int>(enemyTypes.size())) {
-                    if (gridX >= 0 && gridX < MapWidth && gridY >= 0 && gridY < MapHeight) {
+                    if (gridX > 0 && gridX < MapWidth && gridY > 0 && gridY < MapHeight) {
                         auto it = std::remove_if(unitData.begin(), unitData.end(), [gridX, gridY](const std::tuple<int, float, float>& unit) {
                             int ux = static_cast<int>(std::get<1>(unit)) - 1;
                             int uy = static_cast<int>(std::get<2>(unit)) - 1;
@@ -565,7 +564,7 @@ void MapEditorScene::OnMouseMove(int mx, int my) {
                 if (removeButtonSelected) {
                     RemoveAtGrid(gridX, gridY);
                 } else if (selectedEnemyIndex >= 0 && selectedEnemyIndex < static_cast<int>(enemyTypes.size())) {
-                    if (gridX >= 0 && gridX < MapWidth && gridY >= 0 && gridY < MapHeight) {
+                    if (gridX > 0 && gridX < MapWidth && gridY > 0 && gridY < MapHeight) {
                         auto it = std::remove_if(unitData.begin(), unitData.end(), [gridX, gridY](const std::tuple<int, float, float>& unit) {
                             int ux = static_cast<int>(std::get<1>(unit)) - 1;
                             int uy = static_cast<int>(std::get<2>(unit)) - 1;

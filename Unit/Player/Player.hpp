@@ -22,7 +22,7 @@ protected:
     int hp;
     int attackRange;
     float damage;
-    PlayScene *getPlayScene();
+    PlayScene *getPlayScene() const;
     // Reference: Design Patterns - Factory Method.
 public:
     bool Enabled = true;

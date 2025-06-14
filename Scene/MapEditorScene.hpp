@@ -25,7 +25,7 @@ private:
     float cameraStartX = 0, cameraStartY = 0;
     int selectedTileIndex = 0;
     int selectedEnemyIndex = 0;
-    std::vector<std::string> tileTypes = {"play/floor.png", "play/dirt.png"}; /*Add your tile image paths*/
+    std::vector<std::string> tileTypes = {"play/GrassTile.png", "play/PlacableTile.png", "play/Rock.png"}; /*Add your tile image paths*/
     std::vector<int> enemyTypes = {1, 2, 3, 4};
     std::vector<std::tuple<int, float, float>> unitData;
     static bool removeButtonSelected;

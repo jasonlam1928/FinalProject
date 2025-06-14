@@ -58,9 +58,10 @@ protected:
 
 public:
     enum TileType {
-        TILE_DIRT,
-        TILE_FLOOR,
-        TILE_SAND
+        TILE_GRASS,
+        TILE_PLACEABLE,
+        TILE_ROCK,
+        TILE_MINIROCK
     };
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;

@@ -21,6 +21,7 @@ bool EnemyKnight1::Act(){
         for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
             Unit* unit = dynamic_cast<Unit*>(obj);
             if(unit->IsPlayer()){
+                if(unit->gridPos == r) continue;
                 int dist = abs(r.x - unit->gridPos.x)+abs(r.y - unit->gridPos.y);
                 if(dist<closetDist){
                     target = unit;

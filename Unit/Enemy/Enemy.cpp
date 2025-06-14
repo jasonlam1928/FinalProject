@@ -19,12 +19,12 @@
 #include "UI/Component/HitLabel.hpp"
 
 int count=0;
-PlayScene *Enemy::getPlayScene() {
+PlayScene *Enemy::getPlayScene() const {
     return dynamic_cast<PlayScene *>(Engine::GameEngine::GetInstance().GetActiveScene());
 }
 
 Enemy::Enemy(std::string base, std::string img, std::string fight_img, float x, float y, int hp, float speed, int distance, int damage, int energy, int attackRange,std::string Label)
-    : Unit(x, y, base, img, fight_img, speed, hp, distance, damage, energy,attackRange, Label), distance(distance), speed(speed), hp(hp), damage(damage), Label(Label){
+    : Unit(x, y, base, img, fight_img, speed, hp, distance, damage, energy,attackRange, Label), distance(distance), speed(speed), hp(hp), damage(damage), Label(Label) {
     Maxhp=hp;
     img=img;
 }
@@ -36,9 +36,14 @@ void Enemy::Hit(float damage, std::string Label) {
 void Enemy::Update(float deltaTime) {
     PlayScene* scene = getPlayScene();
     imgBase.Move(Sprite::Position.x, Sprite::Position.y);
+    Select.Move(Sprite::Position.x, Sprite::Position.y);
+    
 }
 void Enemy::Draw() const {
     imgBase.Draw();
     Sprite::Draw();
+    if(getPlayScene()->Processing==this){
+        Select.Draw();
+    }
 }
 

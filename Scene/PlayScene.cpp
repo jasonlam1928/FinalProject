@@ -122,7 +122,7 @@ void PlayScene::Initialize() {
 
     // 初始化開始遊戲按鈕
     if (!btnStartGame) {
-        btnStartGame = new Engine::ImageButton("play/Idle.png", "play/Hover.png", 700, WindowSize.second - 120, 200, 60);
+        btnStartGame = new Engine::ImageButton("play/ConfirmButtonIdle.png", "play/ConfirmButtonHover.png", 700, WindowSize.second - 120, 100, 100);
         btnStartGame->SetOnClickCallback([this]() {
             if (isPlacingUnits && placedUnits.size() > 0) {
                 isPlacingUnits = false;
@@ -642,7 +642,7 @@ void PlayScene::DrawActionValue(const std::vector<Unit*>& sortedAction, int y, f
             float drawW = srcW * scale;
             float drawH = srcH * scale;
             float drawX = 10;
-            float drawY = y;
+            float drawY = y-10;
             al_draw_scaled_bitmap(avatar, 0, 0, srcW, srcH, drawX, drawY, drawW, drawH, 0);
         }
         // 畫行動值（*10並取整數）
@@ -1054,7 +1054,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
         int gridY = worldY / BlockSize;
         std::cout << "[DEBUG] OnMouseUp: mx=" << mx << ", my=" << my << ", worldX=" << worldX << ", worldY=" << worldY << std::endl;
         std::cout << "[DEBUG] OnMouseUp: gridX=" << gridX << ", gridY=" << gridY << ", mapWidth=" << mapWidth << ", mapHeight=" << mapHeight << std::endl;
-        if (gridX >= 0 && gridX < mapWidth && gridY >= 0 && gridY < mapHeight) {
+        if (gridX > 0 && gridX < mapWidth && gridY > 0 && gridY < mapHeight) {
             std::cout << "[DEBUG] OnMouseUp: mapState[" << gridY << "][" << gridX << "]=" << mapState[gridY][gridX] << std::endl;
             // 檢查是否有其他 unit 已佔用該格
             bool occupied = false;
@@ -1063,7 +1063,7 @@ void PlayScene::OnMouseUp(int button, int mx, int my) {
                 if (u->gridPos.x == gridX && u->gridPos.y == gridY) occupied = true;
             }
             std::cout << "[DEBUG] OnMouseUp: occupied=" << occupied << std::endl;
-            if (mapState[gridY][gridX] == TILE_FLOOR && !occupied) {
+            if (mapState[gridY][gridX] == TILE_PLACEABLE && !occupied) {
                 draggingUnit->Position.x = gridX * BlockSize + BlockSize / 2;
                 draggingUnit->Position.y = gridY * BlockSize + BlockSize / 2;
                 draggingUnit->gridPos = Engine::IntPoint(gridX, gridY);
@@ -1138,6 +1138,7 @@ void PlayScene::ReadMap() {
             case '0': mapData.push_back(0); break;
             case '1': mapData.push_back(1); break;
             case '2': mapData.push_back(2); break;
+            case '3': mapData.push_back(3); break;
             case '\n':
             case '\r':
                 break;
@@ -1152,16 +1153,20 @@ void PlayScene::ReadMap() {
             // 設定 tile 狀態
             switch (num) {
                 case 0:
-                    mapState[i][j] = TILE_DIRT;
-                    TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    mapState[i][j] = TILE_GRASS;
+                    TileMapGroup->AddNewObject(new Engine::Image("play/GrassTile.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
                     break;
                 case 1:
-                    mapState[i][j] = TILE_FLOOR;
-                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    mapState[i][j] = TILE_PLACEABLE;
+                    TileMapGroup->AddNewObject(new Engine::Image("play/PlacableTile.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
                     break;
                 case 2:
-                    mapState[i][j] = TILE_SAND; // 你要在 enum TileType 加 TILE_SAND
-                    TileMapGroup->AddNewObject(new Engine::Image("play/sand.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    mapState[i][j] = TILE_ROCK; // 你要在 enum TileType 加 TILE_SAND
+                    TileMapGroup->AddNewObject(new Engine::Image("play/Rock.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 3:
+                    mapState[i][j] = TILE_MINIROCK; // 你要在 enum TileType 加 TILE_SAND
+                    TileMapGroup->AddNewObject(new Engine::Image("play/MiniRock.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
                     break;
                 default:
                     break;
@@ -1184,7 +1189,7 @@ void PlayScene::ReadEnemyWave() {
 void PlayScene::ConstructUI() {
     float screenW = Engine::GameEngine::GetInstance().GetScreenSize().x;
     float screenH = Engine::GameEngine::GetInstance().GetScreenSize().y;
-    btnConfirm = new Engine::ImageButton("play/Idle.png", "play/Hover.png",0, 0, 120, 40);
+    btnConfirm = new Engine::ImageButton("play/ConfirmButtonIdle.png", "play/ConfirmButtonHover.png",0, 0, 120, 120);
     btnConfirm->SetOnClickCallback(std::bind(&PlayScene::ConfirmClick, this)) ;   
     UIGroup->AddNewControlObject(btnConfirm);                                 
     btnAbilityCancel = new Engine::ImageButton("play/CancelButtonIdle.png",  "play/CancelButtonHover.png",0, 0, 120, 120);
@@ -1197,10 +1202,10 @@ void PlayScene::ConstructUI() {
 
 
     // 新增鏟子（刪除）按鈕
-    btnShovel = new Engine::ImageButton("play/Idle.png",  "play/Hover.png", 50, 50, 80, 80);
+    btnShovel = new Engine::ImageButton("play/ShovelButtonIdle.png",  "play/ShovelButtonHover.png", 50, 50, 80, 80);
     btnShovel->SetOnClickCallback([this]() {
         isShovelMode = !isShovelMode;
-        btnShovel->bmp = Engine::Resources::GetInstance().GetBitmap(isShovelMode ? "play/Idle.png" : "play/Hover.png");
+        btnShovel->bmp = Engine::Resources::GetInstance().GetBitmap(isShovelMode ? "play/ShovelButtonIdle.png" : "play/ShovelButtonHover.png");
     });
     UIGroup->AddNewControlObject(btnShovel);
 

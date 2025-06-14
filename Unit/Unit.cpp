@@ -14,7 +14,8 @@ PlayScene* Unit::getPlayScene() {
 }
 
 Unit::Unit(float x, float y,std::string base, std::string img, std::string fight_img, float speed, int hp, int distance, int damage, int energy, int attackRange, std::string Label)
-    : Sprite(img, x, y),imgBase(base, x, y),fight_img(fight_img),Speed(speed), HP(hp), distance(distance), calc(false), damage(damage), MaxEnergy(energy),Energy(energy/4), Label(Label), ActionValue(MaxActionValue/speed), img(img), attackRange(attackRange) {
+    : Sprite(img, x, y), imgBase(base, x, y), fight_img(fight_img), Speed(speed), HP(hp), distance(distance), calc(false), damage(damage), MaxEnergy(energy), Energy(energy/4), Label(Label), ActionValue(MaxActionValue/speed), img(img), attackRange(attackRange), Select("play/Selected.png", x, y)
+{
     gridPos = IntPoint(x / PlayScene::BlockSize, y / PlayScene::BlockSize);
     MAXHP=HP;
 }
@@ -102,7 +103,10 @@ void Unit::Reset(){
 
 
 void Unit::Update(float deltaTime){
-    
+    if(this==getPlayScene()->Processing){
+        Select.Move(previewPos.x, previewPos.y);
+        Select.Draw();
+    }
 }
 
 
@@ -111,58 +115,64 @@ void Unit::drawRadius(int cameraX, int cameraY) {
         int dx[4] = {0, 0, 1, -1};
         int dy[4] = {1, -1, 0, 0};
 
-        std::queue<IntPoint> q;
+        std::queue<pair<IntPoint,int>> q;
         std::set<IntPoint> visited;
         std::map<IntPoint, int> level;
         std::map<IntPoint, bool> valid;
 
-        q.push(gridPos);
+        q.push({gridPos, 0});
         visited.insert(gridPos);
         level[gridPos] = 0;
         valid[gridPos] = true;
-
+        PlayScene scene;
+        int mapwidth = scene.mapWidth;
+        int mapheight = scene.mapHeight;
         int step = 0;
-        while (!q.empty() && step < distance+attackRange) {
+        while (!q.empty() && step < distance + attackRange) {
             int sz = q.size();
             for (int i = 0; i < sz; ++i) {
-                IntPoint cur = q.front(); q.pop();
-                for (int d = 0; d < 4; ++d) {
-                    IntPoint nxt = cur + IntPoint(dx[d], dy[d]);
-                    bool outOfRange = false;
-                    if (visited.count(nxt)) continue;
-                    // 修正：用 enum 判斷 TILE_SAND
-                    if(getPlayScene()->mapState[nxt.y][nxt.x] == PlayScene::TILE_SAND){
-                        valid[nxt]=false;
-                        outOfRange = true;
-                    }
+            auto [cur, curStep] = q.front(); q.pop();
+            for (int d = 0; d < 4; ++d) {
+                IntPoint nxt = cur + IntPoint(dx[d], dy[d]);
+                if (visited.count(nxt)) continue;
+                bool outOfRange = false;
+                int nextStep = curStep;
+                // miniRock步數+1
+                if (getPlayScene()->mapState[nxt.y][nxt.x] == PlayScene::TILE_MINIROCK)
+                nextStep += 2;
+                else
+                nextStep += 1;
 
-                    if (nxt.x <= 1 || nxt.x >= 62 || nxt.y <= 1 || nxt.y >= 62) {
-                        outOfRange = true;
-                        valid[nxt] = false;
-                    }
-                    else if (step >= distance) {
-                        outOfRange = true;
-                        valid[nxt] = false;
-                        q.push(nxt);
-                    }
-
-                    for (auto& obj : getPlayScene()->UnitGroup->GetObjects()) {
-                        auto unit = dynamic_cast<Unit*>(obj);
-                        if (nxt == unit->gridPos) {
-                            valid[nxt] = false;
-                            outOfRange=true;
-                            q.push(nxt);
-                            break;
-                        }
-                    }
-
-                    visited.insert(nxt);
-                    level[nxt] = step + 1;
-                    if (!outOfRange) {
-                        q.push(nxt);
-                        valid[nxt] = true;
-                    }
+                if (getPlayScene()->mapState[nxt.y][nxt.x] == PlayScene::TILE_ROCK) {
+                valid[nxt] = false;
+                outOfRange = true;
                 }
+
+                if (nxt.x <= 0 || nxt.x >= mapwidth || nxt.y <= 0 || nxt.y >= mapheight) {
+                outOfRange = true;
+                valid[nxt] = false;
+                }
+                else if (nextStep > distance) {
+                outOfRange = true;
+                valid[nxt] = false;
+                }
+
+                for (auto& obj : getPlayScene()->UnitGroup->GetObjects()) {
+                auto unit = dynamic_cast<Unit*>(obj);
+                if (nxt == unit->gridPos) {
+                    valid[nxt] = false;
+                    outOfRange = true;
+                    break;
+                }
+                }
+
+                visited.insert(nxt);
+                level[nxt] = nextStep;
+                if (!outOfRange) {
+                q.push({nxt, nextStep});
+                valid[nxt] = true;
+                }
+            }
             }
             ++step;
         }

@@ -13,7 +13,7 @@ class Player;
 
 class Enemy : public Unit {
 protected:
-    PlayScene *getPlayScene();
+    PlayScene *getPlayScene() const;
     std::list<Enemy *>::iterator lockedEnemyIterator;
 
 public:

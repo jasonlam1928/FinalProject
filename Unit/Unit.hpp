@@ -42,6 +42,7 @@ public:
     std::string Label;
     std::string img;
     std::string fight_img;
+    Sprite Select;
     Sprite imgBase;
     int MaxEnergy;
     int Energy;

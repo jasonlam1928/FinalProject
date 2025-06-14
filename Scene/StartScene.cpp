@@ -31,17 +31,17 @@ void StartScene::Initialize() {
     int halfH = h / 2;
     Engine::ImageButton *btn;
 
-    AddNewObject(new Engine::Label("Tower Defense", "pirulen.ttf", 120, halfW, halfH / 3 + 50, 10, 255, 255, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Battleground", "StageRetro.ttf", 110, halfW, halfH / 3 + 50, 10, 150, 255, 255, 0.5, 0.5));
 
     btn = new Engine::ImageButton("stage-select/ButtonIdle.png", "stage-select/ButtonHover.png", halfW - 200, halfH / 2 + 200, 400, 100);
     btn->SetOnClickCallback(std::bind(&StartScene::PlayOnClick, this, 1));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Play", "pirulen.ttf", 48, halfW, halfH / 2 + 250, 0, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Play", "pirulen.ttf", 36, halfW, halfH / 2 + 250, 0, 0, 0, 255, 0.5, 0.5));
 
     btn = new Engine::ImageButton("stage-select/ButtonIdle.png", "stage-select/ButtonHover.png", halfW - 200, halfH * 3 / 2 - 50, 400, 100);
     btn->SetOnClickCallback(std::bind(&StartScene::SettingsOnClick, this, 2));
     AddNewControlObject(btn);
-    AddNewObject(new Engine::Label("Settings", "pirulen.ttf", 48, halfW, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
+    AddNewObject(new Engine::Label("Settings", "pirulen.ttf", 36, halfW, halfH * 3 / 2, 0, 0, 0, 255, 0.5, 0.5));
 }
 void StartScene::Terminate() {
     IScene::Terminate();
@@ -73,6 +73,17 @@ void StartScene::Draw() const {
             color, w / 2, 40, ALLEGRO_ALIGN_CENTRE, (debugMode) ? "Developer Mode Enabled" : "Developer Mode Disabled"
             );
     }
+
+    // Draw blue rectangle border almost as wide as the game screen around the title label
+    float screenW = Engine::GameEngine::GetInstance().GetScreenSize().x;
+    float screenH = Engine::GameEngine::GetInstance().GetScreenSize().y;
+    float titleY = 80; // Adjust if your label Y is different
+    float rectMargin = 40; // Margin from left/right edge
+    float rectW = screenW - 2 * rectMargin;
+    float rectH = 140; // Height of the rectangle
+    float rectX = rectMargin;
+    float rectY = screenH / 6 - 25;
+    al_draw_rectangle(rectX, rectY, rectX + rectW, rectY + rectH, al_map_rgb(0, 120, 255), 10);
 }
 
 void StartScene::Update(float deltaTime) {

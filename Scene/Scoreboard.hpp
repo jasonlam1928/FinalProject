@@ -22,7 +22,9 @@ public:
 };
 struct PlayerRecord{
     string name;
+    int stage;
     int score;
     string time;
+    
 };
 vector<PlayerRecord> getPlayerRecord();
