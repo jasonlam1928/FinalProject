@@ -183,7 +183,9 @@ namespace Engine {
         if (scenes.count(name) == 0)
             throw std::invalid_argument("Cannot change to a unknown scene.");
         // Terminate the old scene.
+        std::cout<<"DEGUB\n";
         activeScene->Terminate();
+        
         activeScene = scenes[name];
         // Release unused resources.
         if (freeMemoryOnSceneChanged)

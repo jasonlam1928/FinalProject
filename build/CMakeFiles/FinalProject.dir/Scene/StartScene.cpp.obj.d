@@ -853,10 +853,13 @@ CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./Engine/IControl.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/IObject.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/Point.hpp \
+  C:/allegro/include/allegro5/allegro_primitives.h \
+  C:/allegro/include/allegro5/allegro_font.h \
+  C:/allegro/include/allegro5/allegro_image.h \
+  C:/allegro/include/allegro5/allegro_ttf.h \
   C:/Users/jason/Downloads/Final_project/./Engine/AudioHelper.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/GameEngine.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/Resources.hpp \
-  C:/allegro/include/allegro5/allegro_font.h \
   C:/Users/jason/Downloads/Final_project/Scene/PlayScene.hpp \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/set \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__tree \
@@ -865,7 +868,6 @@ CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./Unit/Unit.hpp \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/map \
   C:/Users/jason/Downloads/Final_project/./Engine/Sprite.hpp \
-  C:/allegro/include/allegro5/allegro_ttf.h \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Image.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/IntPoint.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \

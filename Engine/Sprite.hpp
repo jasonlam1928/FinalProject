@@ -48,7 +48,8 @@ namespace Engine {
         /// Draw to window display.
         /// This is called when the game should redraw the window.
         /// </summary>
-        void Draw() const override;
+        void Draw() const;
+        void Draw(float scale) const;
         void Drawhp(int hp, int maxhp, int Level) const override;
         void DrawBlue() const override;
         /// <summary>

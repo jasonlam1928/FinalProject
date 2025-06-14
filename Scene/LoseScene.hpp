@@ -1,5 +1,6 @@
 #ifndef LOSESCENE_HPP
 #define LOSESCENE_HPP
+
 #include "Engine/IScene.hpp"
 #include <allegro5/allegro_audio.h>
 #include <memory>

@@ -29,6 +29,26 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            "group": "build",
+            "detail": "偵錯工具產生的工作。"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe 建置使用中檔案",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

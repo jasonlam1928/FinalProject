@@ -15,7 +15,7 @@ using namespace std;
 #include "UI/Component/ImageButton.hpp"
 #include "UI/Component/Label.hpp"
 
-class Turret;
+class Player;
 namespace Engine {
     class Group;
     class Image;
@@ -47,27 +47,27 @@ protected:
     bool dragging = false;
     int dragStartX = 0, dragStartY = 0;
     float cameraStartX = 0, cameraStartY = 0;
-    int cameraTargetX = cameraX;
-    int cameraTargetY = cameraY;
+    int cameraTargetX = 0;
+    int cameraTargetY=0;
     bool drawRadius;
     int bx1;//buttonX
     int by1;//buttonY
     int bx2;
     int by2;
+    int bx3;
+    int by3;
 
     void ConfirmClick();
     void CancelClick();
+    void AttackClick();
 
 public:
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;
-    static const int MapWidth, MapHeight;
+    static int MapWidth, MapHeight;
     static const int BlockSize;
-    static const float DangerTime;
     static const pair<int,int> WindowSize;
-    static const Engine::Point SpawnGridPoint;
-    static const Engine::Point EndGridPoint;
-    static const std::vector<int> code;
+    std::vector<pair<bool, bool>> mapData;
     int MapId;
     float ticks;
     float deathCountDown;
@@ -82,7 +82,7 @@ public:
     Unit *Processing;
     Unit *Preview;
     Engine::Image *imgTarget;
-    Turret *preview;
+    Player *preview;
     std::vector<std::vector<TileType>> mapState;
     std::vector<std::vector<int>> mapDistance;
     std::list<std::pair<int, std::pair<int, int>>> enemyWaveData;
@@ -93,27 +93,22 @@ public:
     void Terminate() override;
     void Update(float deltaTime) override;
     void Draw() const override;
+    void AttackUI()const;
+    void ChooseAbilityUI()const;
     void OnMouseDown(int button, int mx, int my) override;
     void OnMouseMove(int mx, int my) override;
     void OnMouseUp(int button, int mx, int my) override;
     void OnKeyDown(int keyCode) override;
     void OnKeyUp(int keyCode) override;
-    void Hit();
-    int GetMoney() const;
-    void EarnMoney(int money);
     void ReadMap();
     void ReadEnemyWave();
     void ConstructUI();
-    void UIBtnClicked(int id);
-    bool CheckSpaceValid(int x, int y);
-    void Scores();
-    void ClearPlace(int x, int y);
-    std::vector<std::vector<int>> CalculateBFSDistance();
-    pair<int,int> GetCamera();
-    // void ModifyReadMapTiles();
+    void DrawActionValue(const std::vector<Unit*>& sortedAction, int y, float iconSize, float cellW, float cellH, int showCount) const;
+    void AttackSystem();
+    void CalcAttackValue();
 
     mutable ALLEGRO_TRANSFORM Camera;
-    multiset<Unit*> Action;
+    vector<Unit*> Action;
     queue<Unit*> Managing;
     bool changeCamera;
     float cameraX = 0;
@@ -125,14 +120,63 @@ public:
     bool waitingForConfirm = false;
     bool previewSelected = false;
     Engine::Point confirmTarget;  
-    Engine::ImageButton *btnConfirm, *btnCancel;
+    Engine::ImageButton *btnConfirm, *btnAbilityCancel, *btnAttack;
     Unit *confirmUnit = nullptr;
+    int KnightCount, GunnerCount, kMaxUnits;
 
-    int actionValue = 100;
+    Unit* Defense;
+    bool attackUIDraw=false;
+    bool ChooseAbilityDraw=false;
+    float AttackUIVisibleTime = 0;
+    bool attackUIActive = false;
+
+    float actionValue;
     bool active;
     float MoveTime;
-};
 
+    mutable std::vector<std::pair<int, Engine::Point>> actionCellRects;
+    mutable int PlayerselectedSkillIndex = -1; // -1 代表未選
+    mutable int EnemyselectedSkillIndex = -1; // -1 代表未選
+    void SetDrawRadius(bool value);
+    bool isUnitInGroup(Unit* unit) const;
+    void RemoveUnit(Unit* unit);
+    int lastAttackDamage = 0;
+    int lastCounterDamage = 0;
+
+    ALLEGRO_FONT* attackUIFont = nullptr;
+    ALLEGRO_FONT* bigFont = nullptr;
+    ALLEGRO_FONT* font20 = nullptr;
+    ALLEGRO_FONT* font22 = nullptr;
+    ALLEGRO_FONT* font28 = nullptr;
+    ALLEGRO_FONT* font32 = nullptr;
+    ALLEGRO_FONT* font48 = nullptr;
+
+    int mapWidth = 64;
+    int mapHeight = 64;
+
+    std::vector<Unit*> availableUnits; // 玩家可用但未放置的 unit
+    Unit* draggingUnit = nullptr;      // 當前拖曳中的 unit
+    float draggingOffsetX = 0, draggingOffsetY = 0;
+    bool isPlacingUnits = true;        // 佈陣階段
+    Engine::ImageButton* btnStartGame = nullptr; // 開始遊戲按鈕
+
+    // 玩家已放置的 unit 記錄
+    std::vector<Unit*> placedUnits;
+
+    // 玩家可用角色（合併同類型，指標+數量）
+    struct UnitSlot {
+        Unit* proto;
+        int count;
+    };
+    std::vector<UnitSlot> availableUnitSlots;
+
+    int draggingUnitSlotIndex = -1; // 拖曳中的 unit slot 索引，-1 代表沒有拖曳
+
+    Engine::ImageButton* btnShovel = nullptr; // 鏟子按鈕
+
+    
+};
 int getScore();
+
 
 #endif   // PLAYSCENE_HPP

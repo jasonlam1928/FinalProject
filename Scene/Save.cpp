@@ -30,9 +30,9 @@ using namespace std;
 
 bool comparePlayers(const PlayerRecord& a, const PlayerRecord& b) {
     if (a.score != b.score) {
-        return a.score > b.score; // 降序排列
+        return a.score < b.score;
     }
-    return a.name < b.name;
+    return a.name > b.name;
 }
 
 int Namelen;
@@ -67,7 +67,7 @@ void Save::SaveRecord(int stage) {
     if(Namelen>=0){
         vector<PlayerRecord> playersRecord;
 
-        ifstream file("C:\\Users\\jason\\Downloads\\2025_I2P2_TowerDefense-main\\Resource\\scoreboard.txt");
+        ifstream file("Resource\\scoreboard.txt");
         string name;
         string times;
         int score;
@@ -85,6 +85,7 @@ void Save::SaveRecord(int stage) {
 
         PlayerRecord p;
         p.name = PlayerName;
+        p.score = getScore();
         stringstream time;
         std::time_t now = std::time(nullptr);
         std::tm* localTime = std::localtime(&now);

@@ -9,8 +9,7 @@
 
 class Bullet;
 class PlayScene;
-class Turret;
-
+class Player;
 
 class Enemy : public Unit {
 protected:
@@ -20,10 +19,14 @@ protected:
 public:
     int distance;
     float speed;
-    float Maxhp;
-    float hp;
+    int Maxhp;
+    int hp;
     int attackRange;
-    Enemy(std::string img, float x, float y, float hp, float speed, int distance);
+    int damage;
+    Unit* target;
+    std::string img;
+    std::string Label;
+    Enemy(std::string base, std::string img, std::string fight_img, float x, float y, int hp, float speed, int distance, int damage, int energy,int attackRange, std::string Label);
     bool IsPlayer() const override { return false; }
     void Hit(float damage, std::string Label);
     void Update(float deltaTime) override;

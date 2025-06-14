@@ -19,6 +19,8 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp"
   "C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp"
+  "C:/Users/jason/Downloads/Final_project/Scene/MapEditorScene.cpp"
+  "C:/Users/jason/Downloads/Final_project/Scene/MapEditorSelectScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.cpp"
@@ -34,9 +36,11 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp"
   "C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp"
   "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyGunner1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyKnight1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Gunner1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Knight1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Player.cpp"
   "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
   "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/3.29.2/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/jason/Downloads/Final_project/main.cpp"
@@ -78,6 +82,15 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # ALL_SOURCES at CMakeLists.txt:13 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Player/*.cpp")
+set(OLD_GLOB
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
+endif()
+
+# ALL_SOURCES at CMakeLists.txt:13 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Resource/*.cpp")
 set(OLD_GLOB
   )
@@ -90,6 +103,8 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Scene/*.cpp")
 set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp"
+  "C:/Users/jason/Downloads/Final_project/Scene/MapEditorScene.cpp"
+  "C:/Users/jason/Downloads/Final_project/Scene/MapEditorSelectScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/Save.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.cpp"
@@ -97,15 +112,6 @@ set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp"
   "C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp"
-  )
-if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
-  message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "C:/Users/jason/Downloads/Final_project/build/CMakeFiles/cmake.verify_globs")
-endif()
-
-# ALL_SOURCES at CMakeLists.txt:13 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Turret/*.cpp")
-set(OLD_GLOB
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -132,9 +138,11 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jason/Downloads/Final_project/Unit/*.cpp")
 set(OLD_GLOB
   "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy1.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret.cpp"
-  "C:/Users/jason/Downloads/Final_project/Unit/Turret/Turret1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyGunner1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyKnight1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Gunner1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Knight1.cpp"
+  "C:/Users/jason/Downloads/Final_project/Unit/Player/Player.cpp"
   "C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

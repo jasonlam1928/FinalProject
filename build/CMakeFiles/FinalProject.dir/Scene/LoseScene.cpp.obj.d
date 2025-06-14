@@ -868,4 +868,5 @@ CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./UI/Component/Image.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/IntPoint.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \
-  C:/Users/jason/Downloads/Final_project/./UI/Component/Label.hpp
+  C:/Users/jason/Downloads/Final_project/./UI/Component/Label.hpp \
+  C:/Users/jason/Downloads/Final_project/Scene/StartScene.h

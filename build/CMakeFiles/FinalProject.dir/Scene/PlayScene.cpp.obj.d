@@ -690,6 +690,7 @@ CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/byteswap.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/endian.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/__bit/has_single_bit.h \
+  C:/allegro/include/allegro5/allegro_primitives.h \
   C:/allegro/include/allegro5/allegro.h \
   C:/allegro/include/allegro5/base.h \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/lib/clang/18/include/stdarg.h \
@@ -906,7 +907,8 @@ CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./Unit/Unit.hpp \
   C:/Users/jason/Downloads/llvm-mingw-20240417-msvcrt-x86_64/llvm-mingw-20240417-msvcrt-x86_64/include/c++/v1/map \
   C:/Users/jason/Downloads/Final_project/./Engine/IntPoint.hpp \
-  C:/Users/jason/Downloads/Final_project/./Unit/Enemy/Enemy1.hpp \
+  C:/Users/jason/Downloads/Final_project/./Unit/Enemy/EnemyKnight1.hpp \
+  C:/Users/jason/Downloads/Final_project/./Unit/Enemy/EnemyGunner1.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/AudioHelper.hpp \
   C:/allegro/include/allegro5/allegro_audio.h \
   C:/Users/jason/Downloads/Final_project/./Engine/GameEngine.hpp \
@@ -918,6 +920,9 @@ CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/./UI/Component/ImageButton.hpp \
   C:/Users/jason/Downloads/Final_project/Scene/PlayScene.hpp \
   C:/Users/jason/Downloads/Final_project/./Engine/IScene.hpp \
-  C:/Users/jason/Downloads/Final_project/./Unit/Turret/Turret.hpp \
-  C:/Users/jason/Downloads/Final_project/./Unit/Turret/Turret1.hpp \
+  C:/Users/jason/Downloads/Final_project/Scene/WinScene.hpp \
+  C:/Users/jason/Downloads/Final_project/Scene/LoseScene.hpp \
+  C:/Users/jason/Downloads/Final_project/./Unit/Player/Player.hpp \
+  C:/Users/jason/Downloads/Final_project/./Unit/Player/Knight1.hpp \
+  C:/Users/jason/Downloads/Final_project/./Unit/Player/Gunner1.hpp \
   C:/Users/jason/Downloads/Final_project/./UI/Animation/DirtyEffect.hpp

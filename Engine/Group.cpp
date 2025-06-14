@@ -1,9 +1,11 @@
 #include <stdexcept>
 #include <utility>
-
+#include<iostream>
 #include "Group.hpp"
 #include "IControl.hpp"
 #include "IObject.hpp"
+#include <iostream>
+#include <typeinfo>
 
 namespace Engine {
     void Group::addObject(bool shouldDelete, IObject *obj) {
@@ -23,11 +25,17 @@ namespace Engine {
     }
     void Group::Clear() {
         for (auto &it : objects) {
-            if (it.first) delete it.second;
+            if (it.first && it.second) {
+                delete it.second;
+                it.second = nullptr;
+            }
         }
         objects.clear();
         for (auto &it : controls) {
-            if (it.first) delete it.second;
+            if (it.first && it.second) {
+                delete it.second;
+                it.second = nullptr;
+            }
         }
         controls.clear();
     }
@@ -89,11 +97,25 @@ namespace Engine {
         }
     }
     void Group::RemoveObject(std::list<std::pair<bool, IObject *>>::iterator it) {
-        if (it->first) delete it->second;
+        if (it->second == nullptr) {
+            // do nothing
+        } else {
+            if (it->first) {
+                delete it->second;
+                it->second = nullptr;
+            }
+        }
         objects.erase(it);
     }
     void Group::RemoveControl(std::list<std::pair<bool, IControl *>>::iterator it) {
-        if (it->first) delete it->second;
+        if (it->second == nullptr) {
+            // do nothing
+        } else {
+            if (it->first) {
+                delete it->second;
+                it->second = nullptr;
+            }
+        }
         controls.erase(it);
     }
     void Group::RemoveControlObject(std::list<std::pair<bool, IControl *>>::iterator ctrlIt, std::list<std::pair<bool, IObject *>>::iterator objIt) {
@@ -102,12 +124,6 @@ namespace Engine {
     }
     void Group::AddNewObject(IObject *obj) {
         addObject(true, obj);
-    }
-    void Group::InsertNewObject(IObject *obj, std::list<std::pair<bool, IObject *>>::iterator it) {
-        insertObject(true, obj, it);
-    }
-    void Group::AddNewControl(IControl *ctrl) {
-        addControl(true, ctrl);
     }
     void Group::AddNewControlObject(IControl *ctrl) {
         if (!dynamic_cast<IObject *>(ctrl))

@@ -465,6 +465,54 @@ Scene/LoseScene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.s
 .PHONY : Scene/LoseScene.cpp.s
 
+Scene/MapEditorScene.obj: Scene/MapEditorScene.cpp.obj
+.PHONY : Scene/MapEditorScene.obj
+
+# target to build an object file
+Scene/MapEditorScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj
+.PHONY : Scene/MapEditorScene.cpp.obj
+
+Scene/MapEditorScene.i: Scene/MapEditorScene.cpp.i
+.PHONY : Scene/MapEditorScene.i
+
+# target to preprocess a source file
+Scene/MapEditorScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.i
+.PHONY : Scene/MapEditorScene.cpp.i
+
+Scene/MapEditorScene.s: Scene/MapEditorScene.cpp.s
+.PHONY : Scene/MapEditorScene.s
+
+# target to generate assembly for a file
+Scene/MapEditorScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.s
+.PHONY : Scene/MapEditorScene.cpp.s
+
+Scene/MapEditorSelectScene.obj: Scene/MapEditorSelectScene.cpp.obj
+.PHONY : Scene/MapEditorSelectScene.obj
+
+# target to build an object file
+Scene/MapEditorSelectScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj
+.PHONY : Scene/MapEditorSelectScene.cpp.obj
+
+Scene/MapEditorSelectScene.i: Scene/MapEditorSelectScene.cpp.i
+.PHONY : Scene/MapEditorSelectScene.i
+
+# target to preprocess a source file
+Scene/MapEditorSelectScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.i
+.PHONY : Scene/MapEditorSelectScene.cpp.i
+
+Scene/MapEditorSelectScene.s: Scene/MapEditorSelectScene.cpp.s
+.PHONY : Scene/MapEditorSelectScene.s
+
+# target to generate assembly for a file
+Scene/MapEditorSelectScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.s
+.PHONY : Scene/MapEditorSelectScene.cpp.s
+
 Scene/PlayScene.obj: Scene/PlayScene.cpp.obj
 .PHONY : Scene/PlayScene.obj
 
@@ -825,77 +873,125 @@ Unit/Enemy/Enemy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.s
 .PHONY : Unit/Enemy/Enemy.cpp.s
 
-Unit/Enemy/Enemy1.obj: Unit/Enemy/Enemy1.cpp.obj
-.PHONY : Unit/Enemy/Enemy1.obj
+Unit/Enemy/EnemyGunner1.obj: Unit/Enemy/EnemyGunner1.cpp.obj
+.PHONY : Unit/Enemy/EnemyGunner1.obj
 
 # target to build an object file
-Unit/Enemy/Enemy1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.obj
-.PHONY : Unit/Enemy/Enemy1.cpp.obj
+Unit/Enemy/EnemyGunner1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj
+.PHONY : Unit/Enemy/EnemyGunner1.cpp.obj
 
-Unit/Enemy/Enemy1.i: Unit/Enemy/Enemy1.cpp.i
-.PHONY : Unit/Enemy/Enemy1.i
+Unit/Enemy/EnemyGunner1.i: Unit/Enemy/EnemyGunner1.cpp.i
+.PHONY : Unit/Enemy/EnemyGunner1.i
 
 # target to preprocess a source file
-Unit/Enemy/Enemy1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.i
-.PHONY : Unit/Enemy/Enemy1.cpp.i
+Unit/Enemy/EnemyGunner1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.i
+.PHONY : Unit/Enemy/EnemyGunner1.cpp.i
 
-Unit/Enemy/Enemy1.s: Unit/Enemy/Enemy1.cpp.s
-.PHONY : Unit/Enemy/Enemy1.s
+Unit/Enemy/EnemyGunner1.s: Unit/Enemy/EnemyGunner1.cpp.s
+.PHONY : Unit/Enemy/EnemyGunner1.s
 
 # target to generate assembly for a file
-Unit/Enemy/Enemy1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy1.cpp.s
-.PHONY : Unit/Enemy/Enemy1.cpp.s
+Unit/Enemy/EnemyGunner1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.s
+.PHONY : Unit/Enemy/EnemyGunner1.cpp.s
 
-Unit/Turret/Turret.obj: Unit/Turret/Turret.cpp.obj
-.PHONY : Unit/Turret/Turret.obj
+Unit/Enemy/EnemyKnight1.obj: Unit/Enemy/EnemyKnight1.cpp.obj
+.PHONY : Unit/Enemy/EnemyKnight1.obj
 
 # target to build an object file
-Unit/Turret/Turret.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.obj
-.PHONY : Unit/Turret/Turret.cpp.obj
+Unit/Enemy/EnemyKnight1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj
+.PHONY : Unit/Enemy/EnemyKnight1.cpp.obj
 
-Unit/Turret/Turret.i: Unit/Turret/Turret.cpp.i
-.PHONY : Unit/Turret/Turret.i
+Unit/Enemy/EnemyKnight1.i: Unit/Enemy/EnemyKnight1.cpp.i
+.PHONY : Unit/Enemy/EnemyKnight1.i
 
 # target to preprocess a source file
-Unit/Turret/Turret.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.i
-.PHONY : Unit/Turret/Turret.cpp.i
+Unit/Enemy/EnemyKnight1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.i
+.PHONY : Unit/Enemy/EnemyKnight1.cpp.i
 
-Unit/Turret/Turret.s: Unit/Turret/Turret.cpp.s
-.PHONY : Unit/Turret/Turret.s
+Unit/Enemy/EnemyKnight1.s: Unit/Enemy/EnemyKnight1.cpp.s
+.PHONY : Unit/Enemy/EnemyKnight1.s
 
 # target to generate assembly for a file
-Unit/Turret/Turret.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret.cpp.s
-.PHONY : Unit/Turret/Turret.cpp.s
+Unit/Enemy/EnemyKnight1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.s
+.PHONY : Unit/Enemy/EnemyKnight1.cpp.s
 
-Unit/Turret/Turret1.obj: Unit/Turret/Turret1.cpp.obj
-.PHONY : Unit/Turret/Turret1.obj
+Unit/Player/Gunner1.obj: Unit/Player/Gunner1.cpp.obj
+.PHONY : Unit/Player/Gunner1.obj
 
 # target to build an object file
-Unit/Turret/Turret1.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.obj
-.PHONY : Unit/Turret/Turret1.cpp.obj
+Unit/Player/Gunner1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj
+.PHONY : Unit/Player/Gunner1.cpp.obj
 
-Unit/Turret/Turret1.i: Unit/Turret/Turret1.cpp.i
-.PHONY : Unit/Turret/Turret1.i
+Unit/Player/Gunner1.i: Unit/Player/Gunner1.cpp.i
+.PHONY : Unit/Player/Gunner1.i
 
 # target to preprocess a source file
-Unit/Turret/Turret1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.i
-.PHONY : Unit/Turret/Turret1.cpp.i
+Unit/Player/Gunner1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.i
+.PHONY : Unit/Player/Gunner1.cpp.i
 
-Unit/Turret/Turret1.s: Unit/Turret/Turret1.cpp.s
-.PHONY : Unit/Turret/Turret1.s
+Unit/Player/Gunner1.s: Unit/Player/Gunner1.cpp.s
+.PHONY : Unit/Player/Gunner1.s
 
 # target to generate assembly for a file
-Unit/Turret/Turret1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Turret/Turret1.cpp.s
-.PHONY : Unit/Turret/Turret1.cpp.s
+Unit/Player/Gunner1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.s
+.PHONY : Unit/Player/Gunner1.cpp.s
+
+Unit/Player/Knight1.obj: Unit/Player/Knight1.cpp.obj
+.PHONY : Unit/Player/Knight1.obj
+
+# target to build an object file
+Unit/Player/Knight1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj
+.PHONY : Unit/Player/Knight1.cpp.obj
+
+Unit/Player/Knight1.i: Unit/Player/Knight1.cpp.i
+.PHONY : Unit/Player/Knight1.i
+
+# target to preprocess a source file
+Unit/Player/Knight1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.i
+.PHONY : Unit/Player/Knight1.cpp.i
+
+Unit/Player/Knight1.s: Unit/Player/Knight1.cpp.s
+.PHONY : Unit/Player/Knight1.s
+
+# target to generate assembly for a file
+Unit/Player/Knight1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.s
+.PHONY : Unit/Player/Knight1.cpp.s
+
+Unit/Player/Player.obj: Unit/Player/Player.cpp.obj
+.PHONY : Unit/Player/Player.obj
+
+# target to build an object file
+Unit/Player/Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj
+.PHONY : Unit/Player/Player.cpp.obj
+
+Unit/Player/Player.i: Unit/Player/Player.cpp.i
+.PHONY : Unit/Player/Player.i
+
+# target to preprocess a source file
+Unit/Player/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.i
+.PHONY : Unit/Player/Player.cpp.i
+
+Unit/Player/Player.s: Unit/Player/Player.cpp.s
+.PHONY : Unit/Player/Player.s
+
+# target to generate assembly for a file
+Unit/Player/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FinalProject.dir\build.make CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.s
+.PHONY : Unit/Player/Player.cpp.s
 
 Unit/Unit.obj: Unit/Unit.cpp.obj
 .PHONY : Unit/Unit.obj
@@ -996,6 +1092,12 @@ help:
 	@echo ... Scene/LoseScene.obj
 	@echo ... Scene/LoseScene.i
 	@echo ... Scene/LoseScene.s
+	@echo ... Scene/MapEditorScene.obj
+	@echo ... Scene/MapEditorScene.i
+	@echo ... Scene/MapEditorScene.s
+	@echo ... Scene/MapEditorSelectScene.obj
+	@echo ... Scene/MapEditorSelectScene.i
+	@echo ... Scene/MapEditorSelectScene.s
 	@echo ... Scene/PlayScene.obj
 	@echo ... Scene/PlayScene.i
 	@echo ... Scene/PlayScene.s
@@ -1041,15 +1143,21 @@ help:
 	@echo ... Unit/Enemy/Enemy.obj
 	@echo ... Unit/Enemy/Enemy.i
 	@echo ... Unit/Enemy/Enemy.s
-	@echo ... Unit/Enemy/Enemy1.obj
-	@echo ... Unit/Enemy/Enemy1.i
-	@echo ... Unit/Enemy/Enemy1.s
-	@echo ... Unit/Turret/Turret.obj
-	@echo ... Unit/Turret/Turret.i
-	@echo ... Unit/Turret/Turret.s
-	@echo ... Unit/Turret/Turret1.obj
-	@echo ... Unit/Turret/Turret1.i
-	@echo ... Unit/Turret/Turret1.s
+	@echo ... Unit/Enemy/EnemyGunner1.obj
+	@echo ... Unit/Enemy/EnemyGunner1.i
+	@echo ... Unit/Enemy/EnemyGunner1.s
+	@echo ... Unit/Enemy/EnemyKnight1.obj
+	@echo ... Unit/Enemy/EnemyKnight1.i
+	@echo ... Unit/Enemy/EnemyKnight1.s
+	@echo ... Unit/Player/Gunner1.obj
+	@echo ... Unit/Player/Gunner1.i
+	@echo ... Unit/Player/Gunner1.s
+	@echo ... Unit/Player/Knight1.obj
+	@echo ... Unit/Player/Knight1.i
+	@echo ... Unit/Player/Knight1.s
+	@echo ... Unit/Player/Player.obj
+	@echo ... Unit/Player/Player.i
+	@echo ... Unit/Player/Player.s
 	@echo ... Unit/Unit.obj
 	@echo ... Unit/Unit.i
 	@echo ... Unit/Unit.s

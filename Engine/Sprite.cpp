@@ -25,6 +25,15 @@ namespace Engine {
         al_draw_tinted_scaled_rotated_bitmap(bmp.get(), Tint, Anchor.x * GetBitmapWidth(), Anchor.y * GetBitmapHeight(),
                                              Position.x, Position.y, Size.x / GetBitmapWidth(), Size.y / GetBitmapHeight(), Rotation, 0);
     }
+    void Sprite::Draw(float scale) const {
+        al_draw_tinted_scaled_rotated_bitmap(
+            bmp.get(), Tint,
+            Anchor.x * GetBitmapWidth(), Anchor.y * GetBitmapHeight(),
+            Position.x, Position.y,
+            (Size.x / GetBitmapWidth()) * scale,
+            (Size.y / GetBitmapHeight()) * scale,
+            Rotation, 0);
+    }
     void Sprite::DrawBlue() const {
         ALLEGRO_COLOR Tint1 = al_map_rgba_f(0.3, 0.5, 1.0, 1.0);
         al_draw_tinted_scaled_rotated_bitmap(bmp.get(), Tint1, Anchor.x * GetBitmapWidth(), Anchor.y * GetBitmapHeight(),

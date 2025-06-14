@@ -17,13 +17,21 @@ file(GLOB_RECURSE ALL_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/UI/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/Enemy/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/Resource/*.cpp"
-    "${CMAKE_CURRENT_SOURCE_DIR}/Turret/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Player/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/Unit/*.cpp"
     "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"   # 把根目錄（main.cpp）也包含
 )
 list(FILTER ALL_SOURCES EXCLUDE REGEX ".*/build/.*")
 
 add_executable(${PROJECT_NAME} ${ALL_SOURCES})
+
+# 強制 Debug 模式時加上 -g 產生 debug symbol
+set(CMAKE_BUILD_TYPE Debug)
+if (MSVC)
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /Zi /Od /DDEBUG")
+else()
+    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -DDEBUG")
+endif()
 
 IF (WIN32)
     target_include_directories(FinalProject PUBLIC C:/allegro/include)

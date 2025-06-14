@@ -21,13 +21,49 @@
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 120x40
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png
 [INFO] Loaded Resource<image>: Resource/images/play/Hover.png
-[INFO] Loaded Resource<image>: Resource/images/play/target.png
+[INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 80x80
 [INFO] Loaded Resource<audio>: Resource/audios/astronomia.ogg
 [INFO] Created<sample_instance>: Resource/audios/astronomia.ogg
 [INFO] Loaded Resource<image>: Resource/images/lose/benjamin-happy.png
 [INFO] Loaded Resource<audio>: Resource/audios/play.ogg
-[INFO] Loaded Resource<image>: Resource/images/play/Knight_01.png
-[INFO] Loaded Resource<image>: Resource/images/play/Knight_03.png
+[INFO] Loaded Resource<image>: Resource/images/play/ShieldIcon.png
+[INFO] Loaded Resource<image>: Resource/images/play/PlayerBase.png
+[INFO] Loaded Resource<image>: Resource/images/play/GunnerIcon.png
+[INFO] Loaded Resource<image>: Resource/images/play/EnemyBase.png
+[INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 200x60
 [INFO] Changed to play scene
-[INFO] Game Terminating...
+[INFO] Loaded Resource<image>: Resource/images/play/KnightIdle.png
 [INFO] stopped audio (bgm)
+[INFO] Loaded Resource<image>: Resource/images/win/dirt.png scaled to 400x100
+[INFO] Loaded Resource<image>: Resource/images/win/dirt.png
+[INFO] Loaded Resource<image>: Resource/images/win/floor.png
+[INFO] Changed to lose scene
+[INFO] Changed to start scene
+[INFO] Game Terminating...
+[INFO] Game terminated
+[INFO] Game end
+[INFO] Destroyed Resource<image>: win/dirt.png
+[INFO] Destroyed Resource<image>: win/dirt.png?400x100
+[INFO] Destroyed Resource<image>: play/KnightIdle.png
+[INFO] Destroyed Resource<image>: play/Idle.png?200x60
+[INFO] Destroyed Resource<image>: play/EnemyBase.png
+[INFO] Destroyed Resource<image>: play/Idle.png
+[INFO] Destroyed Resource<image>: lose/benjamin-happy.png
+[INFO] Destroyed Resource<image>: icon.png
+[INFO] Destroyed Resource<image>: play/dirt.png?64x64
+[INFO] Destroyed Resource<image>: win/floor.png
+[INFO] Destroyed Resource<image>: stage-select/floor.png
+[INFO] Destroyed Resource<image>: play/Idle.png?80x80
+[INFO] Destroyed Resource<image>: play/floor.png?64x64
+[INFO] Destroyed Resource<image>: play/Hover.png
+[INFO] Destroyed Resource<image>: play/Idle.png?120x40
+[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
+[INFO] Destroyed Resource<image>: stage-select/dirt.png
+[INFO] Destroyed Resource<font>: pirulen.ttf?24
+[INFO] Destroyed Resource<font>: pirulen.ttf?48
+[INFO] Destroyed Resource<font>: pirulen.ttf?120
+[INFO] Destroyed<sample_instance>: astronomia.ogg
+[INFO] Destroyed<sample_instance>: select.ogg
+[INFO] Destroyed Resource<audio>: play.ogg
+[INFO] Destroyed Resource<audio>: astronomia.ogg
+[INFO] Destroyed Resource<audio>: select.ogg

@@ -922,4 +922,6 @@ CMakeFiles/FinalProject.dir/main.cpp.obj: \
   C:/Users/jason/Downloads/Final_project/Scene/SettingsScene.hpp \
   C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.hpp \
   C:/allegro/include/allegro5/allegro_primitives.h \
-  C:/Users/jason/Downloads/Final_project/Scene/Save.hpp
+  C:/Users/jason/Downloads/Final_project/Scene/Save.hpp \
+  C:/Users/jason/Downloads/Final_project/Scene/MapEditorScene.hpp \
+  C:/Users/jason/Downloads/Final_project/Scene/MapEditorSelectScene.hpp

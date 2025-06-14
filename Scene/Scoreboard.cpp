@@ -127,8 +127,6 @@ void Scoreboard::PrevPage(int type){
         cur-=5;
         UpdateScorePage();
     }
-    
-    
 }
 
 vector<PlayerRecord> getPlayerRecord(){
