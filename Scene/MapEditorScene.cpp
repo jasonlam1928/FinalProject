@@ -332,6 +332,18 @@ void MapEditorScene::Draw() const {
         al_draw_text(font, al_map_rgb(255,255,255), plusX2+btnW/2, btnY2+4, ALLEGRO_ALIGN_CENTRE, "+");
         al_draw_filled_rectangle(minusX2, btnY2, minusX2+btnW, btnY2+btnH, al_map_rgb(180,60,60));
         al_draw_text(font, al_map_rgb(255,255,255), minusX2+btnW/2, btnY2+4, ALLEGRO_ALIGN_CENTRE, "-");
+        // maxUnit + -
+        iconY += gapY;
+        ALLEGRO_BITMAP* baseBmp = Engine::Resources::GetInstance().GetBitmap("play/EnemyBase.png").get();
+        if(baseBmp)
+            al_draw_scaled_bitmap(baseBmp, 0,0,al_get_bitmap_width(baseBmp),al_get_bitmap_height(baseBmp), iconX, iconY, 48, 48, 0);
+        al_draw_text(font, al_map_rgb(255,255,255), iconX+60, iconY+12, 0, "Max Unit");
+        al_draw_textf(font, al_map_rgb(0,255,255), iconX+160, iconY+12, 0, "%d", maxUnit);
+        float plusX3=iconX+200, minusX3=iconX+240, btnY3=iconY+8;
+        al_draw_filled_rectangle(plusX3, btnY3, plusX3+btnW, btnY3+btnH, al_map_rgb(60,180,60));
+        al_draw_text(font, al_map_rgb(255,255,255), plusX3+btnW/2, btnY3+4, ALLEGRO_ALIGN_CENTRE, "+");
+        al_draw_filled_rectangle(minusX3, btnY3, minusX3+btnW, btnY3+btnH, al_map_rgb(180,60,60));
+        al_draw_text(font, al_map_rgb(255,255,255), minusX3+btnW/2, btnY3+4, ALLEGRO_ALIGN_CENTRE, "-");
     }
     // Draw Save button at the bottom of the toolbar
     float saveBtnW = 120, saveBtnH = 48;
@@ -340,6 +352,16 @@ void MapEditorScene::Draw() const {
     al_draw_filled_rectangle(saveBtnX, saveBtnY, saveBtnX + saveBtnW, saveBtnY + saveBtnH, al_map_rgb(60, 180, 60));
     al_draw_rectangle(saveBtnX, saveBtnY, saveBtnX + saveBtnW, saveBtnY + saveBtnH, al_map_rgb(255,255,255), 2);
     al_draw_text(al_create_builtin_font(), al_map_rgb(255,255,255), saveBtnX + saveBtnW/2, saveBtnY + saveBtnH/2 - 10, ALLEGRO_ALIGN_CENTRE, "Save");
+
+    // Cancel button (same style, left of Save)
+    float cancelBtnW = 120, cancelBtnH = 48;
+    float cancelBtnX = saveBtnX - cancelBtnW - 20;
+    float cancelBtnY = saveBtnY;
+    al_draw_filled_rectangle(cancelBtnX, cancelBtnY, cancelBtnX + cancelBtnW, cancelBtnY + cancelBtnH, al_map_rgb(180, 60, 60));
+    al_draw_rectangle(cancelBtnX, cancelBtnY, cancelBtnX + cancelBtnW, cancelBtnY + cancelBtnH, al_map_rgb(255,255,255), 2);
+    al_draw_text(al_create_builtin_font(), al_map_rgb(255,255,255), cancelBtnX + cancelBtnW/2, cancelBtnY + cancelBtnH/2 - 10, ALLEGRO_ALIGN_CENTRE, "Cancel");
+
+
 }
 
 void MapEditorScene::OnMouseDown(int button, int mx, int my) {
@@ -393,15 +415,19 @@ void MapEditorScene::OnMouseDown(int button, int mx, int my) {
         float iconY = baseY;
         float btnW=32, btnH=32;
         float plusX=iconX+200, minusX=iconX+240, btnY=iconY+8;
-        bool handled = false;
-        if(mx>=plusX && mx<=plusX+btnW && my>=btnY && my<=btnY+btnH) { knightCount++; handled = true; }
-        if(mx>=minusX && mx<=minusX+btnW && my>=btnY && my<=btnY+btnH && knightCount>0) { knightCount--; handled = true; }
+        if(mx>=plusX && mx<=plusX+btnW && my>=btnY && my<=btnY+btnH) { knightCount++; }
+        if(mx>=minusX && mx<=minusX+btnW && my>=btnY && my<=btnY+btnH && knightCount>0) { knightCount--; }
         // Gunner + -
         iconY += 80;
         float plusX2=iconX+200, minusX2=iconX+240, btnY2=iconY+8;
-        if(mx>=plusX2 && mx<=plusX2+btnW && my>=btnY2 && my<=btnY2+btnH) { gunnerCount++; handled = true; }
-        if(mx>=minusX2 && mx<=minusX2+btnW && my>=btnY2 && my<=btnY2+btnH && gunnerCount>0) { gunnerCount--; handled = true; }
-        if(handled) return;
+        if(mx>=plusX2 && mx<=plusX2+btnW && my>=btnY2 && my<=btnY2+btnH) { gunnerCount++; }
+        if(mx>=minusX2 && mx<=minusX2+btnW && my>=btnY2 && my<=btnY2+btnH && gunnerCount>0) { gunnerCount--; }
+        // maxUnit + -
+        iconY += 80;
+        float plusX3=iconX+200, minusX3=iconX+240, btnY3=iconY+8;
+        if(mx>=plusX3 && mx<=plusX3+btnW && my>=btnY3 && my<=btnY3+btnH) { maxUnit++; }
+        if(mx>=minusX3 && mx<=minusX3+btnW && my>=btnY3 && my<=btnY3+btnH && maxUnit>1) { maxUnit--; }
+        return;
     }
 
     float thirdTabWidth = toolbarSize / 3;
@@ -435,6 +461,15 @@ void MapEditorScene::OnMouseDown(int button, int mx, int my) {
         if (mx >= saveBtnX && mx <= saveBtnX + saveBtnW && my >= saveBtnY && my <= saveBtnY + saveBtnH) {
             SaveMapAndUnits();
             std::cout << "[DEBUG] Map and units saved (button)." << std::endl;
+            return;
+        }
+        // Cancel button
+        float cancelBtnW = 120, cancelBtnH = 48;
+        float cancelBtnX = saveBtnX - cancelBtnW - 20;
+        float cancelBtnY = saveBtnY;
+        if (mx >= cancelBtnX && mx <= cancelBtnX + cancelBtnW && my >= cancelBtnY && my <= cancelBtnY + cancelBtnH) {
+            Engine::GameEngine::GetInstance().ChangeScene("start");
+            std::cout << "[DEBUG] Cancel button pressed, returning to start scene." << std::endl;
             return;
         }
         placing = 1; 
