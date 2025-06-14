@@ -4,7 +4,9 @@
 [INFO] There are total 5 supported mouse buttons
 [INFO] Allegro5 initialized
 [INFO] Game begin
-[INFO] Loaded Resource<font>: Resource/fonts/StageRetro.ttf with size 110
+[INFO] Loaded Resource<image>: Resource/images/MainMenuBackground.png scaled to 1600x832
+[INFO] Loaded Resource<image>: Resource/images/MainMenuBackground.png
+[INFO] Loaded Resource<font>: Resource/fonts/Stage.ttf with size 110
 [INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonIdle.png scaled to 400x100
 [INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonIdle.png
 [INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonHover.png
@@ -17,10 +19,10 @@
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 24
 [INFO] Changed to stage-select scene
 [INFO] stopped audio (sample)
-[INFO] Loaded Resource<image>: Resource/images/play/PlacableTile.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/GrassTile.png scaled to 64x64
-[INFO] Loaded Resource<image>: Resource/images/play/MiniRock.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/Rock.png scaled to 64x64
+[INFO] Loaded Resource<image>: Resource/images/play/MiniRock.png scaled to 64x64
+[INFO] Loaded Resource<image>: Resource/images/play/PlacableTile.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/ConfirmButtonIdle.png scaled to 120x120
 [INFO] Loaded Resource<image>: Resource/images/play/ConfirmButtonIdle.png
 [INFO] Loaded Resource<image>: Resource/images/play/ConfirmButtonHover.png
@@ -41,47 +43,71 @@
 [INFO] Loaded Resource<image>: Resource/images/play/EnemyBase.png
 [INFO] Loaded Resource<image>: Resource/images/play/ConfirmButtonIdle.png scaled to 100x100
 [INFO] Changed to play scene
+[INFO] Loaded Resource<image>: Resource/images/play/GunnerIdle.png
+[INFO] Loaded Resource<audio>: Resource/audios/gun.mp3
+[INFO] stopped audio (bgm)
+[INFO] Loaded Resource<image>: Resource/images/lose/LoseScene.png
+[INFO] Changed to lose scene
+[INFO] Changed to start scene
+[INFO] Created<sample_instance>: Resource/audios/select.ogg
+[INFO] Changed to stage-select scene
+[INFO] stopped audio (sample)
+[INFO] Changed to start scene
+[INFO] Created<sample_instance>: Resource/audios/select.ogg
+[INFO] Changed to stage-select scene
+[INFO] stopped audio (sample)
+[INFO] Changed to play scene
 [INFO] Loaded Resource<image>: Resource/images/play/KnightIdle.png
 [INFO] Loaded Resource<audio>: Resource/audios/sword.mp3
 [INFO] stopped audio (bgm)
-[INFO] Loaded Resource<image>: Resource/images/win/WinScene.png
-[INFO] Loaded Resource<audio>: Resource/audios/win.wav
-[INFO] Changed to win scene
-[INFO] stopped audio (bgm)
+[INFO] Changed to lose scene
+[INFO] Changed to start scene
+[INFO] Changed to map-editor-select scene
+[INFO] Changed to map-editor scene
+[INFO] Loaded Resource<image>: Resource/images/play/GrassTile.png
+[INFO] Loaded Resource<image>: Resource/images/play/Rock.png
+[INFO] Loaded Resource<image>: Resource/images/play/MiniRock.png
+[INFO] Loaded Resource<image>: Resource/images/play/PlacableTile.png
 [INFO] Changed to start scene
 [INFO] Game Terminating...
 [INFO] Game terminated
 [INFO] Game end
+[INFO] Destroyed Resource<image>: play/MiniRock.png
+[INFO] Destroyed Resource<image>: play/GrassTile.png
+[INFO] Destroyed Resource<image>: lose/LoseScene.png
+[INFO] Destroyed Resource<image>: play/Rock.png
+[INFO] Destroyed Resource<image>: play/GunnerIdle.png
 [INFO] Destroyed Resource<image>: play/ConfirmButtonIdle.png?100x100
-[INFO] Destroyed Resource<image>: play/EnemyBase.png
 [INFO] Destroyed Resource<image>: play/ShovelButtonIdle.png
 [INFO] Destroyed Resource<image>: play/AttackButtonHover.png
-[INFO] Destroyed Resource<image>: win/WinScene.png
 [INFO] Destroyed Resource<image>: play/AttackButtonIdle.png
 [INFO] Destroyed Resource<image>: play/CancelButtonIdle.png
 [INFO] Destroyed Resource<image>: play/CancelButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: play/ConfirmButtonHover.png
 [INFO] Destroyed Resource<image>: play/ConfirmButtonIdle.png
 [INFO] Destroyed Resource<image>: play/CancelButtonHover.png
 [INFO] Destroyed Resource<image>: play/ConfirmButtonIdle.png?120x120
-[INFO] Destroyed Resource<image>: play/ConfirmButtonHover.png
 [INFO] Destroyed Resource<image>: play/ShovelButtonIdle.png?80x80
+[INFO] Destroyed Resource<image>: MainMenuBackground.png?1600x832
+[INFO] Destroyed Resource<image>: play/Rock.png?64x64
+[INFO] Destroyed Resource<image>: play/MiniRock.png?64x64
+[INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
+[INFO] Destroyed Resource<image>: play/GrassTile.png?64x64
+[INFO] Destroyed Resource<image>: play/PlacableTile.png?64x64
 [INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png
 [INFO] Destroyed Resource<image>: icon.png
-[INFO] Destroyed Resource<image>: play/MiniRock.png?64x64
-[INFO] Destroyed Resource<image>: play/Rock.png?64x64
-[INFO] Destroyed Resource<image>: play/ShovelButtonHover.png
-[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png?120x120
-[INFO] Destroyed Resource<image>: play/PlacableTile.png?64x64
-[INFO] Destroyed Resource<image>: play/GrassTile.png?64x64
-[INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
 [INFO] Destroyed Resource<image>: play/KnightIdle.png
 [INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png?400x100
+[INFO] Destroyed Resource<image>: play/PlacableTile.png
+[INFO] Destroyed Resource<image>: play/ShovelButtonHover.png
+[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: MainMenuBackground.png
 [INFO] Destroyed Resource<font>: pirulen.ttf?24
 [INFO] Destroyed Resource<font>: pirulen.ttf?36
 [INFO] Destroyed Resource<font>: pirulen.ttf?48
-[INFO] Destroyed Resource<font>: StageRetro.ttf?110
+[INFO] Destroyed Resource<font>: Stage.ttf?110
 [INFO] Destroyed<sample_instance>: select.ogg
-[INFO] Destroyed Resource<audio>: win.wav
 [INFO] Destroyed Resource<audio>: sword.mp3
+[INFO] Destroyed Resource<audio>: gun.mp3
 [INFO] Destroyed Resource<audio>: play.mp3
 [INFO] Destroyed Resource<audio>: select.ogg
