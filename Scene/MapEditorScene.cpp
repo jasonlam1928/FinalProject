@@ -427,7 +427,6 @@ void MapEditorScene::OnMouseDown(int button, int mx, int my) {
         float plusX3=iconX+200, minusX3=iconX+240, btnY3=iconY+8;
         if(mx>=plusX3 && mx<=plusX3+btnW && my>=btnY3 && my<=btnY3+btnH) { maxUnit++; }
         if(mx>=minusX3 && mx<=minusX3+btnW && my>=btnY3 && my<=btnY3+btnH && maxUnit>1) { maxUnit--; }
-        return;
     }
 
     float thirdTabWidth = toolbarSize / 3;

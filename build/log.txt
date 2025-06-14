@@ -11,6 +11,15 @@
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 48
 [INFO] Game initialized
 [INFO] Game start event loop
+[INFO] Loaded Resource<audio>: Resource/audios/select.ogg
+[INFO] Created<sample_instance>: Resource/audios/select.ogg
+[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png scaled to 400x100
+[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png
+[INFO] Loaded Resource<image>: Resource/images/stage-select/floor.png
+[INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 24
+[INFO] Changed to stage-select scene
+[INFO] stopped audio (sample)
+[INFO] Changed to start scene
 [INFO] Changed to map-editor-select scene
 [INFO] Loaded Resource<image>: Resource/images/play/floor.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/dirt.png scaled to 64x64
@@ -23,6 +32,11 @@
 [INFO] Loaded Resource<image>: Resource/images/play/dirt.png
 [INFO] Loaded Resource<image>: Resource/images/play/sand.png
 [INFO] Changed to start scene
+[INFO] Changed to map-editor-select scene
+[INFO] Changed to map-editor scene
+[INFO] Changed to start scene
+[INFO] Changed to map-editor-select scene
+[INFO] Changed to start scene
 [INFO] Game Terminating...
 [INFO] Game terminated
 [INFO] Game end
@@ -33,10 +47,16 @@
 [INFO] Destroyed Resource<image>: icon.png
 [INFO] Destroyed Resource<image>: play/dirt.png?64x64
 [INFO] Destroyed Resource<image>: play/floor.png?64x64
+[INFO] Destroyed Resource<image>: stage-select/dirt.png
+[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
 [INFO] Destroyed Resource<image>: play/sand.png?64x64
+[INFO] Destroyed Resource<image>: stage-select/floor.png
 [INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
 [INFO] Destroyed Resource<image>: play/dirt.png
 [INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png?400x100
 [INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png
+[INFO] Destroyed Resource<font>: pirulen.ttf?24
 [INFO] Destroyed Resource<font>: pirulen.ttf?48
 [INFO] Destroyed Resource<font>: pirulen.ttf?120
+[INFO] Destroyed<sample_instance>: select.ogg
+[INFO] Destroyed Resource<audio>: select.ogg
