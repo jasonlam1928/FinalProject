@@ -38,13 +38,34 @@
 [INFO] Loaded Resource<image>: Resource/images/play/EnemyBase.png
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 200x60
 [INFO] Changed to play scene
-[INFO] Loaded Resource<image>: Resource/images/play/KnightIdle.png
-[INFO] Loaded Resource<audio>: Resource/audios/sword.mp3
+[INFO] Game Terminating...
 [INFO] stopped audio (bgm)
-[INFO] Loaded Resource<image>: Resource/images/lose/benjamin-happy.png
-[INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 48
-[INFO] Loaded Resource<image>: Resource/images/win/dirt.png scaled to 400x100
-[INFO] Loaded Resource<image>: Resource/images/win/dirt.png
-[INFO] Loaded Resource<image>: Resource/images/win/floor.png
-[INFO] Changed to lose scene
-[INFO] Changed to start scene
+[INFO] Game terminated
+[INFO] Game end
+[INFO] Destroyed Resource<image>: play/EnemyBase.png
+[INFO] Destroyed Resource<image>: play/AttackButtonHover.png
+[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png
+[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: play/CancelButtonHover.png
+[INFO] Destroyed Resource<image>: play/Idle.png?80x80
+[INFO] Destroyed Resource<image>: play/CancelButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: play/Idle.png?200x60
+[INFO] Destroyed Resource<image>: play/Hover.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png
+[INFO] Destroyed Resource<image>: icon.png
+[INFO] Destroyed Resource<image>: play/dirt.png?64x64
+[INFO] Destroyed Resource<image>: stage-select/floor.png
+[INFO] Destroyed Resource<image>: play/floor.png?64x64
+[INFO] Destroyed Resource<image>: stage-select/dirt.png
+[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
+[INFO] Destroyed Resource<image>: play/Idle.png?120x40
+[INFO] Destroyed Resource<image>: play/CancelButtonIdle.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
+[INFO] Destroyed Resource<image>: play/Idle.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png?400x100
+[INFO] Destroyed Resource<font>: pirulen.ttf?24
+[INFO] Destroyed Resource<font>: pirulen.ttf?36
+[INFO] Destroyed Resource<font>: StageRetro.ttf?110
+[INFO] Destroyed<sample_instance>: select.ogg
+[INFO] Destroyed Resource<audio>: play.mp3
+[INFO] Destroyed Resource<audio>: select.ogg
