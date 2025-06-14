@@ -21,17 +21,19 @@ bool EnemyGunner1::Act(){
         for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
             Unit* unit = dynamic_cast<Unit*>(obj);
             if(unit->IsPlayer()){
-                int dist = abs(r.x - unit->gridPos.x)+abs(r.y - unit->gridPos.y);
-                if(dist<closetDist&&dist>=attackRange){
+                // Skip if the unit is occupying the candidate move position
+                if(unit->gridPos == r) continue;
+                int dist = abs(r.x - unit->gridPos.x) + abs(r.y - unit->gridPos.y);
+                if(dist < closetDist && dist >= attackRange){
                     target = unit;
-                    closetDist=dist;
-                    bestMove=r;
-                    bestStep=radiusStep[r];
+                    closetDist = dist;
+                    bestMove = r;
+                    bestStep = radiusStep[r];
                 }
-                else if(dist==closetDist&&radiusStep[r]<bestStep){
+                else if(dist == closetDist && radiusStep[r] < bestStep){
                     target = unit;
-                    bestMove=r;
-                    bestStep=radiusStep[r];
+                    bestMove = r;
+                    bestStep = radiusStep[r];
                 }
             }
             

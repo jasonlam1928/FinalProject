@@ -38,6 +38,8 @@
 [INFO] Loaded Resource<image>: Resource/images/play/EnemyBase.png
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 200x60
 [INFO] Changed to play scene
+[INFO] Loaded Resource<image>: Resource/images/play/KnightIdle.png
+[INFO] Loaded Resource<audio>: Resource/audios/sword.mp3
 [INFO] Game Terminating...
 [INFO] stopped audio (bgm)
 [INFO] Game terminated
@@ -62,10 +64,12 @@
 [INFO] Destroyed Resource<image>: play/CancelButtonIdle.png
 [INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
 [INFO] Destroyed Resource<image>: play/Idle.png
+[INFO] Destroyed Resource<image>: play/KnightIdle.png
 [INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png?400x100
 [INFO] Destroyed Resource<font>: pirulen.ttf?24
 [INFO] Destroyed Resource<font>: pirulen.ttf?36
 [INFO] Destroyed Resource<font>: StageRetro.ttf?110
 [INFO] Destroyed<sample_instance>: select.ogg
+[INFO] Destroyed Resource<audio>: sword.mp3
 [INFO] Destroyed Resource<audio>: play.mp3
 [INFO] Destroyed Resource<audio>: select.ogg
