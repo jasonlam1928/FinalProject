@@ -1,3 +1,0 @@
-C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/FinalProject.dir
-C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/edit_cache.dir
-C:/Users/liewz/Desktop/School/Programming Class/Final Project (II)/FinalProject/build/CMakeFiles/rebuild_cache.dir
