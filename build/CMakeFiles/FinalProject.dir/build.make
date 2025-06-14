@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jason\Downloads\Final_project
+CMAKE_SOURCE_DIR = "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jason\Downloads\Final_project\build
+CMAKE_BINARY_DIR = "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/FinalProject.dir/depend.make
@@ -70,573 +70,573 @@ include CMakeFiles/FinalProject.dir/flags.make
 
 CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Allegro5Exception.cpp
+CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Allegro5Exception.cpp
 CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Allegro5Exception.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Allegro5Exception.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Allegro5Exception.cpp > CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Allegro5Exception.cpp" > CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Allegro5Exception.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Allegro5Exception.cpp -o CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Allegro5Exception.cpp" -o CMakeFiles\FinalProject.dir\Engine\Allegro5Exception.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/AudioHelper.cpp
+CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/AudioHelper.cpp
 CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\AudioHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\AudioHelper.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\AudioHelper.cpp > CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\AudioHelper.cpp" > CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/AudioHelper.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\AudioHelper.cpp -o CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\AudioHelper.cpp" -o CMakeFiles\FinalProject.dir\Engine\AudioHelper.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Collider.cpp
+CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Collider.cpp
 CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Collider.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Collider.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Collider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Collider.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Collider.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Collider.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Collider.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Collider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Collider.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Collider.cpp > CMakeFiles\FinalProject.dir\Engine\Collider.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Collider.cpp" > CMakeFiles\FinalProject.dir\Engine\Collider.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Collider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Collider.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Collider.cpp -o CMakeFiles\FinalProject.dir\Engine\Collider.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Collider.cpp" -o CMakeFiles\FinalProject.dir\Engine\Collider.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/GameEngine.cpp
+CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/GameEngine.cpp
 CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\GameEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\GameEngine.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\GameEngine.cpp > CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\GameEngine.cpp" > CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/GameEngine.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\GameEngine.cpp -o CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\GameEngine.cpp" -o CMakeFiles\FinalProject.dir\Engine\GameEngine.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Group.cpp
+CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Group.cpp
 CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Group.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Group.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Group.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Group.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Group.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Group.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Group.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Group.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Group.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Group.cpp > CMakeFiles\FinalProject.dir\Engine\Group.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Group.cpp" > CMakeFiles\FinalProject.dir\Engine\Group.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Group.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Group.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Group.cpp -o CMakeFiles\FinalProject.dir\Engine\Group.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Group.cpp" -o CMakeFiles\FinalProject.dir\Engine\Group.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/IControl.cpp
+CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/IControl.cpp
 CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IControl.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IControl.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\IControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IControl.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IControl.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IControl.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IControl.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/IControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/IControl.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\IControl.cpp > CMakeFiles\FinalProject.dir\Engine\IControl.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IControl.cpp" > CMakeFiles\FinalProject.dir\Engine\IControl.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/IControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/IControl.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\IControl.cpp -o CMakeFiles\FinalProject.dir\Engine\IControl.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IControl.cpp" -o CMakeFiles\FinalProject.dir\Engine\IControl.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/IObject.cpp
+CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/IObject.cpp
 CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IObject.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IObject.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\IObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IObject.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IObject.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IObject.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IObject.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/IObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/IObject.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\IObject.cpp > CMakeFiles\FinalProject.dir\Engine\IObject.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IObject.cpp" > CMakeFiles\FinalProject.dir\Engine\IObject.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/IObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/IObject.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\IObject.cpp -o CMakeFiles\FinalProject.dir\Engine\IObject.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IObject.cpp" -o CMakeFiles\FinalProject.dir\Engine\IObject.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/IScene.cpp
+CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/IScene.cpp
 CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\IScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IScene.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/IScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/IScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\IScene.cpp > CMakeFiles\FinalProject.dir\Engine\IScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IScene.cpp" > CMakeFiles\FinalProject.dir\Engine\IScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/IScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/IScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\IScene.cpp -o CMakeFiles\FinalProject.dir\Engine\IScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IScene.cpp" -o CMakeFiles\FinalProject.dir\Engine\IScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/IntPoint.cpp
+CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/IntPoint.cpp
 CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\IntPoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IntPoint.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\IntPoint.cpp > CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IntPoint.cpp" > CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/IntPoint.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\IntPoint.cpp -o CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\IntPoint.cpp" -o CMakeFiles\FinalProject.dir\Engine\IntPoint.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/LOG.cpp
+CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/LOG.cpp
 CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\LOG.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\LOG.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\LOG.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/LOG.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\LOG.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\LOG.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\LOG.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/LOG.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/LOG.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\LOG.cpp > CMakeFiles\FinalProject.dir\Engine\LOG.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\LOG.cpp" > CMakeFiles\FinalProject.dir\Engine\LOG.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/LOG.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/LOG.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\LOG.cpp -o CMakeFiles\FinalProject.dir\Engine\LOG.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\LOG.cpp" -o CMakeFiles\FinalProject.dir\Engine\LOG.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Point.cpp
+CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Point.cpp
 CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Point.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Point.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Point.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Point.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Point.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Point.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Point.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Point.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Point.cpp > CMakeFiles\FinalProject.dir\Engine\Point.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Point.cpp" > CMakeFiles\FinalProject.dir\Engine\Point.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Point.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Point.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Point.cpp -o CMakeFiles\FinalProject.dir\Engine\Point.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Point.cpp" -o CMakeFiles\FinalProject.dir\Engine\Point.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Resources.cpp
+CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Resources.cpp
 CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Resources.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Resources.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Resources.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Resources.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Resources.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Resources.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Resources.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Resources.cpp > CMakeFiles\FinalProject.dir\Engine\Resources.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Resources.cpp" > CMakeFiles\FinalProject.dir\Engine\Resources.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Resources.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Resources.cpp -o CMakeFiles\FinalProject.dir\Engine\Resources.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Resources.cpp" -o CMakeFiles\FinalProject.dir\Engine\Resources.cpp.s
 
 CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj: C:/Users/jason/Downloads/Final_project/Engine/Sprite.cpp
+CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Engine/Sprite.cpp
 CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.obj -c C:\Users\jason\Downloads\Final_project\Engine\Sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.obj -MF CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.obj.d -o CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Sprite.cpp"
 
 CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Engine\Sprite.cpp > CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Sprite.cpp" > CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.i
 
 CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Engine/Sprite.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Engine\Sprite.cpp -o CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Engine\Sprite.cpp" -o CMakeFiles\FinalProject.dir\Engine\Sprite.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/LoseScene.cpp
+CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/LoseScene.cpp
 CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\LoseScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\LoseScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\LoseScene.cpp > CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\LoseScene.cpp" > CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/LoseScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\LoseScene.cpp -o CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\LoseScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\LoseScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/MapEditorScene.cpp
+CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/MapEditorScene.cpp
 CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\MapEditorScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\MapEditorScene.cpp > CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorScene.cpp" > CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/MapEditorScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\MapEditorScene.cpp -o CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\MapEditorScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/MapEditorSelectScene.cpp
+CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/MapEditorSelectScene.cpp
 CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\MapEditorSelectScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorSelectScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\MapEditorSelectScene.cpp > CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorSelectScene.cpp" > CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/MapEditorSelectScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\MapEditorSelectScene.cpp -o CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\MapEditorSelectScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\MapEditorSelectScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/PlayScene.cpp
+CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/PlayScene.cpp
 CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\PlayScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\PlayScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\PlayScene.cpp > CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\PlayScene.cpp" > CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/PlayScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\PlayScene.cpp -o CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\PlayScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\PlayScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/Save.cpp
+CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/Save.cpp
 CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\Save.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\Save.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\Save.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/Save.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\Save.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\Save.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Save.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/Save.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/Save.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\Save.cpp > CMakeFiles\FinalProject.dir\Scene\Save.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Save.cpp" > CMakeFiles\FinalProject.dir\Scene\Save.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/Save.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/Save.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\Save.cpp -o CMakeFiles\FinalProject.dir\Scene\Save.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Save.cpp" -o CMakeFiles\FinalProject.dir\Scene\Save.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/Scoreboard.cpp
+CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/Scoreboard.cpp
 CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\Scoreboard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Scoreboard.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\Scoreboard.cpp > CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Scoreboard.cpp" > CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/Scoreboard.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\Scoreboard.cpp -o CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\Scoreboard.cpp" -o CMakeFiles\FinalProject.dir\Scene\Scoreboard.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/SettingsScene.cpp
+CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/SettingsScene.cpp
 CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\SettingsScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\SettingsScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\SettingsScene.cpp > CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\SettingsScene.cpp" > CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/SettingsScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\SettingsScene.cpp -o CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\SettingsScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\SettingsScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/StageSelectScene.cpp
+CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/StageSelectScene.cpp
 CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\StageSelectScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StageSelectScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\StageSelectScene.cpp > CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StageSelectScene.cpp" > CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/StageSelectScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\StageSelectScene.cpp -o CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StageSelectScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\StageSelectScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/StartScene.cpp
+CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/StartScene.cpp
 CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\StartScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StartScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\StartScene.cpp > CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StartScene.cpp" > CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/StartScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\StartScene.cpp -o CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\StartScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\StartScene.cpp.s
 
 CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj: C:/Users/jason/Downloads/Final_project/Scene/WinScene.cpp
+CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Scene/WinScene.cpp
 CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.obj -c C:\Users\jason\Downloads\Final_project\Scene\WinScene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.obj -MF CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.obj.d -o CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\WinScene.cpp"
 
 CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Scene\WinScene.cpp > CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\WinScene.cpp" > CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.i
 
 CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Scene/WinScene.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Scene\WinScene.cpp -o CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Scene\WinScene.cpp" -o CMakeFiles\FinalProject.dir\Scene\WinScene.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Animation/DirtyEffect.cpp
+CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Animation/DirtyEffect.cpp
 CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Animation\DirtyEffect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\DirtyEffect.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Animation\DirtyEffect.cpp > CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\DirtyEffect.cpp" > CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Animation/DirtyEffect.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Animation\DirtyEffect.cpp -o CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\DirtyEffect.cpp" -o CMakeFiles\FinalProject.dir\UI\Animation\DirtyEffect.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Animation/ExplosionEffect.cpp
+CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Animation/ExplosionEffect.cpp
 CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Animation\ExplosionEffect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\ExplosionEffect.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Animation\ExplosionEffect.cpp > CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\ExplosionEffect.cpp" > CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Animation/ExplosionEffect.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Animation\ExplosionEffect.cpp -o CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Animation\ExplosionEffect.cpp" -o CMakeFiles\FinalProject.dir\UI\Animation\ExplosionEffect.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Component/HitLabel.cpp
+CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Component/HitLabel.cpp
 CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Component\HitLabel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\HitLabel.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Component\HitLabel.cpp > CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\HitLabel.cpp" > CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Component/HitLabel.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Component\HitLabel.cpp -o CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\HitLabel.cpp" -o CMakeFiles\FinalProject.dir\UI\Component\HitLabel.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Component/Image.cpp
+CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Component/Image.cpp
 CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Component\Image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Image.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Component\Image.cpp > CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Image.cpp" > CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Component/Image.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Component\Image.cpp -o CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Image.cpp" -o CMakeFiles\FinalProject.dir\UI\Component\Image.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Component/ImageButton.cpp
+CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Component/ImageButton.cpp
 CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Component\ImageButton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\ImageButton.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Component\ImageButton.cpp > CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\ImageButton.cpp" > CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Component/ImageButton.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Component\ImageButton.cpp -o CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\ImageButton.cpp" -o CMakeFiles\FinalProject.dir\UI\Component\ImageButton.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Component/Label.cpp
+CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Component/Label.cpp
 CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Component\Label.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Label.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Component\Label.cpp > CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Label.cpp" > CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Component/Label.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Component\Label.cpp -o CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Label.cpp" -o CMakeFiles\FinalProject.dir\UI\Component\Label.cpp.s
 
 CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj: C:/Users/jason/Downloads/Final_project/UI/Component/Slider.cpp
+CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/UI/Component/Slider.cpp
 CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.obj -c C:\Users\jason\Downloads\Final_project\UI\Component\Slider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.obj -MF CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.obj.d -o CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Slider.cpp"
 
 CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\UI\Component\Slider.cpp > CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Slider.cpp" > CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.i
 
 CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/UI/Component/Slider.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\UI\Component\Slider.cpp -o CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\UI\Component\Slider.cpp" -o CMakeFiles\FinalProject.dir\UI\Component\Slider.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Enemy/Enemy.cpp
+CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Enemy/Enemy.cpp
 CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Enemy\Enemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\Enemy.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Enemy\Enemy.cpp > CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\Enemy.cpp" > CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Enemy/Enemy.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Enemy\Enemy.cpp -o CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\Enemy.cpp" -o CMakeFiles\FinalProject.dir\Unit\Enemy\Enemy.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyGunner1.cpp
+CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Enemy/EnemyGunner1.cpp
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyGunner1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyGunner1.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyGunner1.cpp > CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyGunner1.cpp" > CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyGunner1.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyGunner1.cpp -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyGunner1.cpp" -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyGunner1.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Enemy/EnemyKnight1.cpp
+CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Enemy/EnemyKnight1.cpp
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyKnight1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyKnight1.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyKnight1.cpp > CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyKnight1.cpp" > CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Enemy/EnemyKnight1.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Enemy\EnemyKnight1.cpp -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Enemy\EnemyKnight1.cpp" -o CMakeFiles\FinalProject.dir\Unit\Enemy\EnemyKnight1.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Player/Gunner1.cpp
+CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Player/Gunner1.cpp
 CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Player\Gunner1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Gunner1.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Player\Gunner1.cpp > CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Gunner1.cpp" > CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Player/Gunner1.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Player\Gunner1.cpp -o CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Gunner1.cpp" -o CMakeFiles\FinalProject.dir\Unit\Player\Gunner1.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Player/Knight1.cpp
+CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Player/Knight1.cpp
 CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Player\Knight1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Knight1.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Player\Knight1.cpp > CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Knight1.cpp" > CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Player/Knight1.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Player\Knight1.cpp -o CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Knight1.cpp" -o CMakeFiles\FinalProject.dir\Unit\Player\Knight1.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Player/Player.cpp
+CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Player/Player.cpp
 CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Player\Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Player.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Player\Player.cpp > CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Player.cpp" > CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Player/Player.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Player\Player.cpp -o CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Player\Player.cpp" -o CMakeFiles\FinalProject.dir\Unit\Player\Player.cpp.s
 
 CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: C:/Users/jason/Downloads/Final_project/Unit/Unit.cpp
+CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/Unit/Unit.cpp
 CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Unit.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Unit.cpp.obj -c C:\Users\jason\Downloads\Final_project\Unit\Unit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/Unit/Unit.cpp.obj -MF CMakeFiles\FinalProject.dir\Unit\Unit.cpp.obj.d -o CMakeFiles\FinalProject.dir\Unit\Unit.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Unit.cpp"
 
 CMakeFiles/FinalProject.dir/Unit/Unit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/Unit/Unit.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\Unit\Unit.cpp > CMakeFiles\FinalProject.dir\Unit\Unit.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Unit.cpp" > CMakeFiles\FinalProject.dir\Unit\Unit.cpp.i
 
 CMakeFiles/FinalProject.dir/Unit/Unit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/Unit/Unit.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\Unit\Unit.cpp -o CMakeFiles\FinalProject.dir\Unit\Unit.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\Unit\Unit.cpp" -o CMakeFiles\FinalProject.dir\Unit\Unit.cpp.s
 
 CMakeFiles/FinalProject.dir/main.cpp.obj: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/main.cpp.obj: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/main.cpp.obj: C:/Users/jason/Downloads/Final_project/main.cpp
+CMakeFiles/FinalProject.dir/main.cpp.obj: C:/Users/liewz/Desktop/School/Programming\ Class/Final\ Project\ (II)/FinalProject/main.cpp
 CMakeFiles/FinalProject.dir/main.cpp.obj: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/FinalProject.dir/main.cpp.obj"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/main.cpp.obj -MF CMakeFiles\FinalProject.dir\main.cpp.obj.d -o CMakeFiles\FinalProject.dir\main.cpp.obj -c C:\Users\jason\Downloads\Final_project\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/FinalProject.dir/main.cpp.obj"
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/main.cpp.obj -MF CMakeFiles\FinalProject.dir\main.cpp.obj.d -o CMakeFiles\FinalProject.dir\main.cpp.obj -c "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\main.cpp"
 
 CMakeFiles/FinalProject.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/main.cpp.i"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jason\Downloads\Final_project\main.cpp > CMakeFiles\FinalProject.dir\main.cpp.i
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\main.cpp" > CMakeFiles\FinalProject.dir\main.cpp.i
 
 CMakeFiles/FinalProject.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/main.cpp.s"
-	C:\Users\jason\Downloads\llvm-mingw-20240417-msvcrt-x86_64\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jason\Downloads\Final_project\main.cpp -o CMakeFiles\FinalProject.dir\main.cpp.s
+	C:\LLVM\MinGW\llvm-mingw-20240417-msvcrt-x86_64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\main.cpp" -o CMakeFiles\FinalProject.dir\main.cpp.s
 
 # Object files for target FinalProject
 FinalProject_OBJECTS = \
@@ -724,7 +724,7 @@ FinalProject.exe: CMakeFiles/FinalProject.dir/build.make
 FinalProject.exe: CMakeFiles/FinalProject.dir/linkLibs.rsp
 FinalProject.exe: CMakeFiles/FinalProject.dir/objects1.rsp
 FinalProject.exe: CMakeFiles/FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\jason\Downloads\Final_project\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable FinalProject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable FinalProject.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FinalProject.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -736,6 +736,6 @@ CMakeFiles/FinalProject.dir/clean:
 .PHONY : CMakeFiles/FinalProject.dir/clean
 
 CMakeFiles/FinalProject.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jason\Downloads\Final_project C:\Users\jason\Downloads\Final_project C:\Users\jason\Downloads\Final_project\build C:\Users\jason\Downloads\Final_project\build C:\Users\jason\Downloads\Final_project\build\CMakeFiles\FinalProject.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build" "C:\Users\liewz\Desktop\School\Programming Class\Final Project (II)\FinalProject\build\CMakeFiles\FinalProject.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/FinalProject.dir/depend
 
