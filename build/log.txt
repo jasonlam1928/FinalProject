@@ -16,17 +16,16 @@
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 24
 [INFO] Changed to stage-select scene
 [INFO] stopped audio (sample)
-[INFO] Loaded Resource<image>: Resource/images/play/floor.png scaled to 64x64
-[INFO] Loaded Resource<image>: Resource/images/play/dirt.png scaled to 64x64
-[INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 120x40
-[INFO] Loaded Resource<image>: Resource/images/play/Idle.png
-[INFO] Loaded Resource<image>: Resource/images/play/Hover.png
-[INFO] Loaded Resource<audio>: Resource/audios/astronomia.ogg
-[INFO] Created<sample_instance>: Resource/audios/astronomia.ogg
-[INFO] Loaded Resource<image>: Resource/images/lose/benjamin-happy.png
-[INFO] Loaded Resource<audio>: Resource/audios/play.ogg
-[INFO] Loaded Resource<image>: Resource/images/play/Knight_01.png
-[INFO] Loaded Resource<image>: Resource/images/play/Knight_03.png
-[INFO] Changed to play scene
+[INFO] Changed to start scene
 [INFO] Game Terminating...
-[INFO] stopped audio (bgm)
+[INFO] Game terminated
+[INFO] Game end
+[INFO] Destroyed Resource<image>: stage-select/floor.png
+[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
+[INFO] Destroyed Resource<image>: stage-select/dirt.png
+[INFO] Destroyed Resource<image>: icon.png
+[INFO] Destroyed Resource<font>: pirulen.ttf?24
+[INFO] Destroyed Resource<font>: pirulen.ttf?48
+[INFO] Destroyed Resource<font>: pirulen.ttf?120
+[INFO] Destroyed<sample_instance>: select.ogg
+[INFO] Destroyed Resource<audio>: select.ogg
