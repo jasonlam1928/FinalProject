@@ -130,7 +130,11 @@ void Unit::drawRadius(int cameraX, int cameraY) {
                     IntPoint nxt = cur + IntPoint(dx[d], dy[d]);
                     bool outOfRange = false;
                     if (visited.count(nxt)) continue;
-
+                    // 修正：用 enum 判斷 TILE_SAND
+                    if(getPlayScene()->mapState[nxt.y][nxt.x] == PlayScene::TILE_SAND){
+                        valid[nxt]=false;
+                        outOfRange = true;
+                    }
 
                     if (nxt.x <= 1 || nxt.x >= 62 || nxt.y <= 1 || nxt.y >= 62) {
                         outOfRange = true;
@@ -145,8 +149,9 @@ void Unit::drawRadius(int cameraX, int cameraY) {
                     for (auto& obj : getPlayScene()->UnitGroup->GetObjects()) {
                         auto unit = dynamic_cast<Unit*>(obj);
                         if (nxt == unit->gridPos) {
-                            outOfRange = true;
                             valid[nxt] = false;
+                            outOfRange=true;
+                            q.push(nxt);
                             break;
                         }
                     }

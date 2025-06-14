@@ -14,6 +14,7 @@ namespace Engine {
         mouseIn = Collider::IsPointInBitmap(Point((mouse.x - Position.x) * GetBitmapWidth() / Size.x + Anchor.x * GetBitmapWidth(), (mouse.y - Position.y) * GetBitmapHeight() / Size.y + Anchor.y * GetBitmapHeight()), bmp);
         if (!mouseIn || !Enabled) bmp = imgOut;
         else bmp = this->imgIn;
+        hover = mouseIn; // 新增：同步 hover 狀態
         cameraX=cameraY=0;
     }
     void ImageButton::SetOnClickCallback(std::function<void(void)> onClickCallback) {
@@ -29,6 +30,7 @@ namespace Engine {
         mouseIn = Collider::IsPointInBitmap(Point((mx - Position.x+cameraX) * GetBitmapWidth() / Size.x + Anchor.x * GetBitmapWidth(), (my - Position.y+cameraY) * GetBitmapHeight() / Size.y + Anchor.y * GetBitmapHeight()), bmp);
         if (!mouseIn || !Enabled) bmp = imgOut;
         else bmp = imgIn;
+        hover = mouseIn; // 新增：同步 hover 狀態
     }
     void ImageButton::SetPosition(float x, float y, int cx, int cy) {
         // 直接修改继承自 Image 的 Position 字段

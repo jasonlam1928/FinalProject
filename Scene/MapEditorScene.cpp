@@ -44,7 +44,7 @@ void MapEditorScene::Initialize() {
     tileTypes = {
         "play/dirt.png",   // 0
         "play/floor.png", // 1
-        "play/floor.png"  // 2 (or another image if you have more types)
+        "play/sand.png"  // 2 (or another image if you have more types)
     };
 
     // Load map (reuse PlayScene logic)
@@ -98,8 +98,8 @@ void MapEditorScene::Initialize() {
     enemyFin.close();
 
     for (const auto& [typeInt, ux, uy] : unitData) {
-        float posX = (ux - 1) * BlockSize + BlockSize / 2;
-        float posY = (uy - 1) * BlockSize + BlockSize / 2;
+        float posX = (ux - 1) * BlockSize - BlockSize / 2;
+        float posY = (uy - 1) * BlockSize - BlockSize / 2;
         Engine::Sprite* enemy = nullptr;
         switch (typeInt) {
             case 1:

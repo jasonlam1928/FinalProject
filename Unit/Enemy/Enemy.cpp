@@ -34,6 +34,8 @@ void Enemy::Hit(float damage, std::string Label) {
 }
 
 void Enemy::Update(float deltaTime) {
+    PlayScene* scene = getPlayScene();
+    imgBase.Move(Sprite::Position.x, Sprite::Position.y);
 }
 void Enemy::Draw() const {
     imgBase.Draw();

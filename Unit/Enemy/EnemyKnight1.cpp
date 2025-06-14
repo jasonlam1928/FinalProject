@@ -4,9 +4,9 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-EnemyKnight1::EnemyKnight1(int x, int y) : Enemy("play/EnemyBase.png","play/ShieldIcon.png","play/KnightIdle.png", x, y, 10, 10, 5, 2, 100,1, "Knight_01") {
-    AddSkill({"Blade", 1, 5, 5, 0.2});
-    AddSkill({"LaserBlade", 1, 20, 10, 0.4});
+EnemyKnight1::EnemyKnight1(int x, int y) : Enemy("play/EnemyBase.png","play/ShieldIcon.png","play/KnightIdle.png", x, y, 100, 10, 5, 2, 100,1, "Knight_01") {
+    AddSkill({"Blade", 1, 5, 100, 0.2});
+    AddSkill({"Defense", 1, 0, 0, 0});
     attackRange=1;
 }
 
@@ -45,6 +45,7 @@ bool EnemyKnight1::Act(){
         scene->ChooseAbilityDraw=true;
         scene->btnConfirm->Visible=true;
         scene->waitingForConfirm=true;
+        scene->distance = closetDist;
         gridPos.x=bestMove.x, gridPos.y=bestMove.y;
         Sprite::Move(bestMove.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestMove.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
         calc=false;
@@ -64,11 +65,12 @@ void EnemyKnight1::chooseSkill(){
     int bestSkillIndex = -1;
     const auto& skills = GetSkills();
     for (int i = 0; i < (int)skills.size(); ++i) {
-        if (Energy >= skills[i].energy && skills[i].energy > maxEnergy) {
+        if (Energy >= skills[i].energy && skills[i].energy > maxEnergy && Scene->distance<=skills[i].range) {
             maxEnergy = skills[i].energy;
             bestSkillIndex = i;
         }
     }
     Scene->EnemyselectedSkillIndex = bestSkillIndex;
+    cout<<bestSkillIndex<<endl;
 }
 

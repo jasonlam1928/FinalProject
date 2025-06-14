@@ -4,9 +4,9 @@
 #include"Scene/PlayScene.hpp"
 #include"Engine/IntPoint.hpp"
 
-EnemyGunner1::EnemyGunner1(int x, int y) : Enemy("play/EnemyBase.png","play/ShieldIcon.png","play/KnightIdle.png", x, y, 10, 10, 5, 2, 100, 2, "Knight_01") {
-    AddSkill({"Blade", 2, 50, 5, 0.2});
-    AddSkill({"LaserBlade", 1, 20, 10, 0.4});
+EnemyGunner1::EnemyGunner1(int x, int y) : Enemy("play/EnemyBase.png","play/GunnerIcon.png","play/KnightIdle.png", x, y, 10, 10, 5, 2, 200, 2, "Knight_01") {
+    AddSkill({"Shoot", 2, 50, 5, 0.2});
+    AddSkill({"Defense", 1, 0, 0, 0});
     attackRange=2;
 }
 
@@ -39,6 +39,7 @@ bool EnemyGunner1::Act(){
     }
     if(closetDist<=attackRange){
         PlayScene* scene = getPlayScene();
+        scene->distance = closetDist;
         scene->Defense=target;
         scene->btnAttack->Visible=false;
         scene->SetDrawRadius(false);

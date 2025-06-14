@@ -28,6 +28,8 @@ namespace Engine {
     public:
         // Whether the button can be pressed.
         bool Enabled = true;
+        // 新增 hover 狀態
+        bool hover = false;
         /// <summary>
         /// Construct a image object.
         /// </summary>

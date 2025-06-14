@@ -51,8 +51,9 @@ bool Player::TryMoveNearTarget(Unit* target) {
     visited.insert(start);
     int dx[4] = {0,0,1,-1};
     int dy[4] = {1,-1,0,0};
-    Engine::IntPoint bestnxt;
+    Engine::IntPoint bestnxt={0, 0};
     int bestUnitStep=INT_MAX;
+    int bestDistance;
     while (!q.empty()) {
         auto [cur, step] = q.front(); q.pop();  
         if (step >= 0) {
@@ -69,21 +70,31 @@ bool Player::TryMoveNearTarget(Unit* target) {
                  if(visited.count(nxt)) continue;
                  for(auto obj:getPlayScene()->UnitGroup->GetObjects()){
                     Unit* unit = dynamic_cast<Unit*>(obj);
-                    if(nxt==unit->gridPos){
+                    if(nxt==unit->gridPos&&!unit->IsPlayer()){
                         valid=false;
                         break;
                     }
                  }
                  
-                 if(step==attackRange-1 && MoveValid[nxt]){
-                    if(radiusStep[nxt]<bestUnitStep){
-                        bestnxt=nxt;
-                        bestUnitStep=radiusStep[nxt];
-                        valid=false;
+
+                 // 優先順序: step+1==attackRange > (radiusStep[nxt]<bestUnitStep) > (step+1<=attackRange)
+                 if (step+1 == attackRange && MoveValid[nxt]) {
+                    if (radiusStep[nxt] < bestUnitStep) {
+                        bestDistance = step+1;
+                        bestnxt = nxt;
+                        bestUnitStep = radiusStep[nxt];
                     }
+                 } else if (radiusStep[nxt] < bestUnitStep && MoveValid[nxt] && step+1 <= attackRange) {
+                    bestnxt = nxt;
+                    bestUnitStep = radiusStep[nxt];
+                 } else if (MoveValid[nxt] && step+1 <= attackRange) {
+                    bestnxt = nxt;
                  }
                  if(step>attackRange-1&&bestUnitStep!=INT_MAX)continue;
-                 if(nxt==this->previewPos) return true;
+                 if(nxt==this->previewPos){
+                    getPlayScene()->distance = step+1;
+                    return true;
+                 } 
                  if(!valid) continue;
                  q.push({nxt, step+1});
                  visited.insert(nxt);
@@ -93,7 +104,9 @@ bool Player::TryMoveNearTarget(Unit* target) {
             
         }
     }
+    if (bestnxt == Engine::IntPoint(0, 0)) return false;
     //cout<<bestnxt.x<<" "<<bestnxt.y<<endl;
+    getPlayScene()->distance = attackRange;
     Unit::previewPos = bestnxt;
     Sprite::Move(bestnxt.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestnxt.y*PlayScene::BlockSize+PlayScene::BlockSize/2);
     imgBase.Move(bestnxt.x*PlayScene::BlockSize+PlayScene::BlockSize/2, bestnxt.y*PlayScene::BlockSize+PlayScene::BlockSize/2);

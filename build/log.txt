@@ -5,27 +5,34 @@
 [INFO] Allegro5 initialized
 [INFO] Game begin
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 120
-[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png scaled to 400x100
-[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png
-[INFO] Loaded Resource<image>: Resource/images/stage-select/floor.png
+[INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonIdle.png scaled to 400x100
+[INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonIdle.png
+[INFO] Loaded Resource<image>: Resource/images/stage-select/ButtonHover.png
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 48
 [INFO] Game initialized
 [INFO] Game start event loop
 [INFO] Loaded Resource<audio>: Resource/audios/select.ogg
 [INFO] Created<sample_instance>: Resource/audios/select.ogg
+[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png scaled to 400x100
+[INFO] Loaded Resource<image>: Resource/images/stage-select/dirt.png
+[INFO] Loaded Resource<image>: Resource/images/stage-select/floor.png
 [INFO] Loaded Resource<font>: Resource/fonts/pirulen.ttf with size 24
 [INFO] Changed to stage-select scene
 [INFO] stopped audio (sample)
 [INFO] Loaded Resource<image>: Resource/images/play/floor.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/dirt.png scaled to 64x64
+[INFO] Loaded Resource<image>: Resource/images/play/sand.png scaled to 64x64
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 120x40
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png
 [INFO] Loaded Resource<image>: Resource/images/play/Hover.png
+[INFO] Loaded Resource<image>: Resource/images/play/CancelButtonIdle.png scaled to 120x120
+[INFO] Loaded Resource<image>: Resource/images/play/CancelButtonIdle.png
+[INFO] Loaded Resource<image>: Resource/images/play/CancelButtonHover.png
+[INFO] Loaded Resource<image>: Resource/images/play/AttackButtonIdle.png scaled to 120x120
+[INFO] Loaded Resource<image>: Resource/images/play/AttackButtonIdle.png
+[INFO] Loaded Resource<image>: Resource/images/play/AttackButtonHover.png
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 80x80
-[INFO] Loaded Resource<audio>: Resource/audios/astronomia.ogg
-[INFO] Created<sample_instance>: Resource/audios/astronomia.ogg
-[INFO] Loaded Resource<image>: Resource/images/lose/benjamin-happy.png
-[INFO] Loaded Resource<audio>: Resource/audios/play.ogg
+[INFO] Loaded Resource<audio>: Resource/audios/play.mp3
 [INFO] Loaded Resource<image>: Resource/images/play/ShieldIcon.png
 [INFO] Loaded Resource<image>: Resource/images/play/PlayerBase.png
 [INFO] Loaded Resource<image>: Resource/images/play/GunnerIcon.png
@@ -33,37 +40,40 @@
 [INFO] Loaded Resource<image>: Resource/images/play/Idle.png scaled to 200x60
 [INFO] Changed to play scene
 [INFO] Loaded Resource<image>: Resource/images/play/KnightIdle.png
-[INFO] stopped audio (bgm)
-[INFO] Loaded Resource<image>: Resource/images/win/dirt.png scaled to 400x100
-[INFO] Loaded Resource<image>: Resource/images/win/dirt.png
-[INFO] Loaded Resource<image>: Resource/images/win/floor.png
-[INFO] Changed to lose scene
-[INFO] Changed to start scene
+[INFO] Loaded Resource<audio>: Resource/audios/sword.mp3
+[INFO] Loaded Resource<audio>: Resource/audios/gun.mp3
 [INFO] Game Terminating...
+[INFO] stopped audio (bgm)
 [INFO] Game terminated
 [INFO] Game end
-[INFO] Destroyed Resource<image>: win/dirt.png
-[INFO] Destroyed Resource<image>: win/dirt.png?400x100
-[INFO] Destroyed Resource<image>: play/KnightIdle.png
-[INFO] Destroyed Resource<image>: play/Idle.png?200x60
 [INFO] Destroyed Resource<image>: play/EnemyBase.png
-[INFO] Destroyed Resource<image>: play/Idle.png
-[INFO] Destroyed Resource<image>: lose/benjamin-happy.png
+[INFO] Destroyed Resource<image>: play/AttackButtonHover.png
+[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png
+[INFO] Destroyed Resource<image>: play/AttackButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: play/Idle.png?80x80
+[INFO] Destroyed Resource<image>: play/CancelButtonIdle.png?120x120
+[INFO] Destroyed Resource<image>: play/Idle.png?200x60
+[INFO] Destroyed Resource<image>: play/Hover.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png
 [INFO] Destroyed Resource<image>: icon.png
 [INFO] Destroyed Resource<image>: play/dirt.png?64x64
-[INFO] Destroyed Resource<image>: win/floor.png
 [INFO] Destroyed Resource<image>: stage-select/floor.png
-[INFO] Destroyed Resource<image>: play/Idle.png?80x80
 [INFO] Destroyed Resource<image>: play/floor.png?64x64
-[INFO] Destroyed Resource<image>: play/Hover.png
-[INFO] Destroyed Resource<image>: play/Idle.png?120x40
-[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
+[INFO] Destroyed Resource<image>: play/sand.png?64x64
 [INFO] Destroyed Resource<image>: stage-select/dirt.png
+[INFO] Destroyed Resource<image>: stage-select/dirt.png?400x100
+[INFO] Destroyed Resource<image>: play/Idle.png?120x40
+[INFO] Destroyed Resource<image>: play/CancelButtonHover.png
+[INFO] Destroyed Resource<image>: play/CancelButtonIdle.png
+[INFO] Destroyed Resource<image>: play/Idle.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonHover.png
+[INFO] Destroyed Resource<image>: play/KnightIdle.png
+[INFO] Destroyed Resource<image>: stage-select/ButtonIdle.png?400x100
 [INFO] Destroyed Resource<font>: pirulen.ttf?24
 [INFO] Destroyed Resource<font>: pirulen.ttf?48
 [INFO] Destroyed Resource<font>: pirulen.ttf?120
-[INFO] Destroyed<sample_instance>: astronomia.ogg
 [INFO] Destroyed<sample_instance>: select.ogg
-[INFO] Destroyed Resource<audio>: play.ogg
-[INFO] Destroyed Resource<audio>: astronomia.ogg
+[INFO] Destroyed Resource<audio>: gun.mp3
+[INFO] Destroyed Resource<audio>: sword.mp3
+[INFO] Destroyed Resource<audio>: play.mp3
 [INFO] Destroyed Resource<audio>: select.ogg

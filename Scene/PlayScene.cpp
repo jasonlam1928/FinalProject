@@ -78,10 +78,8 @@ void PlayScene::Initialize() {
     // 構建 UI
     ConstructUI();
     // Preload Lose Scene
-    deathBGMInstance = Engine::Resources::GetInstance().GetSampleInstance("astronomia.ogg");
-    Engine::Resources::GetInstance().GetBitmap("lose/benjamin-happy.png");
     // Start BGM.
-    bgmId = AudioHelper::PlayBGM("play.ogg");
+    bgmId = AudioHelper::PlayBGM("play.mp3");
 
     // 初始化玩家可用角色（合併同類型）
     availableUnitSlots.clear();
@@ -137,39 +135,83 @@ void PlayScene::Initialize() {
     draggingUnitSlotIndex = -1;
 }
 
+#include <random>
+
 void PlayScene::AttackSystem(){
     if (!Processing || !isUnitInGroup(Processing)) return;
     if (!Defense || !isUnitInGroup(Defense)) return;
     lastAttackDamage = 0;
     lastCounterDamage = 0;
+    lastAttackIsCrit = false;
+    lastCounterIsCrit = false;
+
+    // 隨機數產生器（暴擊用）
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    std::uniform_real_distribution<> enemydis(0.0, 1.0);
+    std::uniform_real_distribution<> dis(0.0, 1.0);
+    
     if(Processing->IsPlayer()){
         Processing->MovetoPreview();
         Processing->CancelPreview();
         if(PlayerselectedSkillIndex<0||PlayerselectedSkillIndex>=Processing->GetSkills().size()) return;
-        int damage = Processing->GetSkills()[PlayerselectedSkillIndex].power;
-        Processing->Energy-=Processing->GetSkills()[PlayerselectedSkillIndex].energy;
+        const Skill& atkSkill = Processing->GetSkills()[PlayerselectedSkillIndex];
+        int damage = atkSkill.power;
+        float critRate = atkSkill.critRate;
+        bool isCrit = dis(gen) < critRate;
+        if(isCrit) damage = static_cast<int>(damage * 1.5f); // 暴擊 1.5 倍傷害
+        lastAttackIsCrit = isCrit;
+        Processing->Energy -= atkSkill.energy;
+        if(atkSkill.range>1) Gunbgm = AudioHelper::PlayAudio("gun.mp3");
+        else Swordbgm = AudioHelper::PlayAudio("sword.mp3");
         Defense->UnitHit(damage);
         lastAttackDamage = damage;
         // 防呆：UnitHit 可能導致 Defense 被移除
         if (!Defense || !isUnitInGroup(Defense) || Defense->HP<=0) return;
         Defense->chooseSkill();
-        int EnemyDamage = Defense->GetSkills()[EnemyselectedSkillIndex].power;
-        Defense->Energy-=Defense->GetSkills()[EnemyselectedSkillIndex].energy;
-        Processing->UnitHit(EnemyDamage);
-        lastCounterDamage = EnemyDamage;
+        if(EnemyselectedSkillIndex!=-1){
+            const Skill& enemySkill = Defense->GetSkills()[EnemyselectedSkillIndex];
+            int EnemyDamage = enemySkill.power;
+            int Enemyrange = enemySkill.range;
+            float enemyCritRate = enemySkill.critRate;
+            bool enemyIsCrit = enemydis(gen) < enemyCritRate;
+            if(Enemyrange<distance) return;
+            if(enemyIsCrit) EnemyDamage = static_cast<int>(EnemyDamage * 1.5f);
+            lastCounterIsCrit = enemyIsCrit;
+            Defense->Energy -= enemySkill.energy;
+            Processing->UnitHit(EnemyDamage);
+            lastCounterDamage = EnemyDamage;
+        }
         // 防呆：UnitHit 可能導致 Processing 被移除
         if (!Processing || !isUnitInGroup(Processing)) return;
     }
     else{
         Processing->chooseSkill();
-        int EnemyDamage = Processing->GetSkills()[EnemyselectedSkillIndex].power;
-        Processing->Energy-=Processing->GetSkills()[EnemyselectedSkillIndex].energy;
-        Defense->UnitHit(EnemyDamage);
-        lastAttackDamage = EnemyDamage;
+        if(EnemyselectedSkillIndex!=-1){
+            const Skill& atkSkill = Processing->GetSkills()[EnemyselectedSkillIndex];
+            int EnemyDamage = atkSkill.power;
+            float critRate = atkSkill.critRate;
+            bool isCrit = enemydis(gen) < critRate;
+            if(atkSkill.range>1) Gunbgm = AudioHelper::PlayAudio("gun.mp3");
+            else Swordbgm = AudioHelper::PlayAudio("sword.mp3");
+            if(isCrit) EnemyDamage = static_cast<int>(EnemyDamage * 1.5f);
+            lastAttackIsCrit = isCrit;
+            Processing->Energy -= atkSkill.energy;
+            Defense->UnitHit(EnemyDamage);
+            lastAttackDamage = EnemyDamage;
+        }
         // 防呆：UnitHit 可能導致 Defense 被移除
         if (!Defense || !isUnitInGroup(Defense) || Defense->HP<=0) return;
-        int damage = Defense->GetSkills()[PlayerselectedSkillIndex].power;
-        Defense->Energy-=Defense->GetSkills()[PlayerselectedSkillIndex].energy;
+        if(PlayerselectedSkillIndex<0||PlayerselectedSkillIndex>=Defense->GetSkills().size()) return;
+        const Skill& counterSkill = Defense->GetSkills()[PlayerselectedSkillIndex];
+        int damage = counterSkill.power;
+        int range = counterSkill.range;
+        float critRate = counterSkill.critRate;
+        bool isCrit = dis(gen) < critRate;
+        if(range<distance) return ;
+        if(isCrit) damage = static_cast<int>(damage * 1.5f);
+        lastCounterIsCrit = isCrit;
+        Defense->Energy -= counterSkill.energy;
         Processing->UnitHit(damage);
         lastCounterDamage = damage;
         // 防呆：UnitHit 可能導致 Processing 被移除
@@ -197,10 +239,15 @@ void PlayScene::ConfirmClick(){
     if(ChooseAbilityDraw){
         if(PlayerselectedSkillIndex==-1) return;
         AttackSystem();
+        PlayerselectedSkillIndex=EnemyselectedSkillIndex=-1;
         btnConfirm->Visible = btnAbilityCancel->Visible = btnAttack->Visible=false;
         Processing->Reset();
         attackUIActive=true;
         AttackUIVisibleTime=1;
+        for(auto obj:UnitGroup->GetObjects()){
+            auto unit = dynamic_cast<Unit*>(obj);
+            if(unit) unit->calc = false;
+        }
         return;
     }
     waitingForConfirm=false;
@@ -209,6 +256,10 @@ void PlayScene::ConfirmClick(){
     Processing->MovetoPreview();
     Processing->CancelPreview();
     Processing->Reset();
+    for(auto obj:UnitGroup->GetObjects()){
+        auto unit = dynamic_cast<Unit*>(obj);
+        if(unit) unit->calc = false;
+    }
     Processing=nullptr;
 }
 void PlayScene::CancelClick(){
@@ -228,8 +279,6 @@ void PlayScene::AttackClick(){
 void PlayScene::Terminate() {
     IScene::Terminate(); // 先釋放所有 UI/Group/Label
     AudioHelper::StopBGM(bgmId);
-    AudioHelper::StopSample(deathBGMInstance);
-    deathBGMInstance = std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE>();
     if (attackUIFont) { al_destroy_font(attackUIFont); attackUIFont = nullptr; }
     if (font20) { al_destroy_font(font20); font20 = nullptr; }
     if (font22) { al_destroy_font(font22); font22 = nullptr; }
@@ -305,6 +354,7 @@ void PlayScene::Update(float deltaTime) {
         }
         else{
             drawRadius=true;
+            //AudioHelper::PlayAudio("radius.mp3");
             Preview=Processing;
             if (!isUnitInGroup(Preview)) {
                 std::cout << "[DEBUG] Assign Preview: pointer invalid, set to nullptr" << std::endl;
@@ -374,7 +424,7 @@ void PlayScene::Update(float deltaTime) {
         float screenY = WindowSize.second-1000 - cameraY;
         //cout<<"X:"<<screenX<<" Y:"<<screenY<<endl;
         bx1=WindowSize.first-screenX-520;
-        by1 = WindowSize.second-screenY-210;
+        by1 = WindowSize.second-screenY-310;
         bx2 = bx1-1470;
         bx3 = bx1-700;
         btnConfirm->SetPosition(bx1, by1, cameraX, cameraY);
@@ -428,6 +478,7 @@ void PlayScene::Draw() const {
     GroundEffectGroup->Draw();
     DebugIndicatorGroup->Draw();
     EffectGroup->Draw();
+    if(ChooseAbilityDraw) UnitGroup->Draw();
     al_identity_transform(&Camera);
     al_use_transform(&Camera);
     if (Preview && !isUnitInGroup(Preview)) {
@@ -440,7 +491,6 @@ void PlayScene::Draw() const {
         }
         
         if(ChooseAbilityDraw){
-            UnitGroup->Draw();
             ChooseAbilityUI();
             
         } 
@@ -661,14 +711,27 @@ void PlayScene::AttackUI() const{
     // 顯示本次攻擊與反擊造成的傷害
     if (attackUIActive && (lastAttackDamage > 0 || lastCounterDamage > 0)) {
         ALLEGRO_FONT* bigFont = font48;
+        ALLEGRO_FONT* critFont = nullptr;
+        if (!critFont) critFont = al_load_ttf_font("Resource/fonts/pirulen.ttf", 64, 0); // 暴擊用大字體
         int textY = y + offsetY + barHeight + 40;
         if (lastAttackDamage > 0) {
-            al_draw_textf(bigFont, al_map_rgb(255, 0, 0), barX + barWidth/2, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastAttackDamage);
+            if (lastAttackIsCrit && critFont) {
+                // 金黃色暴擊
+                al_draw_textf(critFont, al_map_rgb(255, 215, 0), barX, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastAttackDamage);
+            } else {
+                al_draw_textf(bigFont, al_map_rgb(255, 0, 0), barX, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastAttackDamage);
+            }
             textY += 56;
         }
         if (lastCounterDamage > 0) {
-            al_draw_textf(bigFont, al_map_rgb(255, 80, 80), barX + barWidth/2, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastCounterDamage);
+            if (lastCounterIsCrit && critFont) {
+                // 亮橘色暴擊
+                al_draw_textf(critFont, al_map_rgb(255, 140, 0), 200, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastCounterDamage);
+            } else {
+                al_draw_textf(bigFont, al_map_rgb(255, 80, 80), 200, textY, ALLEGRO_ALIGN_CENTRE, "%d", lastCounterDamage);
+            }
         }
+        if (critFont) al_destroy_font(critFont);
     }
 }
 
@@ -828,7 +891,9 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
         cameraStartY = cameraY;
         if(Preview==Processing&&drawRadius){
             if(Processing->IsPlayer()){
-                if(!(worldX>=bx2-240&&worldX<=bx1+240&&worldY>=by1-80&&worldY<=by1+80)){
+                // 新增：如有任何按鈕 hover==true，就不執行
+                bool anyButtonHover = btnStartGame->hover || btnConfirm->hover || btnAbilityCancel->hover || btnAttack->hover || btnShovel->hover;
+                if(!anyButtonHover){
                     //cout<<"out"<<endl;
                     Player *player = dynamic_cast<Player *>(Processing);
                     if(player->CheckPlacement(x, y)){
@@ -864,6 +929,7 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
                         Preview = nullptr;
                     } else {
                         drawRadius=true;
+                        //AudioHelper::PlayAudio("radius.mp3");
                         Preview->drawStep=0;
                     }
                 }
@@ -945,6 +1011,7 @@ void PlayScene::OnMouseDown(int button, int mx, int my) {
     
 }
 void PlayScene::OnMouseMove(int mx, int my) {
+   // cout<<"x:"<<mx+cameraX<<" y:"<<my+cameraY<<endl;
     if (isPlacingUnits && draggingUnit) {
         // 拖曳時可即時顯示角色跟隨滑鼠（Draw 裡可加一層拖曳中的角色預覽）
         // 這裡只需記錄滑鼠座標即可
@@ -1056,7 +1123,7 @@ void PlayScene::ReadMap() {
     std::cout << "[DEBUG] PlayScene::ReadMap() begin" << std::endl;
     std::string filename = std::string("Resource/map") + std::to_string(MapId) + ".txt";
     char c;
-    std::vector<pair<bool, bool>> mapData;
+    std::vector<int> mapData; // 改成 int，方便三種 tile
     std::ifstream fin(filename);
     if (!fin.is_open()) {
         std::cout << "[ERROR] PlayScene::ReadMap() cannot open file: " << filename << std::endl;
@@ -1064,13 +1131,13 @@ void PlayScene::ReadMap() {
     }
     fin >> MapWidth;
     fin >> MapHeight;
-    fin>> KnightCount>>GunnerCount>>kMaxUnits;
+    fin >> KnightCount >> GunnerCount >> kMaxUnits;
     std::cout << "[DEBUG] PlayScene::ReadMap() MapWidth=" << MapWidth << ", MapHeight=" << MapHeight << std::endl;
     while (fin >> c) {
         switch (c) {
-            case '0': mapData.push_back({false, false}); break;
-            case '1': mapData.push_back({true, false}); break;
-            case '2': mapData.push_back({true, true}); break;
+            case '0': mapData.push_back(0); break;
+            case '1': mapData.push_back(1); break;
+            case '2': mapData.push_back(2); break;
             case '\n':
             case '\r':
                 break;
@@ -1081,12 +1148,24 @@ void PlayScene::ReadMap() {
     mapState = std::vector<std::vector<TileType>>(MapHeight, std::vector<TileType>(MapWidth));
     for (int i = 0; i < MapHeight; i++) {
         for (int j = 0; j < MapWidth; j++) {
-            const int num = mapData[i * MapWidth + j].first;
-            mapState[i][j] = num ? TILE_FLOOR : TILE_DIRT;
-            if (num)
-                TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
-            else
-                TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+            int num = mapData[i * MapWidth + j];
+            // 設定 tile 狀態
+            switch (num) {
+                case 0:
+                    mapState[i][j] = TILE_DIRT;
+                    TileMapGroup->AddNewObject(new Engine::Image("play/dirt.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 1:
+                    mapState[i][j] = TILE_FLOOR;
+                    TileMapGroup->AddNewObject(new Engine::Image("play/floor.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                case 2:
+                    mapState[i][j] = TILE_SAND; // 你要在 enum TileType 加 TILE_SAND
+                    TileMapGroup->AddNewObject(new Engine::Image("play/sand.png", j * BlockSize, i * BlockSize, BlockSize, BlockSize));
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
@@ -1108,10 +1187,10 @@ void PlayScene::ConstructUI() {
     btnConfirm = new Engine::ImageButton("play/Idle.png", "play/Hover.png",0, 0, 120, 40);
     btnConfirm->SetOnClickCallback(std::bind(&PlayScene::ConfirmClick, this)) ;   
     UIGroup->AddNewControlObject(btnConfirm);                                 
-    btnAbilityCancel = new Engine::ImageButton("play/Idle.png",  "play/Hover.png",0, 0, 120, 40);
+    btnAbilityCancel = new Engine::ImageButton("play/CancelButtonIdle.png",  "play/CancelButtonHover.png",0, 0, 120, 120);
     btnAbilityCancel->SetOnClickCallback(std::bind(&PlayScene::CancelClick, this)) ;  
     UIGroup->AddNewControlObject(btnAbilityCancel);  
-    btnAttack = new Engine::ImageButton("play/Idle.png",  "play/Hover.png",0, 0, 120, 40);
+    btnAttack = new Engine::ImageButton("play/AttackButtonIdle.png",  "play/AttackButtonHover.png",0, 0, 120, 120);
     btnAttack->SetOnClickCallback(std::bind(&PlayScene::AttackClick, this)) ;  
     UIGroup->AddNewControlObject(btnAttack);
     btnConfirm->Visible = btnAbilityCancel->Visible = btnAttack->Visible=false;

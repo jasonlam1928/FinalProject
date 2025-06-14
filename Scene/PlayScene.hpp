@@ -26,12 +26,7 @@ namespace Engine {
 extern int score;
 class PlayScene final : public Engine::IScene {
 private:
-    enum TileType {
-        TILE_DIRT,
-        TILE_FLOOR,
-        TILE_OCCUPIED,
-    };
-    ALLEGRO_SAMPLE_ID bgmId;
+    ALLEGRO_SAMPLE_ID bgmId, Swordbgm, Gunbgm;
     std::shared_ptr<ALLEGRO_SAMPLE_INSTANCE> deathBGMInstance;
 
 protected:
@@ -62,6 +57,11 @@ protected:
     void AttackClick();
 
 public:
+    enum TileType {
+        TILE_DIRT,
+        TILE_FLOOR,
+        TILE_SAND
+    };
     static bool DebugMode;
     static const std::vector<Engine::Point> directions;
     static int MapWidth, MapHeight;
@@ -133,6 +133,7 @@ public:
     float actionValue;
     bool active;
     float MoveTime;
+    int distance;
 
     mutable std::vector<std::pair<int, Engine::Point>> actionCellRects;
     mutable int PlayerselectedSkillIndex = -1; // -1 代表未選
@@ -142,6 +143,8 @@ public:
     void RemoveUnit(Unit* unit);
     int lastAttackDamage = 0;
     int lastCounterDamage = 0;
+    bool lastAttackIsCrit = false; // 新增：記錄攻擊是否暴擊
+    bool lastCounterIsCrit = false; // 新增：記錄反擊是否暴擊
 
     ALLEGRO_FONT* attackUIFont = nullptr;
     ALLEGRO_FONT* bigFont = nullptr;
